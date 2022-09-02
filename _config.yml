@@ -1,3 +1,9 @@
-heading_anchors: true
-remote_theme: just-the-docs/just-the-docs
 title: sphinx tutorial
+description: A step-by-step tutorial for documentation generation with sphinx
+
+remote_theme: just-the-docs/just-the-docs
+
+heading_anchors: true
+
+back_to_top: true
+back_to_top_text: "Back to top"

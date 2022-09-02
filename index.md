@@ -10,18 +10,18 @@ nav_order: 1
 
 ## Contents
 
-1. [Environment setup](environment-setup.md)
-2. [Getting started with `sphinx`](getting-started-with-sphinx.md)
-3. [reStructuredText basics](restructuredtext-basics.md)
-4. [Documenting your API](documenting-your-api.md)
-5. [Generating HTML docs from docstrings](generating-docs.md)
-6. [Selecting a theme](selecting-a-theme.md)
-7. [Hosting on GitHub Pages](hosting-on-github-pages.md)
-8. [Automating documentation updates](automating-documentation-updates.md)
-9. [Versioning](versioning.md)
-10. [Automating versioning](automating-versioning.md)
-11. [Vocabulary](vocabulary.md)
-12. [Further reading](further-reading.md)
+1. [Environment setup](docs/environment-setup.md)
+2. [Getting started with `sphinx`](docs/getting-started-with-sphinx.md)
+3. [reStructuredText basics](docs/restructuredtext-basics.md)
+4. [Documenting your API](docs/documenting-your-api.md)
+5. [Generating HTML docs from docstrings](docs/generating-docs.md)
+6. [Selecting a theme](docs/selecting-a-theme.md)
+7. [Hosting on GitHub Pages](docs/hosting-on-github-pages.md)
+8. [Automating documentation updates](docs/automating-documentation-updates.md)
+9. [Versioning](docs/versioning.md)
+10. [Automating versioning](docs/automating-versioning.md)
+11. [Vocabulary](docs/vocabulary.md)
+12. [Further reading](docs/further-reading.md)
 
 ---
 
