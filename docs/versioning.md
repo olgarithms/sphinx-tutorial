@@ -145,5 +145,3 @@ git add index.html
 git commit -m "redirect to main branch"
 git push origin gh-pages
 ```
-
----

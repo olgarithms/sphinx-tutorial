@@ -29,5 +29,3 @@ nav_order: 12
 
    `PyPI` (pronounced Pie-'P'-'I') is the Python Package Index ([docs](https://pypi.org/)). It's
    the default, global Python package mirror.
-
----

@@ -52,5 +52,3 @@ And re-build your docs:
 ```sh
 make html
 ```
-
----

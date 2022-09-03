@@ -73,5 +73,3 @@ git add docs .gitignore
 git commit -m "Add documentation"
 git push origin main
 ```
-
----

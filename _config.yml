@@ -5,5 +5,10 @@ remote_theme: just-the-docs/just-the-docs
 
 heading_anchors: true
 
+aux_links:
+  "Example project":
+    - "//github.com/aelsayed95/the-office"
+aux_links_new_tab: true
+
 back_to_top: true
 back_to_top_text: "Back to top"

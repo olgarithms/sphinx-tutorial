@@ -33,5 +33,3 @@ nav_order: 13
 - `sphinx.ext.napoleon`
   [[link](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)]
 - `sphinx-multiversion` [[link](https://holzhaus.github.io/sphinx-multiversion/master/index.html)]
-
----

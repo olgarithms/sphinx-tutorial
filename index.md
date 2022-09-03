@@ -37,5 +37,3 @@ some sample code to serve as a base for the rest of the workshop.
 Moreover, all the steps of the tutorial have been applied in corresponding commits and branches, so
 if anything doesn't quite work for you, you can refer to a previous/next step branch by using
 `git checkout` (or browse the branch in the `github` UI) and continue from there.
-
----

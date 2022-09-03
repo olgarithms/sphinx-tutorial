@@ -34,5 +34,3 @@ The `toctree` (table of contents tree) adds structure to your docs.
 The `maxdepth` parameter specifies how many levels of headers you would like `sphinx` to create in its output.
 
 `:caption: Contents:`
-
----

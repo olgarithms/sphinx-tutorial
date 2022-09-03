@@ -35,5 +35,3 @@ In order to exit your virtual environment at any point, you can run
 ```sh
 deactivate
 ```
-
----

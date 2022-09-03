@@ -68,5 +68,3 @@ your browser.
 
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
 show you the latest updates.
-
----

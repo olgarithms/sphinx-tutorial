@@ -136,5 +136,3 @@ is done running, and the subsequent `pages-build-deployment` has finished runnin
 Pages URL. You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
 
 We are done! We recommend you take a look at the [Further reading](#further-reading) section if you want to learn more about documentation.
-
----
