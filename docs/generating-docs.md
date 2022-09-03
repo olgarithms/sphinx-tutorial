@@ -29,8 +29,8 @@ sphinx-apidoc --output-dir . ..
 ```
 
 You can see that Sphinx created an `rst` file per module, as well as a `modules.rst` which acts as
-a module directory. To link these to our documentation, we'll need to edit `index.rst` to add a
-reference to `modules`:
+a module directory. To link these to our documentation, we are going to edit `index.rst` to add a
+reference to `modules`, which will appear in the Table of Contents:
 
 ```rst
 .. toctree::
