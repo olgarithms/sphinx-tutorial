@@ -31,9 +31,8 @@ This workshop will walk you through the steps of using the `sphinx` tool for doc
 generation for a Python API, hosting them on Github pages and automatically creating new versions
 on code updates.
 
-Accompanying the instructions there is [this example repo](TODO: fill in link) where you can find
-some sample code to serve as a base for the rest of the workshop.
+Accompanying the instructions there is [this example project](https://github.com/aelsayed95/the-office) where you can find some sample code to serve as a base for the rest of the workshop.
 
 Moreover, all the steps of the tutorial have been applied in corresponding commits and branches, so
 if anything doesn't quite work for you, you can refer to a previous/next step branch by using
-`git checkout` (or browse the branch in the `github` UI) and continue from there.
+`git checkout` (or browse the branch on `github`) and continuing from there.
