@@ -31,6 +31,7 @@ def get_employee_sales(self, employee: Employee) -> int:
     """
 ```
 
-> 💁‍♀️ In VS Code, you can install the extension `autoDocstring` which will generate python docstrings for you, so you only need to fill them in. `PyCharm` supports this as well.
+{: .note }
+In VS Code, you can install the extension `autoDocstring` which will generate python docstrings for you, so you only need to fill them in. `PyCharm` supports this as well.
 
 Continue adding documentation for the rest of the methods and for the class itself.

@@ -12,3 +12,8 @@ aux_links_new_tab: true
 
 back_to_top: true
 back_to_top_text: "Back to top"
+
+callouts:
+  note:
+    title: Tip
+    color: purple

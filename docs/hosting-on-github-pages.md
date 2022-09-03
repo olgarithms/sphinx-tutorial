@@ -58,7 +58,9 @@ git commit -m 'initial commit of gh-pages branch'
 git push origin gh-pages
 ```
 
-> 💁‍♀️ You can use the command `make clean` inside your `docs` directory to remove everything under
+{: .note }
+You can use the command `make clean` inside your `docs` directory to remove everything under
+
 > `_build`. This also means that every time you `make clean`, you need to recreate the github
 > worktree: `git worktree add -f html gh-pages`. To make this easier, add the following to
 > `docs/Makefile`:
@@ -81,8 +83,8 @@ git commit -m "Don't use Jekyll"
 git push origin gh-pages
 ```
 
-> 💁‍♀️ Alternatively, we can add the extension `sphinx.ext.githubpages` to our `conf.py`. It
-> automatically adds the `.nojekyll` file for us on `make html`.
+{: .note }
+Alternatively, we can add the extension `sphinx.ext.githubpages` to our `conf.py`. It automatically adds the `.nojekyll` file for us on `make html`.
 
 ```py
 # Add any Sphinx extension module names here, as strings. They can be
