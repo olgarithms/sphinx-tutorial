@@ -43,10 +43,10 @@ text. Using the same character will create headings of the same level.
 
 ## Creating a section
 
-Now let's add some more content by modifying the file. We are going to add a new section that has
+Now let's add some more content by modifying the file `index.rst`. We are going to add a new section that has
 some more information and a picture of the workspace in the office.
 
-Create a new section **above** the "Indices and tables" one. Do:
+Create a new section **above** the "Indices and tables" one:
 
 ```rst
 Workspace
@@ -61,3 +61,5 @@ your image in the `docs/_static` directory and type under your header:
 ```rst
 .. image:: _static/workspace.jpg
 ```
+
+Now re-run `make html` to see your image rendered on the site.
