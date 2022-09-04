@@ -48,16 +48,14 @@ make html
 ```
 
 As you might have seen in the `Makefile`, this runs `sphinx-build`, pointing to the source and
-build directories to use and instructs `sphinx` to build `html` pages out of your `rst`
-files.
+build directories to use and instructs `sphinx` to build `html` pages out of your `rst` files.
 
 ### Previewing your docs
 
 Now you preview your docs by manually opening the generated `_build/html/index.html` in your
 preferred browser.
 
-{: .note }
-In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
+{: .note } In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
 
 Alternatively, we can run our own python server in the `_build/html` directory, so that we can also
 move around the pages. Run the command
@@ -66,8 +64,8 @@ move around the pages. Run the command
 python3.10 -m http.server
 ```
 
-which opens a web server at port `8000`. Access your docs by visiting [`http://localhost:8000`](http://localhost:8000) on
-your browser.
+which opens a web server at port `8000`. Access your docs by visiting
+[`http://localhost:8000`](http://localhost:8000) on your browser.
 
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
 show you the latest updates.

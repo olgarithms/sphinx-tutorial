@@ -37,7 +37,8 @@ reference to `modules`, which will appear in the Table of Contents:
    modules
 ```
 
-We also need to point Sphinx to the source python module's path. In `conf.py`, add the following code snippet to add the parent dir to the path:
+We also need to point Sphinx to the source python module's path. In `conf.py`, add the following
+code snippet to add the parent dir to the path:
 
 ```py
 import os
@@ -54,8 +55,10 @@ make html
 Preview `index.html` on your browser. You should be able to see links to each of the modules.
 Clicking on a module should render its API documentation.
 
-{: .note }
-Instead of manually running `make html` every time you update your docs, you use the extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and auto-reload the html pages in the browser. Learn more [here](https://pypi.org/project/sphinx-autobuild/).
+{: .note } Instead of manually running `make html` every time you update your docs, you use the
+extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
+auto-reload the html pages in the browser. Learn more
+[here](https://pypi.org/project/sphinx-autobuild/).
 
 Finally, commit and push your documentation src files to your remote repository. To ensure you
 don't accidentally commit any generated `html` files, let's first add the `_build` folder to

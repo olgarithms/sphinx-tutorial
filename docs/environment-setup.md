@@ -8,13 +8,14 @@ nav_order: 2
 
 ---
 
-The prerequisites for this workshop are having `git` and `python` installed ([`python3.10`](https://www.python.org/downloads/) is
-recommended).
+The prerequisites for this workshop are having `git` and `python` installed
+([`python3.10`](https://www.python.org/downloads/) is recommended).
 
 You can choose to work on your own environment using any IDE, although there will be some extra
 tips provided for a local workflow using [`Visual Studio Code`](https://code.visualstudio.com/).
 
-Our first step will be forking and cloning the [example project](https://github.com/aelsayed95/the-office), so run
+Our first step will be forking and cloning the
+[example project](https://github.com/aelsayed95/the-office), so run
 
 ```sh
 git clone git@github.com:<your-org>/the-office.git
@@ -38,4 +39,5 @@ deactivate
 ```
 
 [Previous: Environment setup](docs/environment-setup.md){: .btn .float-left .mb-lg-4}
-[Next: Getting started with `Sphinx`](docs/getting-started-with-sphinx.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Next: Getting started with `Sphinx`](docs/getting-started-with-sphinx.md){: .btn .btn-purple
+.float-right .mb-lg-4}

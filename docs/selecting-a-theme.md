@@ -8,9 +8,14 @@ nav_order: 7
 
 ---
 
-What if you wanted a different appearance for your website? Sphinx ships with a number of built-in themes. You can also install and use a theme from `PyPI`. We'll cover how to do both in this section.
+What if you wanted a different appearance for your website? Sphinx ships with a number of built-in
+themes. You can also install and use a theme from `PyPI`. We'll cover how to do both in this
+section.
 
-First, browse through `sphinx`'s [built-in themes](https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes) and select your favorite. We picked the theme `classic`. In `conf.py`, navigate to the section `Options for HTML output` and edit the `html_theme` variable:
+First, browse through `sphinx`'s
+[built-in themes](https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes) and
+select your favorite. We picked the theme `classic`. In `conf.py`, navigate to the section
+`Options for HTML output` and edit the `html_theme` variable:
 
 ```py
 # -- Options for HTML output -------------------------------------------------
