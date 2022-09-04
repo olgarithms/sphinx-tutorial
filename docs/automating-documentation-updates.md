@@ -6,10 +6,13 @@ nav_order: 8
 
 # Automating documentation updates
 
-Github Actions allow Github users to automatically execute workflows. We can use this to automate
-building and deploying new versions of our documentation. First, let's build a simple Github
-Actions workflow to understand how it works. Let's create a workflow that prints "Hello, World!"
-when a commit is pushed to `main`:
+`Github Actions` allow `Github` users to automatically execute workflows. We can use this to
+automate building and deploying new versions of our documentation.
+
+## Creating a simple Github Action
+
+First, let's build a simple `Github Actions` workflow to understand how it works. Let's create a
+workflow that prints "Hello, World!" when a commit is pushed to `main`:
 
 From your repo's root, create a new file `.github/workflows/hello.yaml` with the following
 contents:
@@ -30,14 +33,16 @@ jobs:
         run: echo "Hello, World!"
 ```
 
-This file defines a workflow named `Hello World`, which is triggered by a push to the `main`
-branch. It runs a single job `hello`, which has a single step `echo` that prints `Hello, Wolrd!` to
-stdout. To test it out, commit and push this file to `main`.
+This file defines a workflow named `Hello World`, which, when triggered, runs a single job `hello`
+The job has a single step `echo` that prints `Hello, Wolrd!` to stdout. To test it out, commit and
+push this file to `main`.
 
 Now, navigate to the `Actions` tab on your repo's Github URL. You should see that a `workflow` with
 the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click on the
 job `hello`. Now expand the step `echo` to see its details. You should see the message
 `Hello, World!` printed to stdout.
+
+## Deploying your docs automatically
 
 You now know how to build a simple workflow. Let's now write a workflow that would build and deploy
 our documentation when a PR is merged. Create a new file `.github/workflows/docs.yaml`:
@@ -128,7 +133,7 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: |
-          pip install sphinx
+          pip install sphinx furo
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -170,8 +175,13 @@ git push origin update_docs
 From your repo's Github URL, create and merge your PR. Go to the `Actions` tab, you should see that
 the workflow `Deploy Documentation` is running. Click on it to observe the details of each step.
 Once all steps have completed, you'll see that a new workflow `pages-build-deployment` has kicked
-off. This workflow is triggered by Github when changes are pushed to `gh-pages`. Once it completes,
-refresh your Github Pages URL. You should see the new change on your site.
+off. This workflow is triggered by `Github` when changes are pushed to `gh-pages`.
+
+When this workflow is completed, refresh your Github Pages URL. You should see the new change on
+your site.
+
+To sum up, from now on every newly merged Pull Request into your project is going to trigger a new
+deployment of your documentation!
 
 <br />
 [Previous: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .float-left .mb-lg-4}

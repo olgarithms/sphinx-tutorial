@@ -8,9 +8,9 @@ nav_order: 7
 
 ---
 
-To host your docs on GitHub Pages, we need to start by enabling GitHub Pages for our repo. To do
+To host your docs on GitHub Pages, we need to start by enabling `GitHub Pages` for our repo. To do
 that, we need to create a branch that only contains documentation files. We'll name this branch
-`gh-pages`, as Github looks for this name and automatically starts hosting your documentation on
+`gh-pages`, as `Github` looks for this name and automatically starts hosting your documentation on
 `pages`.
 
 We'll start by creating `gh-pages` as an empty orphan branch:
@@ -49,7 +49,7 @@ git branch
 ```
 
 Our branch `gh-pages` is now completely empty. But `Github` will be looking for a top-level
-`index.html`. So let's create a simple one:
+`index.html`. So from the `./docs/_build/html` directory let's create a simple one:
 
 ```sh
 echo "<h1>hello world</h1>" > index.html
@@ -76,7 +76,7 @@ site generator tool that GitHub Pages uses by default. We can turn off its usage
 ```sh
 cd _build/html
 touch .nojekyll
-git add .
+git add .nojekyll
 git commit -m "Don't use Jekyll"
 git push origin gh-pages
 ```
@@ -85,16 +85,13 @@ git push origin gh-pages
 Alternatively, we can add the extension `sphinx.ext.githubpages` to our `conf.py`. It automatically adds the `.nojekyll` file for us on `make html`.
 
 ```py
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.githubpages"
 ]
 ```
 
-It's time to preview our hosted site. Navigate to your repo's `Settings` tab, under `Options`,
+It's time to preview our hosted site. Navigate to your repo's `Settings` tab, and on the left sidebar
 scroll down to the `GitHub Pages` section. You should see that Github recognized the presence of
 the new `gh-pages` branch and gives you a link where you can view your hosted documentation. Click
 on the link, you should be able to see the title `hello world` that we put in our `index.html`.

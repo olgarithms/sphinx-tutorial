@@ -37,7 +37,7 @@ extensions = [
 
 Next, to render a list of links to past versions on your Documentation website, you'll need to add
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
-Github tags and versions on the website side bar:
+git tags and versions on the website sidebar:
 
 ```html
 {% if versions %}

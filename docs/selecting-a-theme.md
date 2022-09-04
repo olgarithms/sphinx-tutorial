@@ -24,7 +24,7 @@ select your favorite. We picked the theme `classic`. In `conf.py`, navigate to t
 html_theme = 'classic'
 ```
 
-Now re-build your HTML files:
+Now from the `docs`directory re-build your HTML files:
 
 ```sh
 make html

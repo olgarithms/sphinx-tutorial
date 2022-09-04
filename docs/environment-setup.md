@@ -40,6 +40,5 @@ deactivate
 
 <br />
 [Previous: Home](../index.md){: .btn .float-left .mb-lg-4}
-[Next: Getting started with Sphinx](./getting-started-with-sphinx.md){: .btn .btn-purple
-.float-right .mb-lg-4}
+[Next: Getting started with Sphinx](./getting-started-with-sphinx.md){: .btn .btn-purple .float-right .mb-lg-4}
 <br />
