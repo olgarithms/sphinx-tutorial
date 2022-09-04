@@ -17,17 +17,16 @@ extensions = [
 ]
 ```
 
-Now, we need to run the API doc command `sphinx-apidoc` to build `rst` files out of our
-`docstrings`. We need to specify the output path and module path, so from the `docs` directory,
-run:
+Now, we need to run the command `sphinx-apidoc` to build `rst` files out of our `docstrings`. We
+need to specify the output path and module path, so from the root of your repo, run:
 
 ```sh
-sphinx-apidoc --output-dir . ..
+sphinx-apidoc --output-dir docs .
 ```
 
-You can see that Sphinx created an `rst` file per module, as well as a `modules.rst` which acts as
-a module directory. To link these to our documentation, we are going to edit `index.rst` to add a
-reference to `modules`, which will appear in the Table of Contents:
+You can see that Sphinx created an `rst` file per module, as well as a `modules.rst` file, which
+acts as a module directory. We are going to edit `index.rst` to
+add a reference to `modules`, so that it appears in the [table of contents](restructuredtext-basics.md#table-of-contents-tree):
 
 ```rst
 .. toctree::
