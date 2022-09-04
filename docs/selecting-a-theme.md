@@ -14,10 +14,8 @@ First, browse through `sphinx`'s [built-in themes](https://www.sphinx-doc.org/en
 
 ```py
 # -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
 html_theme = 'classic'
 ```
 
@@ -40,10 +38,8 @@ Now modify `conf.py` again to change the theme:
 
 ```py
 # -- Options for HTML output -------------------------------------------------
+# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# The theme to use for HTML and HTML Help pages.  See the documentation for
-# a list of builtin themes.
-#
 html_theme = 'furo'
 ```
 

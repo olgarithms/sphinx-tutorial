@@ -173,5 +173,3 @@ Once all steps have completed, you'll see that a new workflow `pages-build-deplo
 off. This workflow is triggered by Github when changes are pushed to `gh-pages`. Once it completes,
 refresh your Github Pages URL. You should see the new change on your site.
 
-{: .note }
-To make previewing local changes to your docs easier, add the extension `sphinx.autobuild` to your `conf.py`. This will automatically rebuild Sphinx documentation on changes and auto-reload the html pages in the browser. Learn more [here](https://pypi.org/project/sphinx-autobuild/).

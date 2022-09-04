@@ -57,8 +57,6 @@ preferred browser.
 {: .note }
 In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
 
-> 💁‍♀️ In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
-
 Alternatively, we can run our own python server in the `_build/html` directory, so that we can also
 move around the pages. Run the command
 
