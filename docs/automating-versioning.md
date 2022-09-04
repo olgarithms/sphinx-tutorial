@@ -94,7 +94,7 @@ To make incrementing the documentation version easier, we'll modify our workflow
 pull request uses the label `docs-version++`, it will create a new Github tag that's an increment
 on the previous tag. Otherwise, it will simply rebuild and deploy documentation updates to `main`.
 
-Let's create a simple shell script `create_tag.sh`, that will increment the github tag:
+Let's create a simple shell script `create_tag.sh`, that will increment the git tag:
 
 ```sh
 # get current tag

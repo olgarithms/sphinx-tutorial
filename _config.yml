@@ -14,6 +14,10 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 callouts:
-  note:
+  tip:
     title: Tip
     color: purple
+  hint:
+    title: Hint
+    color: green
+    opacity: 0.1

@@ -54,7 +54,7 @@ make html
 Preview `index.html` on your browser. You should be able to see links to each of the modules.
 Clicking on a module should render its API documentation.
 
-{: .note }
+{: .tip }
 Instead of manually running `make html` every time you update your docs, you use the
 extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
 auto-reload the HTML pages in the browser. Learn more
