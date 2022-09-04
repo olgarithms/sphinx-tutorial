@@ -55,7 +55,8 @@ build directories to use and instructs `sphinx` to build `html` pages out of you
 Now you preview your docs by manually opening the generated `_build/html/index.html` in your
 preferred browser.
 
-{: .note } In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
+{: .note }
+In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
 
 Alternatively, we can run our own python server in the `_build/html` directory, so that we can also
 move around the pages. Run the command

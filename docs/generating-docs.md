@@ -55,7 +55,8 @@ make html
 Preview `index.html` on your browser. You should be able to see links to each of the modules.
 Clicking on a module should render its API documentation.
 
-{: .note } Instead of manually running `make html` every time you update your docs, you use the
+{: .note }
+Instead of manually running `make html` every time you update your docs, you use the
 extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
 auto-reload the html pages in the browser. Learn more
 [here](https://pypi.org/project/sphinx-autobuild/).
