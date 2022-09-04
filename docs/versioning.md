@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Versioning
-nav_order: 10
+title: 9. Versioning
+nav_order: 9
 ---
 
 # Versioning

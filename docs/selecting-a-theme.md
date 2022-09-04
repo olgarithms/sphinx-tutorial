@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Selecting a theme
-nav_order: 7
+title: 6. Selecting a theme
+nav_order: 6
 ---
 
 # Selecting a theme

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Documenting your API
-nav_order: 5
+title: 4. Documenting your API
+nav_order: 4
 ---
 
 # Documenting your API

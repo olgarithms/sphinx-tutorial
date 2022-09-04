@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Further reading
-nav_order: 13
+title: 12. Further reading
+nav_order: 12
 ---
 
 # Further reading

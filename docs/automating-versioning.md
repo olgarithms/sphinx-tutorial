@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Automating versioning
-nav_order: 11
+title: 10. Automating versioning
+nav_order: 10
 ---
 
 # Automating versioning

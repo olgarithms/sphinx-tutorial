@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Generating docs
-nav_order: 6
+title: 5. Generating docs
+nav_order: 5
 ---
 
 # Generating HTML docs from docstrings
