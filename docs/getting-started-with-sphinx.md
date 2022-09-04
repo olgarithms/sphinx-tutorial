@@ -32,7 +32,7 @@ this tutorial. Once the script has run, you should find the following in your `d
 
 - `conf.py`: configuration file which allows you to set `Sphinx`'s behaviour (see configuration
   options on the [docs](https://www.sphinx-doc.org/en/master/usage/configuration.html))
-- `index.rst`: the source for your documentation's home page
+- `index.rst`: the source file for your documentation's home page
 - `Makefile`/`make.bat`: contain convenient `make` targets for generating documentation
 - `_build/`: directory where your output documentation files will live
 - `_static:`: directory where all your static files, e.g. images, go to
@@ -48,8 +48,10 @@ make html
 ```
 
 As you might have seen in the `Makefile`, this runs `sphinx-build`, pointing to the source and
-build directories to use and instructs `sphinx` to build `html` documentation out of your `rst`
+build directories to use and instructs `sphinx` to build `html` pages out of your `rst`
 files.
+
+### Previewing your docs
 
 Now you preview your docs by manually opening the generated `_build/html/index.html` in your
 preferred browser.
@@ -64,7 +66,7 @@ move around the pages. Run the command
 python3.10 -m http.server
 ```
 
-which opens a web server at port `8000`. Access your docs by visiting `http://localhost:8000` on
+which opens a web server at port `8000`. Access your docs by visiting [`http://localhost:8000`](http://localhost:8000) on
 your browser.
 
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
