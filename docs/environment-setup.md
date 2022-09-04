@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Environment setup
-nav_order: 2
+title: 1. Environment setup
+nav_order: 1
 ---
 
 # Environment setup

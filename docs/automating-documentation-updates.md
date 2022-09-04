@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Automating updates
-nav_order: 9
+title: 8. Automating updates
+nav_order: 8
 ---
 
 # Automating documentation updates
@@ -172,4 +172,3 @@ the workflow `Deploy Documentation` is running. Click on it to observe the detai
 Once all steps have completed, you'll see that a new workflow `pages-build-deployment` has kicked
 off. This workflow is triggered by Github when changes are pushed to `gh-pages`. Once it completes,
 refresh your Github Pages URL. You should see the new change on your site.
-

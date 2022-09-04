@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Vocabulary
-nav_order: 12
+title: 11. Vocabulary
+nav_order: 11
 ---
 
 # Vocabulary

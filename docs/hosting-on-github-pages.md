@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Hosting on Github pages
-nav_order: 8
+title: 7. Hosting on Github pages
+nav_order: 7
 ---
 
 # Hosting on Github pages

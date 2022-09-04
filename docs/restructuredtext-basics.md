@@ -1,7 +1,7 @@
 ---
 layout: default
-title: reStructuredText basics
-nav_order: 4
+title: 3. reStructuredText basics
+nav_order: 3
 ---
 
 # `reStructuredText` basics

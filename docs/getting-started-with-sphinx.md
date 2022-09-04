@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Getting started with sphinx
-nav_order: 3
+title: 2. Getting started with sphinx
+nav_order: 2
 ---
 
 # Getting started with `sphinx`
