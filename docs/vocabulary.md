@@ -8,7 +8,7 @@ nav_order: 11
 
 ---
 
-1. What is `sphinx`?
+1. What is `Sphinx`?
 
    `Sphinx` is a tool that makes it easy to create documentation. It supports various output
    formats including `HTML`, and has powerful extensions that to help keep your API documentation
@@ -23,7 +23,7 @@ nav_order: 11
 3. What is a `docstring`?
 
    A string literal specified in source code that is used to document a specific segment of code.
-   Usually follows a specific format parsable by various tools, including sphinx.
+   Usually follows a specific format parsable by various tools, including `Sphinx`.
 
 4. What is `PyPI`?
 

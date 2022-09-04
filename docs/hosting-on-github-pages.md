@@ -48,7 +48,7 @@ git branch
   main
 ```
 
-Our branch `gh-pages` is now completely empty. But `github` will be looking for a top-level
+Our branch `gh-pages` is now completely empty. But `Github` will be looking for a top-level
 `index.html`. So let's create a simple one:
 
 ```sh
@@ -59,13 +59,11 @@ git push origin gh-pages
 ```
 
 {: .note }
-You can use the command `make clean` inside your `docs` directory to remove everything under
+You can use the command `make clean` inside your `docs` directory to remove everything under `_build`.
 
-> `_build`. This also means that every time you `make clean`, you need to recreate the github
-> worktree: `git worktree add -f html gh-pages`. To make this easier, add the following to
-> `docs/Makefile`:
+This also means that every time you `make clean`, you need to recreate the git worktree: `git worktree add -f html gh-pages`. To make this easier, add the following to `docs/Makefile`:
 
-```
+```make
 clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O);
 	cd _build; git worktree add -f html gh-pages
@@ -117,8 +115,10 @@ git push origin gh-pages
 
 Go back to your Github Pages documentation URL and hit refresh.
 
-🎉 Congratulations! 🎉 Now your documentation is now live on Github Pages! You should be able to
-navigate around the website and share the URL with the world!
+🎉 **Congratulations!** 🎉
+
+Now your documentation is now live on Github Pages!
+You should be able to navigate around the website and share the URL with the world.
 
 <br />
 [Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left .mb-lg-4}

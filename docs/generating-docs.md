@@ -57,7 +57,7 @@ Clicking on a module should render its API documentation.
 {: .note }
 Instead of manually running `make html` every time you update your docs, you use the
 extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
-auto-reload the html pages in the browser. Learn more
+auto-reload the HTML pages in the browser. Learn more
 [here](https://pypi.org/project/sphinx-autobuild/).
 
 Finally, commit and push your documentation src files to your remote repository. To ensure you
@@ -77,6 +77,6 @@ git push origin main
 ```
 
 <br />
-[Previous: Documenting your API](./documenting-your-api.md)){: .btn .float-left .mb-lg-4}
+[Previous: Documenting your API](./documenting-your-api.md){: .btn .float-left .mb-lg-4}
 [Next: Selecting a theme](./selecting-a-theme.md){: .btn .btn-purple .float-right .mb-lg-4}
 <br />

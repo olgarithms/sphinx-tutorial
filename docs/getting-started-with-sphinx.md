@@ -1,14 +1,14 @@
 ---
 layout: default
-title: 2. Getting started with sphinx
+title: 2. Getting started with Sphinx
 nav_order: 2
 ---
 
-# Getting started with `sphinx`
+# Getting started with `Sphinx`
 
 ---
 
-Begin by installing `sphinx` inside your virtual environment.
+Begin by installing `Sphinx` inside your virtual environment.
 
 ```sh
 python3.10 -m pip install sphinx
@@ -36,7 +36,7 @@ this tutorial. Once the script has run, you should find the following in your `d
 - `Makefile`/`make.bat`: contain convenient `make` targets for generating documentation
 - `_build/`: directory where your output documentation files will live
 - `_static:`: directory where all your static files, e.g. images, go to
-- `_templates`: directory where you can override `sphinx` template files to customize the look of
+- `_templates`: directory where you can override `Sphinx` template files to customize the look of
   your documentation
 
 Take a moment to look at the content of each of these files. We are now ready to build our
@@ -48,7 +48,7 @@ make html
 ```
 
 As you might have seen in the `Makefile`, this runs `sphinx-build`, pointing to the source and
-build directories to use and instructs `sphinx` to build `html` pages out of your `rst` files.
+build directories to use and instructs `Sphinx` to build `html` pages out of your `rst` files.
 
 ### Previewing your docs
 

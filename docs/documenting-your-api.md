@@ -39,6 +39,6 @@ docstring prompts, so you only need to fill them in. `PyCharm` supports this as 
 Continue adding documentation for the rest of the methods and for the class itself. Repeat for `employee.py`.
 
 <br />
-[Previous: reStructuredText basics](./restructuredtext-basics.md)){: .btn .float-left .mb-lg-4}
+[Previous: reStructuredText basics](./restructuredtext-basics.md){: .btn .float-left .mb-lg-4}
 [Next: Generating HTML docs from docstrings](./generating-docs.md){: .btn .btn-purple .float-right .mb-lg-4}
 <br />

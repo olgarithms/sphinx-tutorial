@@ -6,7 +6,7 @@ nav_order: 8
 
 # Automating documentation updates
 
-Github Actions allow github users to automatically execute workflows. We can use this to automate
+Github Actions allow Github users to automatically execute workflows. We can use this to automate
 building and deploying new versions of our documentation. First, let's build a simple Github
 Actions workflow to understand how it works. Let's create a workflow that prints "Hello, World!"
 when a commit is pushed to `main`:
@@ -75,7 +75,7 @@ steps:
       python-version: "3.10"
   - name: Install dependencies
     run: |
-      pip install sphinx sphinx_rtd_theme
+      pip install sphinx furo
 ```
 
 Next, we checkout the current repo, and configure Github to allow us to push to the `gh-pages`
@@ -91,7 +91,7 @@ branch:
     git config user.name "your name"
 ```
 
-Finally, we build our sphinx documentation using `sphinx-build` and push the output `_build` folder
+Finally, we build our Sphinx documentation using `sphinx-build` and push the output `_build` folder
 to `gh-pages`:
 
 ```yaml
