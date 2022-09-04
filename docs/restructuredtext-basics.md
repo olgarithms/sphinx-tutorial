@@ -63,3 +63,8 @@ your image in the `docs/_static` directory and type under your header:
 ```
 
 Now re-run `make html` to see your image rendered on the site.
+
+<br />
+[Previous: Getting started with sphinx](./getting-started-with-sphinx.md){: .btn .float-left .mb-lg-4}
+[Next: Documenting your API](./documenting-your-api.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />

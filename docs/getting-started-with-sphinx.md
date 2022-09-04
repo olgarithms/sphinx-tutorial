@@ -70,3 +70,8 @@ which opens a web server at port `8000`. Access your docs by visiting
 
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
 show you the latest updates.
+
+<br />
+[Previous: Environment setup](./environment-setup.md){: .btn .float-left .mb-lg-4}
+[Next: reStructuredText basics](./restructuredtext-basics.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />

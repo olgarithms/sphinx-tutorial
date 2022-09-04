@@ -38,6 +38,8 @@ In order to exit your virtual environment at any point, you can run
 deactivate
 ```
 
-[Previous: Environment setup](docs/environment-setup.md){: .btn .float-left .mb-lg-4}
-[Next: Getting started with `Sphinx`](docs/getting-started-with-sphinx.md){: .btn .btn-purple
+<br />
+[Previous: Home](../index.md){: .btn .float-left .mb-lg-4}
+[Next: Getting started with Sphinx](./getting-started-with-sphinx.md){: .btn .btn-purple
 .float-right .mb-lg-4}
+<br />

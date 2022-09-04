@@ -53,3 +53,8 @@ And re-build your docs:
 ```sh
 make html
 ```
+
+<br />
+[Previous: Generating HTML docs from docstrings](./generating-docs.md){: .btn .float-left .mb-lg-4}
+[Next: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />

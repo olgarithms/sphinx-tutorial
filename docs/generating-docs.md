@@ -75,3 +75,8 @@ git add docs .gitignore
 git commit -m "Add documentation"
 git push origin main
 ```
+
+<br />
+[Previous: Documenting your API](./documenting-your-api.md)){: .btn .float-left .mb-lg-4}
+[Next: Selecting a theme](./selecting-a-theme.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />

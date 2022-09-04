@@ -33,3 +33,7 @@ nav_order: 12
 - `sphinx.ext.napoleon`
   [[link](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)]
 - `sphinx-multiversion` [[link](https://holzhaus.github.io/sphinx-multiversion/master/index.html)]
+
+<br />
+[Previous: Vocabulary](./vocabulary.md){: .btn .float-left .mb-lg-4}
+<br />

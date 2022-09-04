@@ -37,3 +37,8 @@ In VS Code, you can install the extension `autoDocstring` which will generate py
 docstring prompts, so you only need to fill them in. `PyCharm` supports this as well.
 
 Continue adding documentation for the rest of the methods and for the class itself. Repeat for `employee.py`.
+
+<br />
+[Previous: reStructuredText basics](./restructuredtext-basics.md)){: .btn .float-left .mb-lg-4}
+[Next: Generating HTML docs from docstrings](./generating-docs.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />

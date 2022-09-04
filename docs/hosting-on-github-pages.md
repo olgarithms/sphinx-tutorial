@@ -119,3 +119,8 @@ Go back to your Github Pages documentation URL and hit refresh.
 
 🎉 Congratulations! 🎉 Now your documentation is now live on Github Pages! You should be able to
 navigate around the website and share the URL with the world!
+
+<br />
+[Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left .mb-lg-4}
+[Next: Automating documentation updates](./automating-documentation-updates.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />

@@ -160,3 +160,8 @@ git add index.html
 git commit -m "redirect to main branch"
 git push origin gh-pages
 ```
+
+<br />
+[Previous: Automating documentation updates](./automating-documentation-updates.md){: .btn .float-left .mb-lg-4}
+[Next: Automating versioning](./automating-versioning.md){: .btn .btn-purple .float-right .mb-lg-4}
+<br />
