@@ -140,7 +140,7 @@ Modify your Github Pages URL to append a branch or a tag name name:
 You'll be redirected to that version's index page. Of course, this is not convenient. We want to
 automatically redirect the user to the latest version. Say, the version on the `main` branch. To do
 that, we need to add an new file `index.html` at the root of the `gh-pages` branch that has this
-redirection logic. First, we create a new file:
+redirection logic (see the [docs](https://holzhaus.github.io/sphinx-multiversion/master/github_pages.html?highlight=meta%20http%20equiv%20refresh#redirecting-from-the-document-root)). First, we create a new file:
 
 ```sh
 cd ./docs/_build/html
