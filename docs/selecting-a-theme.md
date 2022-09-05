@@ -12,6 +12,7 @@ What if you wanted a different appearance for your website? Sphinx ships with a 
 themes. You can also install and use a theme from `PyPI`. We'll cover how to do both in this
 section.
 
+### Using a built-in theme
 First, browse through `Sphinx`'s
 [built-in themes](https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes) and
 select your favorite. We picked the theme `classic`. In `conf.py`, navigate to the section
@@ -32,6 +33,7 @@ make html
 
 And view `index.html` in your browser, you should be able to see that the theme has changed.
 
+### Using a PyPI Theme
 In addition to Sphinx's built-in themes, there are many themes available on `PyPI`. Our favorite is
 Read The Docs. Let's install [`furo`](https://github.com/pradyunsg/furo):
 
@@ -48,11 +50,25 @@ Now modify `conf.py` again to change the theme:
 html_theme = 'furo'
 ```
 
-And re-build your docs:
+And re-build your and preview your docs:
 
 ```sh
 make html
 ```
+
+commit and push your changes:
+```
+git add docs/conf.py
+git commit -m "Use furo theme!"
+git push origin main
+```
+
+
+{: .hint }
+🙌 You have now reached the
+[`6-selecting-a-theme`](https://github.com/aelsayed95/the-office/tree/6-selecting-a-theme)
+part of the tutorial. If not, check-out that branch and continue from there.
+
 
 <br />
 [Previous: Generating HTML docs from docstrings](./generating-docs.md){: .btn .float-left .mb-lg-4}
