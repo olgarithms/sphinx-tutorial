@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5. Generating docs
+title: 5. Generating documentation
 nav_order: 5
 ---
 
@@ -55,7 +55,7 @@ Preview `index.html` on your browser. You should be able to see links to each of
 Clicking on a module should render its API documentation.
 
 {: .tip }
-Instead of manually running `make html` every time you update your docs, you use the
+Instead of manually running `make html` every time you update your docs, you can use the
 extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
 auto-reload the HTML pages in the browser. Learn more
 [here](https://pypi.org/project/sphinx-autobuild/).
@@ -75,6 +75,11 @@ git add docs .gitignore
 git commit -m "Add documentation"
 git push origin main
 ```
+
+{: .hint }
+🙌 You have now reached the
+[`5-generating-documention`](https://github.com/aelsayed95/the-office/tree/5-generating-documention)
+part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
 [Previous: Documenting your API](./documenting-your-api.md){: .btn .float-left .mb-lg-4}
