@@ -17,7 +17,7 @@ Open up `.gitub/workflows/docs.yaml`. First, modify the step `Install dependenci
 ```yaml
 - name: Install dependencies
   run: |
-    pip install sphinx sphinx_multiversion
+    pip install sphinx furo sphinx_multiversion
 ```
 
 Next, modify the step `Sphinx build` to use the `sphinx_multiversion` command to build your
@@ -51,7 +51,7 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: |
-          pip install sphinx sphinx_multiversion
+          pip install sphinx furo sphinx_multiversion
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
