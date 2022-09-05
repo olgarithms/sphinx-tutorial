@@ -54,18 +54,18 @@ make html
 Preview `index.html` on your browser. You should be able to see links to each of the modules.
 Clicking on a module should render its API documentation.
 
-{: .tip } Instead of manually running `make html` every time you update your docs, you use the
+{: .tip }
+Instead of manually running `make html` every time you update your docs, you use the
 extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
 auto-reload the HTML pages in the browser. Learn more
 [here](https://pypi.org/project/sphinx-autobuild/).
 
 Finally, commit and push your documentation src files to your remote repository. To ensure you
-don't accidentally commit any generated `.html` files, add the `_build` directory to a
-`~/.gitignore` file that you can create at the root of your repository, so they are ignored by
-`git`:
+don't accidentally commit any generated `html` files, add the `_build/` directory to a `.gitignore`
+file at the root of your repository, so that these files are ignored by `git`:
 
 ```sh
-_build
+_build/
 ```
 
 Now from the project root commit and push your documentation src files:
