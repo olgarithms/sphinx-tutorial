@@ -86,7 +86,7 @@ Let's test this out. Make a small change in `index.rst`. Commit it to `main` and
 ```rst
 # Welcome to The Office's documentation!
 
-Explore The Office documentation _by browsing the API documentation_.
+Explore The Office documentation **by browsing the different modules**.
 ```
 
 ```sh

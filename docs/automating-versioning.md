@@ -91,7 +91,7 @@ version of your docs.
 ## Incrementing Documentation Versions Easily
 
 To make incrementing the documentation version easier, we'll modify our workflow so that if the
-pull request uses the label `docs-version++`, it will create a new Github tag that's an increment
+pull request uses the label `docs-version++`, it will create a new git tag that's an increment
 on the previous tag. Otherwise, it will simply rebuild and deploy documentation updates to `main`.
 
 Let's create a simple shell script `create_tag.sh`, that will increment the git tag:
@@ -145,7 +145,7 @@ running, and the subsequent `pages-build-deployment` has finished running, refre
 You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
 
 We are done! We recommend you take a look at the [Further reading](#further-reading) section if you
-want to learn more about documentation.
+want to learn more about documentation generation.
 
 <br />
 [Previous: Versioning](./versioning.md){: .btn .float-left .mb-lg-4}
