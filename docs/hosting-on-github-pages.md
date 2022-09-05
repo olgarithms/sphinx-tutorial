@@ -8,6 +8,8 @@ nav_order: 7
 
 ---
 
+## Creating a `gh-pages` branch
+
 To host your docs on GitHub Pages, we need to start by enabling `GitHub Pages` for our repo. To do
 that, we need to create a branch that only contains documentation files. We'll name this branch
 `gh-pages`, as `Github` looks for this name and automatically starts hosting your documentation on
@@ -58,16 +60,19 @@ git commit -m 'initial commit of gh-pages branch'
 git push origin gh-pages
 ```
 
-{: .tip }
-You can use the command `make clean` inside your `docs` directory to remove everything under `_build`.
+### Cleaning the HTML files
 
-This also means that every time you `make clean`, you need to recreate the git worktree: `git worktree add -f html gh-pages`. To make this easier, add the following to `docs/Makefile`:
+You saw how above we cleaned everything under the `_build/html` directory. Alternatively, you can use the command `make clean` inside your `docs` directory to remove everything under `_build`.
+
+This also means that every time you `make clean`, you need to recreate the `git worktree`: `git worktree add -f html gh-pages`. To make this easier, add the following to `docs/Makefile`:
 
 ```make
 clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O);
 	cd _build; git worktree add -f html gh-pages
 ```
+
+## Viewing your hosted page
 
 Before we can preview this on `Github pages`, we need to tell Github not to use `Jekyll`: a static
 site generator tool that GitHub Pages uses by default. We can turn off its usage by committing a
@@ -82,7 +87,7 @@ git push origin gh-pages
 ```
 
 {: .tip }
-Alternatively, we can add the extension `sphinx.ext.githubpages` to our `conf.py`. It automatically adds the `.nojekyll` file for us on `make html`.
+Instead of committing a `.nojekyll` file, you can add the extension `sphinx.ext.githubpages` to our `conf.py`. It automatically adds the `.nojekyll` file on `make html`.
 
 ```py
 extensions = [
@@ -95,6 +100,8 @@ It's time to preview our hosted site. Navigate to your repo's `Settings` tab, an
 scroll down to the `GitHub Pages` section. You should see that Github recognized the presence of
 the new `gh-pages` branch and gives you a link where you can view your hosted documentation. Click
 on the link, you should be able to see the title `hello world` that we put in our `index.html`.
+
+## Hosting the documentation
 
 Next, we want to add The Office documentation to `gh-pages`. Let's generate our documentation again
 and check in our output files.
