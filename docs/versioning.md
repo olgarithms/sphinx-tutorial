@@ -16,8 +16,8 @@ using.
 Let's see how you can achieve that.
 
 We will be using
-[`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/quickstart.html), a
-popular extension that makes versioning your documentation easy.
+[`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/), a
+popular extension that makes versioning your documentation easy. This will replace the traditional `sphinx-build` command (which was executed under the hood when we ran `make html`!)
 
 In your virtual environment, install:
 
@@ -37,7 +37,7 @@ extensions = [
 
 Next, to render a list of links to past versions on your Documentation website, you'll need to add
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
-git tags and versions on the website sidebar:
+versions (git tags and branches) on the website sidebar:
 
 ```html
 {% if versions %}
@@ -50,7 +50,7 @@ git tags and versions on the website sidebar:
 {% endif %}
 ```
 
-Next, we need to point `Sphinx` to this file. In `conf.py`, add the following:
+Next, we need to point `Sphinx` to use this file. In `conf.py`, add the following:
 
 ```py
 templates_path = [
