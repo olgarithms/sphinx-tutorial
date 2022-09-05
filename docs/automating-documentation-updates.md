@@ -165,8 +165,9 @@ jobs:
 Commit and push your file to `main`. To test out our new command, make a quick change to
 `docs/index.rst`:
 
-```markdown
-# Welcome to The Office's documentation!
+```rst
+Welcome to The Office's documentation!
+======================================
 
 Explore The Office documentation.
 ```
@@ -194,7 +195,7 @@ going to trigger a new deployment of your documentation!
 {: .hint }
 🙌 You have now reached the
 [`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part
-of the tutorial. If not, check-out that branch and continue from there.
+of the tutorial. If not, check-out that branch and [8-gh-pages](https://github.com/aelsayed95/the-office/tree/8-gh-pages) branch for `gh-pages` and continue from there.
 
 <br />
 [Previous: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .float-left .mb-lg-4}

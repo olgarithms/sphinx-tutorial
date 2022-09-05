@@ -9,8 +9,8 @@ nav_order: 9
 ---
 
 As your project evolves and new features are added, you may be supporting different versions of
-your code. In those cases it is a good idea to keep an archive of different versions of your
-documentation as well, so your users can refer to it depending on the software version they are
+your code. For this reason, it is a good idea to keep an archive of different versions of your
+documentation, so your users can refer to it depending on the software version they are
 using.
 
 Let's see how you can achieve that.
