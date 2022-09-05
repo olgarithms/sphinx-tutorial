@@ -6,8 +6,10 @@ nav_order: 8
 
 # Automating documentation updates
 
-`Github Actions` allow `Github` users to automatically execute workflows. We can use this to
-automate building and deploying new versions of our documentation.
+So far, we'd been manually building our documentation files locally, then pushing the output `html`
+to `Github Pages` to host it. In this section, we will learn how to automate this process using
+`Github Actions`. `Github Actions` allow `Github` users to automatically execute workflows. We can
+use this to automate building and deploying new versions of our documentation.
 
 ## Creating a simple Github Action
 
@@ -29,17 +31,23 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: echo
+      - name: say hello
         run: echo "Hello, World!"
 ```
 
 This file defines a workflow named `Hello World`, which, when triggered, runs a single job `hello`
-The job has a single step `echo` that prints `Hello, Wolrd!` to stdout. To test it out, commit and
-push this file to `main`.
+The job has a single step named `say hello` that prints `Hello, Wolrd!` to stdout. To test it out,
+commit and push this file to `main`.
+
+```sh
+git add ./.github/workflows/hello.yaml
+git commit -m "hello world workflow"
+git push origin main
+```
 
 Now, navigate to the `Actions` tab on your repo's Github URL. You should see that a `workflow` with
 the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click on the
-job `hello`. Now expand the step `echo` to see its details. You should see the message
+job `hello`. Now expand the step `say hello` to see its details. You should see the message
 `Hello, World!` printed to stdout.
 
 ## Deploying your docs automatically
@@ -96,8 +104,8 @@ branch:
     git config user.name "your name"
 ```
 
-Finally, we build our Sphinx documentation using `sphinx-build` and push the output `_build` folder
-to `gh-pages`:
+Finally, we build our Sphinx documentation using `sphinx-build` (run by `make html`) and push the
+output `_build/html` folder to `gh-pages`:
 
 ```yaml
 - name: Sphinx build
@@ -163,7 +171,7 @@ Commit and push your file to `main`. To test out our new command, make a quick c
 Explore The Office documentation.
 ```
 
-Commit your change to a new branch and create a PR:
+Commit your change to a new branch `update_docs` and create a PR:
 
 ```sh
 git checkout -b update_docs
@@ -180,8 +188,13 @@ off. This workflow is triggered by `Github` when changes are pushed to `gh-pages
 When this workflow is completed, refresh your Github Pages URL. You should see the new change on
 your site.
 
-To sum up, from now on every newly merged Pull Request into your project is going to trigger a new
-deployment of your documentation!
+With this new workflow in place, from now on every newly merged Pull Request into your project is
+going to trigger a new deployment of your documentation!
+
+{: .hint }
+🙌 You have now reached the
+[`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part
+of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
 [Previous: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .float-left .mb-lg-4}
