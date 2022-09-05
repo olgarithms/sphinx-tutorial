@@ -15,9 +15,11 @@ using.
 
 Let's see how you can achieve that.
 
+## Using `sphinx-multiversion`
+
 We will be using
-[`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/quickstart.html), a
-popular extension that makes versioning your documentation easy.
+[`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/), a
+popular extension that makes versioning your documentation easy. This will replace the traditional `sphinx-build` command (which was executed under the hood when we ran `make html`!)
 
 In your virtual environment, install:
 
@@ -37,7 +39,7 @@ extensions = [
 
 Next, to render a list of links to past versions on your Documentation website, you'll need to add
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
-git tags and versions on the website sidebar:
+versions (git tags and branches) on the website sidebar:
 
 ```html
 {% if versions %}
@@ -50,7 +52,7 @@ git tags and versions on the website sidebar:
 {% endif %}
 ```
 
-Next, we need to point `Sphinx` to this file. In `conf.py`, add the following:
+Next, we need to point `Sphinx` to use this file. In `conf.py`, add the following:
 
 ```py
 templates_path = [
@@ -77,9 +79,11 @@ branch and tag you have in your repo. For example, there's a `main` folder and a
 folder in which their corresponding output `HTML` files live. As you create more branches and tags,
 more output `HTML` folders will be created for them.
 
+### Generating different versions for your docs
+
 Let's test this out. Make a small change in `index.rst`. Commit it to `main` and tag it:
 
-```markdown
+```rst
 # Welcome to The Office's documentation!
 
 Explore The Office documentation _by browsing the API documentation_.
@@ -114,14 +118,19 @@ Finally, let's push the latest contents of the `html/` folder to `gh-pages`.
 
 ```sh
 cd ./docs/_build/html/
+git branch # ensure you are on the gh-pages branch
 git add .
 git commit -m "versioning support"
 git push origin gh-pages
 ```
 
 Refresh your Github Pages URL. You'll notice that you'll get a `404 File not found` error. Why is
-that? gh-pages looks for an `index.html` file at the root level of the `gh-pages` branch. Since
-we'd moved we're storing `index.html` files under their respective branch's folders now, Github
+that?
+
+### Choosing a default version
+
+`Github Pages` looks for an `index.html` file at the root level of the `gh-pages` branch. Since
+we have been using `sphinx-multiversion` we're storing `index.html` files under their respective git branch or tag folders now and Github
 could not find a page to load.
 
 Modify your Github Pages URL to append a branch or a tag name name:
