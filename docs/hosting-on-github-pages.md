@@ -10,12 +10,11 @@ nav_order: 7
 
 ## Creating a `gh-pages` branch
 
-To host your docs on GitHub Pages, we need to start by enabling `GitHub Pages` for our repo. To do
-that, we need to create a branch that only contains documentation files. We'll name this branch
-`gh-pages`, as `Github` looks for this name and automatically starts hosting your documentation on
-`pages`.
+To host your docs on GitHub Pages, we need to enable `GitHub Pages` for our repo. To do that, we
+need to create a branch that only contains `html` files. We'll name this branch `gh-pages`, as
+`Github` looks for this name and automatically starts hosting your documentation on `pages`.
 
-We'll start by creating `gh-pages` as an empty orphan branch:
+Let's create `gh-pages` as an empty orphan branch:
 
 ```sh
 cd ./docs/_build/html
@@ -25,8 +24,12 @@ git commit --allow-empty -m "Init"
 git push origin gh-pages
 ```
 
-In your remote repository, you should now see a new empty `gh-pages` branch. Next, we locally mount
-the branch as a subdirectory using `git worktree`.
+In your remote repository, you should now see a new empty `gh-pages` branch. You will notice that
+under `Settings > Pages`, Github has enabled `Pages` and started hosting your site at a URL like
+`https://<username>.github.io/the-office/`. Of course, if you visit the URL, you get a 404 Error
+because there are no files yet on the `gh-pages` branch.
+
+Next, we locally mount the branch as a subdirectory using `git worktree`.
 
 ```sh
 cd ./docs/_build/
@@ -50,21 +53,30 @@ git branch
   main
 ```
 
-Our branch `gh-pages` is now completely empty. But `Github` will be looking for a top-level
+Our branch `gh-pages` is completely empty. But `Github` will be looking for a top-level
 `index.html`. So from the `./docs/_build/html` directory let's create a simple one:
 
 ```sh
-echo "<h1>hello world</h1>" > index.html
+echo "<h1>Hello, World!</h1>" > index.html
 git add index.html
 git commit -m 'initial commit of gh-pages branch'
 git push origin gh-pages
 ```
 
+Go to the `Actions` tab of your repo's Github URL. You should see that a `pages-build-deployment`
+workflow has kicked off. This is a workflow that rebuilds your `Github Pages` site and is triggered
+by our push to `gh-pages`. Once it's completed, refresh the `Pages` URL where your site is hosted.
+You should see the heading `Hello, World!`.
+
 ### Cleaning the HTML files
 
-You saw how above we cleaned everything under the `_build/html` directory. Alternatively, you can use the command `make clean` inside your `docs` directory to remove everything under `_build`.
+In the previous section, we mounted the `gh-pages` branch at `./docs/_build/html`. But you may
+occasionally want to clean your documentation build output. Running `make clean` inside your `docs`
+directory will remove everything under `_build`.
 
-This also means that every time you `make clean`, you need to recreate the `git worktree`: `git worktree add -f html gh-pages`. To make this easier, add the following to `docs/Makefile`:
+This means that, if you want to be able to push more updates to `gh-pages`, you will need to
+recreate the git worktree every time you `make clean`: `git worktree add -f html gh-pages`. To make
+this easier, add the following to `docs/Makefile` above the CA:
 
 ```make
 clean:
@@ -72,11 +84,15 @@ clean:
 	cd _build; git worktree add -f html gh-pages
 ```
 
-## Viewing your hosted page
+With these changes, `make clean` will clean the `_build/` directory, and populate the `html`
+directory with the current contents on the `gh-pages` branch. So it will effectively clean your
+local documentation changes.
 
-Before we can preview this on `Github pages`, we need to tell Github not to use `Jekyll`: a static
-site generator tool that GitHub Pages uses by default. We can turn off its usage by committing a
-`.nojekyll` file our `_build/html` folder.
+## Disabling Jekyll
+
+Before we can deploy our API docs on `Github pages`, we need to tell Github not to use `Jekyll`: a
+static site generator tool that GitHub Pages uses by default. We can turn off its usage by
+committing a `.nojekyll` file our `_build/html` folder.
 
 ```sh
 cd _build/html
@@ -87,7 +103,9 @@ git push origin gh-pages
 ```
 
 {: .tip }
-Instead of committing a `.nojekyll` file, you can add the extension `sphinx.ext.githubpages` to our `conf.py`. It automatically adds the `.nojekyll` file on `make html`.
+Instead of committing a `.nojekyll` file, you can add the extension
+`sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
+`make html`.
 
 ```py
 extensions = [
@@ -96,11 +114,6 @@ extensions = [
 ]
 ```
 
-It's time to preview our hosted site. Navigate to your repo's `Settings` tab, and on the left sidebar
-scroll down to the `GitHub Pages` section. You should see that Github recognized the presence of
-the new `gh-pages` branch and gives you a link where you can view your hosted documentation. Click
-on the link, you should be able to see the title `hello world` that we put in our `index.html`.
-
 ## Hosting the documentation
 
 Next, we want to add The Office documentation to `gh-pages`. Let's generate our documentation again
@@ -108,7 +121,7 @@ and check in our output files.
 
 ```sh
 cd docs/
-make clean # cleans and create the gh-pages worktree
+make clean # clean and re-create the gh-pages worktree
 make html
 cd _build/html
 git branch # verify you're in gh-pages branch
@@ -117,12 +130,18 @@ git commit -m "First documentation commit"
 git push origin gh-pages
 ```
 
-Go back to your Github Pages documentation URL and hit refresh.
+Go back to your repo's `Action` tab. Once `pages-build-deployment` workflow has completed, hit
+refresh on your Pages URL.
 
 🎉 **Congratulations!** 🎉
 
-Now your documentation is now live on Github Pages!
-You should be able to navigate around the website and share the URL with the world.
+Now your documentation is now live on Github Pages! You should be able to navigate around the
+website and share the URL with the world.
+
+{: .hint }
+🙌 You have now reached the
+[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages)
+part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
 [Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left .mb-lg-4}
