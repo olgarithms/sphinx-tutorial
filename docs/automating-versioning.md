@@ -91,14 +91,14 @@ version of your docs.
 ## Incrementing Documentation Versions Easily
 
 To make incrementing the documentation version easier, we'll modify our workflow so that if the
-pull request uses the label `docs-version++`, it will create a new git tag that's an increment
-on the previous tag. Otherwise, it will simply rebuild and deploy documentation updates to `main`.
+pull request uses the label `docs-version++`, it will create a new git tag that's an increment on
+the previous tag. Otherwise, it will simply rebuild and deploy documentation updates to `main`.
 
 Let's create a simple shell script `create_tag.sh`, that will increment the git tag:
 
 ```sh
 # get current tag
-CURTAG=`git describe --abbrev=0 --tags`;
+CURTAG=`git tag`;
 CURTAG="${CURTAG/v/}"
 echo "Current version is ${CURTAG}"
 
@@ -114,6 +114,12 @@ NEWTAG="v$MAJ.$MIN.${PATCH}"
 echo "Next version is $NEWTAG"
 git tag -a $NEWTAG -m $NEWTAG
 git push origin $NEWTAG
+```
+
+Next, add execute permissions to the shell file:
+
+```sh
+chmod ugo+x
 ```
 
 Next, in `.github/workflow/docs.yaml` and add a new step, following the `Git config` step that will
@@ -143,6 +149,13 @@ that `Deploy Documentation` Action kicked off. Verify that the step `Create new 
 successfully as part of your workflow and has created the tag `v0.0.2`. When your workflow is done
 running, and the subsequent `pages-build-deployment` has finished running, refresh your Pages URL.
 You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
+
+{: .hint }
+🙌 You have now reached the
+[`10-automating-versioning`](https://github.com/aelsayed95/the-office/tree/10-automating-versioning)
+part of the tutorial. If not, check-out that branch and
+[10-gh-pages](https://github.com/aelsayed95/the-office/tree/10-gh-pages) branch for `gh-pages` and
+continue from there.
 
 We are done! We recommend you take a look at the [Further reading](#further-reading) section if you
 want to learn more about documentation generation.
