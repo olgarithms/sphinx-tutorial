@@ -40,6 +40,7 @@ Next, to render a list of links to past versions on your Documentation website, 
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
 versions (git tags and branches) on the website sidebar:
 
+```html
 {% highlight html %}
 {% if versions %}
 <h3>{{ _('Branches') }}</h3>
@@ -56,6 +57,7 @@ versions (git tags and branches) on the website sidebar:
 </ul>
 {% endif %}
 {% endhighlight %}
+```
 
 Next, we need to point `Sphinx` to use this file. In `conf.py`, add the following:
 
