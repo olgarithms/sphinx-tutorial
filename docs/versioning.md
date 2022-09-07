@@ -183,7 +183,7 @@ git push origin gh-pages
 🙌 You have now reached the
 [`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part of the tutorial.
 If not, check-out that branch and
-[9-gh-pages](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and
+[`9-gh-pages`](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and
 continue from there.
 
 <br />

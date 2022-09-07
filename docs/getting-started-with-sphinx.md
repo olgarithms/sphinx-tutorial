@@ -55,7 +55,7 @@ build directories to use and instructs `Sphinx` to build `html` pages out of you
 Now you preview your docs by manually opening the generated `_build/html/index.html` in your
 preferred browser.
 
-{: .tip }
+
 Alternatively, we can run our own python server in the `_build/html` directory, so that
 we can also move around the pages. Run the command
 
