@@ -18,7 +18,7 @@ free time, so let's focus now on what exists in our `index.rst` file.
 
 ### Heading
 
-```rst
+```
 Welcome to office's documentation!
 ==================================
 ```
@@ -29,7 +29,7 @@ text. Using the same character will create headings of the same level.
 
 ### Table of contents tree
 
-```rst
+```
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -48,7 +48,7 @@ some more information and a picture of the workspace in the office.
 
 Create a new section **above** the "Indices and tables" one:
 
-```rst
+```
 Workspace
 ---------
 ```
@@ -58,7 +58,7 @@ Workspace
 And now let's add a picture (we used one we found online on [unsplash](https://unsplash.com)). Save
 your image in the `docs/_static` directory and type under your header:
 
-```rst
+```
 .. image:: _static/workspace.jpg
 ```
 

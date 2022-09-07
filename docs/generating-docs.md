@@ -25,10 +25,14 @@ sphinx-apidoc --output-dir docs .
 ```
 
 You can see that Sphinx created an `rst` file per module, as well as a `modules.rst` file, which
-acts as a module directory. We are going to edit `index.rst` to add a reference to `modules`, so
-that it appears in the [table of contents](restructuredtext-basics.md#table-of-contents-tree):
+acts as a module directory. Note that these `.rst` files content is generic, so you do not need to
+re-run `sphinx-apidoc` if you modify their corresponding `.py` files! You'd only ever need to
+re-run `sphinx-apidoc` if you add more modules to your project.
 
-```rst
+Next, we are going to edit `index.rst` to add a reference to `modules`, so that it appears in the
+[table of contents](restructuredtext-basics.md#table-of-contents-tree):
+
+```
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -37,7 +41,7 @@ that it appears in the [table of contents](restructuredtext-basics.md#table-of-c
 ```
 
 We also need to point Sphinx to the source python module's path. In `conf.py`, add the following
-code snippet to add the parent dir to the path:
+code snippet to add the parent directory (which is the root of the repo) to the path:
 
 ```py
 import os

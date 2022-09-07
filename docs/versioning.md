@@ -40,9 +40,8 @@ Next, to render a list of links to past versions on your Documentation website, 
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
 versions (git tags and branches) on the website sidebar:
 
-```html
-{% highlight html %}
-{% if versions %}
+{% highlight html %} {% if versions %}
+
 <h3>{{ _('Branches') }}</h3>
 <ul>
   {%- for item in versions.branches %}
@@ -57,7 +56,6 @@ versions (git tags and branches) on the website sidebar:
 </ul>
 {% endif %}
 {% endhighlight %}
-```
 
 Next, we need to point `Sphinx` to use this file. In `conf.py`, add the following:
 
@@ -90,7 +88,7 @@ more output `HTML` folders will be created for them.
 
 Let's test this out. Make a small change in `index.rst`.
 
-```rst
+```
 Welcome to The Office's documentation!
 ======================================
 
@@ -114,7 +112,7 @@ Now re-run `sphinx-multiversion`:
 sphinx-multiversion docs ./docs/_build/html
 ```
 
-You should now see that a new HTML folder was generated: `./docs_build/html/v0.0.1`. Preview all
+You should now see that a new HTML folder was generated: `./docs/_build/html/v0.0.1`. Preview all
 three `index.html` locally: `./docs/_build/html/main/index.html`,
 `./docs/_build/html/v0.0.1/index.html`, and `./docs/_build/html/update_docs/index.html`. As you'd
 expect, the modification will appear in the `main` and the tag `v0.0.1`'s `index.html`, but not in
@@ -183,8 +181,10 @@ git push origin gh-pages
 
 {: .hint }
 🙌 You have now reached the
-[`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part
-of the tutorial. If not, check-out that branch and [9-gh-pages](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and continue from there.
+[`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part of the tutorial.
+If not, check-out that branch and
+[9-gh-pages](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and
+continue from there.
 
 <br />
 [Previous: Automating documentation updates](./automating-documentation-updates.md){: .btn .float-left .mb-lg-4}

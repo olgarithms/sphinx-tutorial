@@ -57,7 +57,7 @@ Our branch `gh-pages` is completely empty. But `Github` will be looking for a to
 `index.html`. So from the `./docs/_build/html` directory let's create a simple one:
 
 ```sh
-echo "<h1>Hello, World!</h1>" > index.html
+echo '<h1>Hello, World!</h1>' > index.html
 git add index.html
 git commit -m 'initial commit of gh-pages branch'
 git push origin gh-pages
@@ -76,7 +76,7 @@ directory will remove everything under `_build`.
 
 This means that, if you want to be able to push more updates to `gh-pages`, you will need to
 recreate the git worktree every time you `make clean`: `git worktree add -f html gh-pages`. To make
-this easier, add the following to `docs/Makefile` above the CA:
+this easier, add the following to `docs/Makefile`:
 
 ```make
 clean:
@@ -102,8 +102,7 @@ git commit -m "Don't use Jekyll"
 git push origin gh-pages
 ```
 
-{: .tip }
-Instead of committing a `.nojekyll` file, you can add the extension
+{: .tip } Instead of committing a `.nojekyll` file, you can add the extension
 `sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
 `make html`.
 
@@ -140,8 +139,10 @@ website and share the URL with the world.
 
 {: .hint }
 🙌 You have now reached the
-[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages)
-part of the tutorial. If not, check-out that branch and [7-gh-pages](https://github.com/aelsayed95/the-office/tree/7-gh-pages) branch for `gh-pages` and continue from there.
+[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages) part
+of the tutorial. If not, check-out that branch and
+[7-gh-pages](https://github.com/aelsayed95/the-office/tree/7-gh-pages) branch for `gh-pages` and
+continue from there.
 
 <br />
 [Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left .mb-lg-4}

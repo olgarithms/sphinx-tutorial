@@ -56,10 +56,8 @@ Now you preview your docs by manually opening the generated `_build/html/index.h
 preferred browser.
 
 {: .tip }
-In VS Code, you can get the `HTML Preview` extension to preview the output `html` files.
-
-Alternatively, we can run our own python server in the `_build/html` directory, so that we can also
-move around the pages. Run the command
+Alternatively, we can run our own python server in the `_build/html` directory, so that
+we can also move around the pages. Run the command
 
 ```py
 python3.10 -m http.server
@@ -72,7 +70,9 @@ As you go on with the workshop, you can leave your server running and refreshing
 show you the latest updates.
 
 {: .hint }
-🙌 You have now reached the [`2-getting-started-with-sphinx`](https://github.com/aelsayed95/the-office/tree/2-getting-started-with-sphinx) part of the tutorial. If not, check-out that branch and continue from there.
+🙌 You have now reached the
+[`2-getting-started-with-sphinx`](https://github.com/aelsayed95/the-office/tree/2-getting-started-with-sphinx)
+part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
 [Previous: Environment setup](./environment-setup.md){: .btn .float-left .mb-lg-4}

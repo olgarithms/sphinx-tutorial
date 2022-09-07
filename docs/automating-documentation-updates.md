@@ -55,7 +55,8 @@ job `hello`. Now expand the step `say hello` to see its details. You should see 
 ## Deploying your docs automatically
 
 You now know how to build a simple workflow. Let's now write a workflow that would build and deploy
-our documentation when a PR is merged. Create a new file `.github/workflows/docs.yaml`:
+our documentation when a PR is merged. Create a new file `.github/workflows/docs.yaml` (find the
+full file [here](automating-documentation-updates?plain=1#L129)):
 
 ```yaml
 name: Deploy Documentation
@@ -167,14 +168,14 @@ jobs:
 Commit and push your file to `main`. To test out our new command, make a quick change to
 `docs/index.rst`:
 
-```rst
+```
 Welcome to The Office's documentation!
 ======================================
 
 Explore The Office documentation.
 ```
 
-Commit your change to a new branch `update_docs` and create a PR:
+Commit your change to a new branch `update_docs`:
 
 ```sh
 git checkout -b update_docs
@@ -182,6 +183,10 @@ git add docs/index.rst
 git commit -m "update docs"
 git push origin update_docs
 ```
+
+Now, create a PR to merge `update_docs` into `main`. As this is a forked repo, make sure the base
+is your own fork's `main` branch as opposed to the default PR behaviour which chooses the original
+fork's `main` branch as the base of your PR.
 
 From your repo's Github URL, create and merge your PR. Go to the `Actions` tab, you should see that
 the workflow `Deploy Documentation` is running. Click on it to observe the details of each step.
@@ -197,7 +202,9 @@ going to trigger a new deployment of your documentation!
 {: .hint }
 🙌 You have now reached the
 [`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part
-of the tutorial. If not, check-out that branch and [8-gh-pages](https://github.com/aelsayed95/the-office/tree/8-gh-pages) branch for `gh-pages` and continue from there.
+of the tutorial. If not, check-out that branch and
+[8-gh-pages](https://github.com/aelsayed95/the-office/tree/8-gh-pages) branch for `gh-pages` and
+continue from there.
 
 <br />
 [Previous: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .float-left .mb-lg-4}
