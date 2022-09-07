@@ -40,7 +40,7 @@ Next, to render a list of links to past versions on your Documentation website, 
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
 versions (git tags and branches) on the website sidebar:
 
-```html
+```
 {% if versions %}
 <h3>{{ _('Branches') }}</h3>
 <ul>
