@@ -35,8 +35,8 @@ this tutorial. Once the script has run, you should find the following in your `d
 - `index.rst`: the source file for your documentation's home page
 - `Makefile`/`make.bat`: contain convenient `make` targets for generating documentation
 - `_build/`: directory where your output documentation files will live
-- `_static:`: directory where all your static files, e.g. images, go to
-- `_templates`: directory where you can override `Sphinx` template files to customize the look of
+- `_static/:`: directory where all your static files, e.g. images, go to
+- `_templates/`: directory where you can override `Sphinx` template files to customize the look of
   your documentation
 
 Take a moment to look at the content of each of these files. We are now ready to build our

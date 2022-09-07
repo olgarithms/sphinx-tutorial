@@ -14,7 +14,7 @@ The prerequisites for this workshop are having `git` and `python` installed
 You can choose to work on your own environment using any IDE, although there will be some extra
 tips provided for a local workflow using [`Visual Studio Code`](https://code.visualstudio.com/).
 
-Our first step will be forking and cloning the
+Our first step will be **forking** and **cloning** the
 [example project](https://github.com/aelsayed95/the-office), so run
 
 ```sh
