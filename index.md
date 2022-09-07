@@ -20,7 +20,7 @@ nav_order: 0
 8. [Automating documentation updates](docs/automating-documentation-updates.md)
 9. [Versioning](docs/versioning.md)
 10. [Automating versioning](docs/automating-versioning.md)
-11. [Vocabulary](docs/vocabulary.md)
+11. [Glossary](docs/glossary.md)
 12. [Further reading](docs/further-reading.md)
 
 ---

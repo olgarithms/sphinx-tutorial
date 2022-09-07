@@ -163,5 +163,5 @@ want to learn more about documentation generation.
 
 <br />
 [Previous: Versioning](./versioning.md){: .btn .float-left .mb-lg-4}
-[Next: Vocabulary](./vocabulary.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Next: Glossary](./glossary.md){: .btn .btn-purple .float-right .mb-lg-4}
 <br />

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 11. Vocabulary
+title: 11. Glossary
 nav_order: 11
 ---
 
