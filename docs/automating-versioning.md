@@ -154,7 +154,7 @@ You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages s
 🙌 You have now reached the
 [`10-automating-versioning`](https://github.com/aelsayed95/the-office/tree/10-automating-versioning)
 part of the tutorial. If not, check-out that branch and
-[10-gh-pages](https://github.com/aelsayed95/the-office/tree/10-gh-pages) branch for `gh-pages` and
+[`10-gh-pages`](https://github.com/aelsayed95/the-office/tree/10-gh-pages) branch for `gh-pages` and
 continue from there.
 
 We are done! We recommend you take a look at the [Further reading](#further-reading) section if you

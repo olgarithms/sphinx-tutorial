@@ -184,7 +184,7 @@ git push origin gh-pages
 {: .hint }
 🙌 You have now reached the
 [`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part
-of the tutorial. If not, check-out that branch and [9-gh-pages](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and continue from there.
+of the tutorial. If not, check-out that branch and [`9-gh-pages`](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and continue from there.
 
 <br />
 [Previous: Automating documentation updates](./automating-documentation-updates.md){: .btn .float-left .mb-lg-4}
