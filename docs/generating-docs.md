@@ -89,6 +89,6 @@ git push origin main
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
-[Previous: Documenting your API](./documenting-your-api.md){: .btn .float-left .mb-lg-4}
-[Next: Selecting a theme](./selecting-a-theme.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: Documenting your API](./documenting-your-api.md){: .btn .float-left}
+[Next: Selecting a theme](./selecting-a-theme.md){: .btn .btn-purple .float-right}
 <br />

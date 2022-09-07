@@ -76,6 +76,6 @@ show you the latest updates.
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
-[Previous: Environment setup](./environment-setup.md){: .btn .float-left .mb-lg-4}
-[Next: reStructuredText basics](./restructuredtext-basics.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: Environment setup](./environment-setup.md){: .btn .float-left}
+[Next: reStructuredText basics](./restructuredtext-basics.md){: .btn .btn-purple .float-right}
 <br />

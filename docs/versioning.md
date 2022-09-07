@@ -190,6 +190,6 @@ If not, check-out that branch and
 continue from there.
 
 <br />
-[Previous: Automating documentation updates](./automating-documentation-updates.md){: .btn .float-left .mb-lg-4}
-[Next: Automating versioning](./automating-versioning.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: Automating documentation updates](./automating-documentation-updates.md){: .btn .float-left}
+[Next: Automating versioning](./automating-versioning.md){: .btn .btn-purple .float-right}
 <br />

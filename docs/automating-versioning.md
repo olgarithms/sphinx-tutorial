@@ -162,6 +162,6 @@ We are done! We recommend you take a look at the [Further reading](#further-read
 want to learn more about documentation generation.
 
 <br />
-[Previous: Versioning](./versioning.md){: .btn .float-left .mb-lg-4}
-[Next: Glossary](./glossary.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: Versioning](./versioning.md){: .btn .float-left}
+[Next: Glossary](./glossary.md){: .btn .btn-purple .float-right}
 <br />

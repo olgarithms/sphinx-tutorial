@@ -143,6 +143,6 @@ of the tutorial. If not, check-out that branch and
 continue from there.
 
 <br />
-[Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left .mb-lg-4}
-[Next: Automating documentation updates](./automating-documentation-updates.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left}
+[Next: Automating documentation updates](./automating-documentation-updates.md){: .btn .btn-purple .float-right}
 <br />

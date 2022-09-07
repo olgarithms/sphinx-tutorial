@@ -37,5 +37,5 @@ Moreover, all the steps of the tutorial have been applied in corresponding commi
 if anything doesn't quite work for you, you can refer to a previous/next step branch by using
 `git checkout` (or browse the branch on `github`) and continuing from there.
 
-[Next: Environment setup](docs/environment-setup.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Next: Environment setup](docs/environment-setup.md){: .btn .btn-purple .float-right}
 <br />

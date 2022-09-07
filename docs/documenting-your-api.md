@@ -49,6 +49,6 @@ Continue adding documentation for the rest of the methods and for the class itse
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
-[Previous: reStructuredText basics](./restructuredtext-basics.md){: .btn .float-left .mb-lg-4}
-[Next: Generating HTML docs from docstrings](./generating-docs.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: reStructuredText basics](./restructuredtext-basics.md){: .btn .float-left}
+[Next: Generating HTML docs from docstrings](./generating-docs.md){: .btn .btn-purple .float-right}
 <br />

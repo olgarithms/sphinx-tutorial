@@ -4,7 +4,7 @@ title: 11. Glossary
 nav_order: 11
 ---
 
-# Vocabulary
+# Glossary
 
 ---
 
@@ -31,6 +31,6 @@ nav_order: 11
    the default, global Python package mirror.
 
 <br />
-[Previous: Automating versioning](./automating-versioning.md){: .btn .float-left .mb-lg-4}
-[Next: Further reading](./further-reading.md){: .btn .btn-purple .float-right .mb-lg-4}
+[Previous: Automating versioning](./automating-versioning.md){: .btn .float-left}
+[Next: Further reading](./further-reading.md){: .btn .btn-purple .float-right}
 <br />
