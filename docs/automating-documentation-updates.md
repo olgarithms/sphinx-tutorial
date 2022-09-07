@@ -6,6 +6,8 @@ nav_order: 8
 
 # Automating documentation updates
 
+---
+
 So far, we'd been manually building our documentation files locally, then pushing the output `html`
 to `Github Pages` to host it. In this section, we will learn how to automate this process using
 `Github Actions`. `Github Actions` allow `Github` users to automatically execute workflows. We can
