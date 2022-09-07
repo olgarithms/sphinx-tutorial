@@ -14,7 +14,8 @@ To host your docs on GitHub Pages, we need to enable `GitHub Pages` for our repo
 need to create a branch that only contains `html` files. We'll name this branch `gh-pages`, as
 `Github` looks for this name and automatically starts hosting your documentation on `pages`.
 
-Let's create `gh-pages` as an empty orphan branch:
+Let's create `gh-pages` as an empty
+[orphan branch](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnew-branchgt):
 
 ```sh
 cd ./docs/_build/html
@@ -29,7 +30,8 @@ under `Settings > Pages`, Github has enabled `Pages` and started hosting your si
 `https://<username>.github.io/the-office/`. Of course, if you visit the URL, you get a 404 Error
 because there are no files yet on the `gh-pages` branch.
 
-Next, we locally mount the branch as a subdirectory using `git worktree`.
+Next, we locally mount the branch as a subdirectory using
+[`git worktree`](https://git-scm.com/docs/git-worktree).
 
 ```sh
 cd ./docs/_build/
@@ -63,7 +65,7 @@ git commit -m 'initial commit of gh-pages branch'
 git push origin gh-pages
 ```
 
-Go to the `Actions` tab of your repo's Github URL. You should see that a `pages-build-deployment`
+Go to the `Actions` tab of your repo's `Github` URL. You should see that a `pages-build-deployment`
 workflow has kicked off. This is a workflow that rebuilds your `Github Pages` site and is triggered
 by our push to `gh-pages`. Once it's completed, refresh the `Pages` URL where your site is hosted.
 You should see the heading `Hello, World!`.
@@ -75,8 +77,8 @@ occasionally want to clean your documentation build output. Running `make clean`
 directory will remove everything under `_build`.
 
 This means that, if you want to be able to push more updates to `gh-pages`, you will need to
-recreate the git worktree every time you `make clean`: `git worktree add -f html gh-pages`. To make
-this easier, add the following to `docs/Makefile`:
+recreate the `git worktree` every time you `make clean`: `git worktree add -f html gh-pages`. To
+make this easier, add the following to `docs/Makefile`:
 
 ```make
 clean:
