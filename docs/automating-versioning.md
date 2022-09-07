@@ -119,7 +119,7 @@ git push origin $NEWTAG
 Next, add execute permissions to the shell file:
 
 ```sh
-chmod ugo+x
+chmod ugo+x create_tag.sh
 ```
 
 Next, in `.github/workflow/docs.yaml` and add a new step, following the `Git config` step that will
