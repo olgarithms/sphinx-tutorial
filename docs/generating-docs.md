@@ -58,11 +58,13 @@ make html
 Preview `index.html` on your browser. You should be able to see links to each of the modules.
 Clicking on a module should render its API documentation.
 
+<!-- prettier-ignore-start -->
 {: .tip }
 Instead of manually running `make html` every time you update your docs, you can use the
 extension `sphinx.autobuild`. This will automatically rebuild your documentation on file save and
 auto-reload the HTML pages in the browser. Learn more
 [here](https://pypi.org/project/sphinx-autobuild/).
+<!-- prettier-ignore-end -->
 
 Finally, commit and push your documentation src files to your remote repository. To ensure you
 don't accidentally commit any generated `html` files, add the `_build/` directory to a `.gitignore`
@@ -80,6 +82,7 @@ git commit -m "Add documentation"
 git push origin main
 ```
 
+<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`5-generating-documention`](https://github.com/aelsayed95/the-office/tree/5-generating-documention)

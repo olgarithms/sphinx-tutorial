@@ -33,13 +33,16 @@ def get_employee_sales(self, employee: Employee) -> int:
     """
 ```
 
+<!-- prettier-ignore-start -->
 {: .tip }
 In VS Code, you can install the extension `autoDocstring` which will generate python
 docstring prompts, so you only need to fill them in. `PyCharm` supports this as well.
 
 Continue adding documentation for the rest of the methods and for the class itself. Repeat for
 `employee.py`.
+<!-- prettier-ignore-end -->
 
+<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`4-documenting-your-api`](https://github.com/aelsayed95/the-office/tree/4-documenting-your-api)

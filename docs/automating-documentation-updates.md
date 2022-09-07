@@ -199,6 +199,7 @@ your site.
 With this new workflow in place, from now on every newly merged Pull Request into your project is
 going to trigger a new deployment of your documentation!
 
+<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part

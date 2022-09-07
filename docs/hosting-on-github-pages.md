@@ -40,8 +40,8 @@ rm -rf html # make sure you don't have an existing target directory
 git worktree add html gh-pages
 ```
 
-To check that you set up branches correctly, you should see `git branch` shows `gh-pages` under the
-`html` subdirectory, but see the `main` branch as usual outside of `html`:
+To check that you set up branches correctly, you should see that `git branch` shows `gh-pages`
+under the `html` subdirectory, but see the `main` branch as usual outside of `html`:
 
 ```sh
 # from the project root
@@ -142,10 +142,13 @@ refresh on your Pages URL.
 Now your documentation is now live on Github Pages! You should be able to navigate around the
 website and share the URL with the world.
 
+<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
-[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages)
-part of the tutorial. If not, check-out that branch and [`7-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-gh-pages) branch for `gh-pages` and continue from there.
+[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages) part
+of the tutorial. If not, check-out that branch and
+[`7-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-gh-pages) branch for `gh-pages` and
+continue from there.
 
 <br />
 [Previous: Selecting a theme](./selecting-a-theme.md){: .btn .float-left .mb-lg-4}

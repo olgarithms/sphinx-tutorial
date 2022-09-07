@@ -62,13 +62,12 @@ git add docs/conf.py
 git commit -m "Use furo theme!"
 git push origin main
 ```
-
+<!-- prettier-ignore -->
 
 {: .hint }
 🙌 You have now reached the
 [`6-selecting-a-theme`](https://github.com/aelsayed95/the-office/tree/6-selecting-a-theme)
 part of the tutorial. If not, check-out that branch and continue from there.
-
 
 <br />
 [Previous: Generating HTML docs from docstrings](./generating-docs.md){: .btn .float-left .mb-lg-4}
