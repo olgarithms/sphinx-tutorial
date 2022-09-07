@@ -104,9 +104,12 @@ git commit -m "Don't use Jekyll"
 git push origin gh-pages
 ```
 
-{: .tip } Instead of committing a `.nojekyll` file, you can add the extension
+<!-- prettier-ignore-start -->
+{: .tip }
+Instead of committing a `.nojekyll` file, you can add the extension
 `sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
 `make html`.
+<!-- prettier-ignore-end -->
 
 ```py
 extensions = [
