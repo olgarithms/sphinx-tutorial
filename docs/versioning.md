@@ -40,7 +40,7 @@ Next, to render a list of links to past versions on your Documentation website, 
 an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
 versions (git tags and branches) on the website sidebar:
 
-```
+{% highlight html %}
 {% if versions %}
 <h3>{{ _('Branches') }}</h3>
 <ul>
@@ -55,7 +55,7 @@ versions (git tags and branches) on the website sidebar:
   {%- endfor %}
 </ul>
 {% endif %}
-```
+{% endhighlight %}
 
 Next, we need to point `Sphinx` to use this file. In `conf.py`, add the following:
 
@@ -86,7 +86,7 @@ more output `HTML` folders will be created for them.
 
 ### Generating different versions for your docs
 
-Let's test this out. Make a small change in `index.rst`. Commit it to `main` and tag it:
+Let's test this out. Make a small change in `index.rst`.
 
 ```rst
 Welcome to The Office's documentation!
@@ -94,6 +94,8 @@ Welcome to The Office's documentation!
 
 Explore The Office documentation by browsing the different modules.
 ```
+
+Commit it to `main` and tag it:
 
 ```sh
 git checkout main
