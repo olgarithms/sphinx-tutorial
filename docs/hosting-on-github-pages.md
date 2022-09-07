@@ -93,16 +93,8 @@ local documentation changes.
 ## Disabling Jekyll
 
 Before we can deploy our API docs on `Github pages`, we need to tell Github not to use `Jekyll`: a
-static site generator tool that GitHub Pages uses by default. We can turn off its usage by
-committing a `.nojekyll` file our `_build/html` folder.
-
-```sh
-cd _build/html
-touch .nojekyll
-git add .nojekyll
-git commit -m "Don't use Jekyll"
-git push origin gh-pages
-```
+static site generator tool that GitHub Pages uses by default. We could turn off its usage by
+committing an empty `.nojekyll` file our `_build/html` folder.
 
 <!-- prettier-ignore-start -->
 {: .tip }
