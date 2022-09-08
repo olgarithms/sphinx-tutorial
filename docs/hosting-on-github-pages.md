@@ -45,14 +45,15 @@ under the `html` subdirectory, but see the `main` branch as usual outside of `ht
 
 ```sh
 # from the project root
-git branch
-  gh-pages
-* main
+$ git branch
+    gh-pages
+  * main
 
-cd ./docs/_build/html
-git branch
-* gh-pages
-  main
+$ cd ./docs/_build/html
+
+$ git branch
+  * gh-pages
+    main
 ```
 
 Our branch `gh-pages` is completely empty. But `Github` will be looking for a top-level
