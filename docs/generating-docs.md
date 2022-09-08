@@ -8,12 +8,19 @@ nav_order: 5
 
 ---
 
-To build this documentation, we first need to add the `autodoc` extension in our Sphinx setup. Open
-`conf.py`, and modify the extensions list:
+To build this documentation, we first need to add some extensions in our Sphinx setup.
+
+- [`autodoc`](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) pulls
+  documentation from docstrings
+- [`napoleon`](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html) enables Sphinx
+  to parse both NumPy and Google style docstrings
+
+Open `conf.py`, and modify the extensions list:
 
 ```py
 extensions = [
-    "sphinx.ext.autodoc"
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon"
 ]
 ```
 

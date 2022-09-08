@@ -32,7 +32,8 @@ and add the extension to `conf.py`:
 extensions = [
     "sphinx.ext.autodoc",
     "sphinx.ext.githubpages",
-    "sphinx_multiversion"
+    "sphinx.ext.napoleon",
+    "sphinx_multiversion",
 ]
 ```
 

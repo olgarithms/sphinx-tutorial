@@ -107,7 +107,8 @@ Instead of committing a `.nojekyll` file, you can add the extension
 ```py
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinx.ext.githubpages"
+    "sphinx.ext.githubpages",
+    "sphinx.ext.napoleon",
 ]
 ```
 

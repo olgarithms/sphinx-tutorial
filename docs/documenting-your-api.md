@@ -15,9 +15,16 @@ it.
 Open the file `office.py`. We are going to add
 [Python docstrings](https://peps.python.org/pep-0257/) to the class `TheOffice` to document how to
 use the API. In this tutorial we will follow the
-[Google-style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html)
-docstring. Sphinx also supports other docstring styles, but this is outside the scope of this
-tutorial.
+[Google-style](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
+docstring. You can browse examples of this style
+[here](ttps://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+
+<!-- prettier-ignore-start -->
+{ .tip }
+`Sphinx` docstrings are traditionally written in `reStructuredText`, but they
+are much more dense and hard to read. The Google-style docstring is friendlier
+to the eye while browsing the source code.
+<!-- prettier-ignore-end -->
 
 Locate the method `get_employee_sales()` and add a Google-style docstring to document it:
 
