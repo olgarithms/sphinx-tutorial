@@ -150,7 +150,6 @@ successfully as part of your workflow and has created the tag `v0.0.2`. When you
 running, and the subsequent `pages-build-deployment` has finished running, refresh your Pages URL.
 You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
 
-<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`10-automating-versioning`](https://github.com/aelsayed95/the-office/tree/10-automating-versioning)

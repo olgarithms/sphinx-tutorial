@@ -62,7 +62,6 @@ git add docs/conf.py
 git commit -m "Use furo theme!"
 git push origin main
 ```
-<!-- prettier-ignore -->
 
 {: .hint }
 🙌 You have now reached the

@@ -97,12 +97,10 @@ Before we can deploy our API docs on `Github pages`, we need to tell Github not 
 static site generator tool that GitHub Pages uses by default. We could turn off its usage by
 committing an empty `.nojekyll` file our `_build/html` folder.
 
-<!-- prettier-ignore-start -->
 {: .tip }
 Instead of committing a `.nojekyll` file, you can add the extension
 `sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
 `make html`.
-<!-- prettier-ignore-end -->
 
 ```py
 extensions = [
@@ -136,7 +134,6 @@ refresh on your Pages URL.
 Now your documentation is now live on Github Pages! You should be able to navigate around the
 website and share the URL with the world.
 
-<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages) part

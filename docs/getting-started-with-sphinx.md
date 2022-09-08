@@ -69,7 +69,6 @@ which opens a web server at port `8000`. Access your docs by visiting
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
 show you the latest updates.
 
-<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`2-getting-started-with-sphinx`](https://github.com/aelsayed95/the-office/tree/2-getting-started-with-sphinx)

@@ -19,12 +19,10 @@ use the API. In this tutorial we will follow the
 docstring. You can browse examples of this style
 [here](ttps://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
-<!-- prettier-ignore-start -->
 { .tip }
 `Sphinx` docstrings are traditionally written in `reStructuredText`, but they
 are much more dense and hard to read. The Google-style docstring is friendlier
 to the eye while browsing the source code.
-<!-- prettier-ignore-end -->
 
 Locate the method `get_employee_sales()` and add a Google-style docstring to document it:
 
@@ -40,16 +38,13 @@ def get_employee_sales(self, employee: Employee) -> int:
     """
 ```
 
-<!-- prettier-ignore-start -->
 {: .tip }
 In VS Code, you can install the extension `autoDocstring` which will generate python
 docstring prompts, so you only need to fill them in. `PyCharm` supports this as well.
 
 Continue adding documentation for the rest of the methods and for the class itself. Repeat for
 `employee.py`.
-<!-- prettier-ignore-end -->
 
-<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`4-documenting-your-api`](https://github.com/aelsayed95/the-office/tree/4-documenting-your-api)

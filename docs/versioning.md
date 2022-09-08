@@ -182,7 +182,6 @@ git commit -m "redirect to main branch"
 git push origin gh-pages
 ```
 
-<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the
 [`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part of the tutorial.

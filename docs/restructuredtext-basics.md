@@ -64,7 +64,6 @@ your image in the `docs/_static` directory and type under your header:
 
 Now re-run `make html` to see your image rendered on the site.
 
-<!-- prettier-ignore -->
 {: .hint }
 🙌 You have now reached the [`3-rst-text-basics`](https://github.com/aelsayed95/the-office/tree/3-rst-text-basics) part of the tutorial. If not, check-out that branch and continue from there.
 
