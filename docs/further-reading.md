@@ -15,7 +15,7 @@ nav_order: 12
 - Sphinx themes database [[link](https://sphinx-themes.org/)]
 - MyST documentation (an alternative to `reStructuredText`)
   [[link](https://myst-parser.readthedocs.io/en/latest/index.html)]
-- [Github Actions](https://docs.github.com/en/actions/)
+- [GitHub Actions](https://docs.github.com/en/actions/)
 - Carol Willing - Practical Sphinx - PyCon 2018
   [[video](https://www.youtube.com/watch?v=0ROZRNZkPS8)]
 

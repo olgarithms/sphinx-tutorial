@@ -28,14 +28,14 @@ nav_order: 0
 ## Workshop overview
 
 This workshop will walk you through the steps of using the `Sphinx` tool for documentation
-generation for a Python API, hosting them on Github pages and automatically creating new versions
+generation for a Python API, hosting them on GitHub pages and automatically creating new versions
 on code updates.
 
 Accompanying the instructions there is [this example project](https://github.com/aelsayed95/the-office) where you can find some sample code to serve as a base for the rest of the workshop.
 
 Moreover, all the steps of the tutorial have been applied in corresponding commits and branches, so
 if anything doesn't quite work for you, you can refer to a previous/next step branch by using
-`git checkout` (or browse the branch on `github`) and continuing from there.
+`git checkout` (or browse the branch on `GitHub`) and continuing from there.
 
 [Next: Environment setup](docs/environment-setup.md){: .btn .btn-purple .float-right}
 <br />
