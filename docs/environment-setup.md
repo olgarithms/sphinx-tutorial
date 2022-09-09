@@ -9,7 +9,8 @@ nav_order: 1
 ---
 
 The prerequisites for this workshop are having `git` and `python` installed
-([`python3.10`](https://www.python.org/downloads/) is recommended).
+([`python3.10`](https://www.python.org/downloads/) is recommended), as well as a
+[`GitHub`](https://github.com/) account
 
 You can choose to work on your own environment using any IDE, although there will be some extra
 tips provided for a local workflow using [`Visual Studio Code`](https://code.visualstudio.com/).
