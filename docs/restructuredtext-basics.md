@@ -19,7 +19,7 @@ free time, so let's focus now on what exists in our `index.rst` file.
 ### Heading
 
 ```
-Welcome to office's documentation!
+Welcome to The Office's documentation!
 ==================================
 ```
 
@@ -43,8 +43,8 @@ text. Using the same character will create headings of the same level.
 
 ## Creating a section
 
-Now let's add some more content by modifying the file `index.rst`. We are going to add a new section that has
-some more information and a picture of the workspace in the office.
+Now let's add some more content by modifying the file `index.rst`. We are going to add a new
+section that has some more information and a picture of the workspace in the office.
 
 Create a new section **above** the "Indices and tables" one:
 
@@ -55,7 +55,8 @@ Workspace
 
 ### Image
 
-And now let's add a picture (we used one we found online on [unsplash](https://unsplash.com)). Save
+And now let's add a picture to our new section. You can use any image you like; we chose one we
+found online and downloaded from [unsplash](https://unsplash.com) and you can do the same. Save
 your image in the `docs/_static` directory and type under your header:
 
 ```

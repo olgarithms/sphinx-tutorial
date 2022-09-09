@@ -27,7 +27,8 @@ We are now ready to start using `Sphinx`. Begin by the following script:
 sphinx-quickstart docs
 ```
 
-It will ask you a few questions to setup your documentation. We'll go with the default options for
+It will ask you a few questions to setup your documentation. When asked for `Project name` type
+"The Office" and add your name as `Author name`. For everything else choose the default options for
 this tutorial. Once the script has run, you should find the following in your `docs` directory:
 
 - `conf.py`: configuration file which allows you to set `Sphinx`'s behaviour (see configuration
@@ -55,12 +56,11 @@ build directories to use and instructs `Sphinx` to build `html` pages out of you
 Now you preview your docs by manually opening the generated `_build/html/index.html` in your
 preferred browser.
 
-
-Alternatively, we can run our own python server in the `_build/html` directory, so that
-we can also move around the pages. Run the command
+Alternatively, we can run our own python server in the `_build/html` directory, so that we can also
+move around the pages. From the project root run the command
 
 ```py
-python3.10 -m http.server
+python3.10 -m http.server --directory docs/_build/html
 ```
 
 which opens a web server at port `8000`. Access your docs by visiting
