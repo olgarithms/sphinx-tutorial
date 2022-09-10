@@ -37,7 +37,7 @@ this tutorial. Once the script has run, you should find the following in your `d
 - `Makefile`/`make.bat`: contain convenient `make` targets for generating documentation
 - `_build/`: directory where your output documentation files will live
 - `_static/:`: directory where all your static files, e.g. images, go to
-- `_templates/`: directory where you can override `Sphinx` template files to customize the look of
+- `_templates/`: directory where you can override `Sphinx` template files to customise the look of
   your documentation
 
 Take a moment to look at the content of each of these files. We are now ready to build our
@@ -57,10 +57,10 @@ Now you preview your docs by manually opening the generated `_build/html/index.h
 preferred browser.
 
 Alternatively, we can run our own python server in the `_build/html` directory, so that we can also
-move around the pages. From the project root run the command
+move around the pages. From the `docs` directory run the command:
 
 ```py
-python3.10 -m http.server --directory docs/_build/html
+python3.10 -m http.server --directory _build/html
 ```
 
 which opens a web server at port `8000`. Access your docs by visiting

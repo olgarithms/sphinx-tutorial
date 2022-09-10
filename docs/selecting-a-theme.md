@@ -15,7 +15,7 @@ section.
 ### Using a built-in theme
 First, browse through `Sphinx`'s
 [built-in themes](https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes) and
-select your favorite. We picked the theme `classic`. In `conf.py`, navigate to the section
+select your favourite. We picked the theme `classic`. In `conf.py`, navigate to the section
 `Options for HTML output` and edit the `html_theme` variable:
 
 ```py
@@ -34,7 +34,7 @@ make html
 And view `index.html` in your browser, you should be able to see that the theme has changed.
 
 ### Using a PyPI Theme
-In addition to Sphinx's built-in themes, there are many themes available on `PyPI`. Our favorite is
+In addition to Sphinx's built-in themes, there are many themes available on `PyPI`. Our favourite is
 [`furo`](https://github.com/pradyunsg/furo). Let's install it:
 
 ```sh

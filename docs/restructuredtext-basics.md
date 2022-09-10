@@ -56,8 +56,8 @@ Workspace
 ### Image
 
 And now let's add a picture to our new section. You can use any image you like; we chose one we
-found online and downloaded from [unsplash](https://unsplash.com) and you can do the same. Save
-your image in the `docs/_static` directory and type under your header:
+found online and downloaded from [unsplash](https://unsplash.com). Save your image in the
+`docs/_static` directory and type under your header:
 
 ```
 .. image:: _static/workspace.jpg

@@ -196,7 +196,8 @@ your site.
 With this new workflow in place, from now on every newly merged Pull Request into your project is
 going to trigger a new deployment of your documentation!
 
-{: .hint } 🙌 You have now reached the
+{: .hint }
+🙌 You have now reached the
 [`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part
 of the tutorial. If not, check-out that branch and
 [`8-gh-pages`](https://github.com/aelsayed95/the-office/tree/8-gh-pages) branch for `gh-pages` and
