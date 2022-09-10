@@ -11,7 +11,7 @@ nav_order: 2
 Begin by installing Sphinx inside your virtual environment.
 
 ```sh
-python3.10 -m pip install sphinx
+pip install sphinx
 ```
 
 At the repo's top level create a `docs` directory. This is where our documentation source and
@@ -60,7 +60,7 @@ Alternatively, we can run our own python server in the `_build/html` directory, 
 move around the pages. From the `docs` directory run the command:
 
 ```py
-python3.10 -m http.server --directory _build/html
+python -m http.server --directory _build/html
 ```
 
 which opens a web server at port `8000`. Access your docs by visiting

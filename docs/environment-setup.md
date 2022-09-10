@@ -14,6 +14,9 @@ The prerequisites for this workshop are having `git` and `python` installed
 ([`python3.10`](https://www.python.org/downloads/) is recommended), as well as having a
 [GitHub](https://github.com/) account.
 
+The tutorial focuses on UNIX-based systems, but we will providing some tips on how to run the
+commands on others.
+
 You can choose to work on your own environment using any IDE, although there will be some extra
 tips provided for a local workflow using [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -40,6 +43,11 @@ where later we will be installing everything else we need for the workshop.
 python3.10 -m venv venv
 source venv/bin/activate
 ```
+
+{ .tip }
+If you are using a different OS and/or shell the command to activate
+your virtual environment might differ, so check the *Platform |
+Shell | Command* table in the [docs](https://docs.python.org/3/library/venv.html#creating-virtual-environments).
 
 In order to exit your virtual environment at any point, you can run
 

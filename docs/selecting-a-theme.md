@@ -38,7 +38,7 @@ In addition to Sphinx's built-in themes, there are many themes available on PyPI
 [`furo`](https://github.com/pradyunsg/furo). Let's install it:
 
 ```sh
-python3.10 -m pip install furo
+pip install furo
 ```
 
 Now modify `conf.py` again to change the theme:

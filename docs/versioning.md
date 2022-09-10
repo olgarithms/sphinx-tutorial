@@ -23,7 +23,7 @@ popular extension that makes versioning your documentation easy. This will repla
 In your virtual environment, install:
 
 ```py
-python3.10 -m pip install sphinx-multiversion
+pip install sphinx-multiversion
 ```
 
 and add the extension to `conf.py`:
