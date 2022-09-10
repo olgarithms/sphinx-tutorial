@@ -37,25 +37,27 @@ extensions = [
 ]
 ```
 
-Next, to render a list of links to past versions on your Documentation website, you'll need to add
-an HTML template. Let's create a file `docs/_templates/versioning.html` that will display a list of
-versions (git tags and branches) on the website sidebar:
+Next, to render a list of links to past versions on your site's sidebar, you'll need to add an HTML
+template. Let's create a file `docs/_templates/sidebar/versions.html` that will display a list of
+versions (git tags and branches):
 
 {% highlight html %}
 {% raw %}
 {% if versions %}
-<h3>{{ _('Branches') }}</h3>
-<ul>
-  {%- for item in versions.branches %}
-  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
-  {%- endfor %}
-</ul>
-<h3>{{ _('Tags') }}</h3>
-<ul>
-  {%- for item in versions.tags %}
-  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
-  {%- endfor %}
-</ul>
+<div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">{{ _('Branches') }}</span></p>
+  <ul>
+    {%- for item in versions.branches %}
+    <li class="toctree-l1"><a class="reference" href="{{ item.url }}">{{ item.name }}</a></li>
+    {%- endfor %}
+  </ul>
+  <p class="caption" role="heading"><span class="caption-text">{{ _('Tags') }}</span></p>
+  <ul>
+    {%- for item in versions.tags %}
+    <li class="toctree-l1"><a class="reference" href="{{ item.url }}">{{ item.name }}</a></li>
+    {%- endfor %}
+  </ul>
+</div>
 {% endif %}
 {% endraw %}
 {% endhighlight %}
@@ -67,11 +69,23 @@ templates_path = [
     "_templates",
 ]
 html_sidebars = {
-    '**': [
-        'versioning.html',
+    "**": [
+        "sidebar/brand.html",
+        "sidebar/search.html",
+        "sidebar/scroll-start.html",
+        "sidebar/navigation.html",
+        "sidebar/versions.html",
+        "sidebar/scroll-end.html",
     ],
 }
 ```
+
+We've only added a `versions.html` to `_templates/sidebar/` folder. So where are the other `html`
+files coming from? They are the default `sidebar` components that ship with `furo`: namely: the
+website title, the search bar, and the content tree. Now that we are overriding the html_sidebar
+contents, we need to explicitly tell `furo` we still want those components in our sidebar in
+addition to our custom `versions` section. `scroll-start.html` and `scroll-end.html` determine the
+scrollable section of the sidebar.
 
 Finally, we are ready to test this command locally. From the `docs/` dir, run:
 
@@ -105,7 +119,7 @@ git checkout main
 git add docs
 git commit -m "update docs"
 git push origin main
-git tag -a v0.0.1 -m "new docs version"
+git tag -a v0.0.1 -m "first release"
 git push origin v0.0.1
 ```
 
@@ -131,7 +145,7 @@ cd ./docs/_build/html
 git branch # ensure you are on the gh-pages branch
 git add .
 git commit -m "versioning support"
-git push origin gh-pages
+git push -f origin gh-pages
 ```
 
 Refresh your GitHub Pages URL. You'll notice that you'll get a `404 File not found` error. Why is
