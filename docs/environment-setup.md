@@ -12,14 +12,14 @@ nav_order: 1
 
 The prerequisites for this workshop are having `git` and `python` installed
 ([`python3.10`](https://www.python.org/downloads/) is recommended), as well as having a
-[`GitHub`](https://github.com/) account.
+[GitHub](https://github.com/) account.
 
 You can choose to work on your own environment using any IDE, although there will be some extra
-tips provided for a local workflow using [`Visual Studio Code`](https://code.visualstudio.com/).
+tips provided for a local workflow using [Visual Studio Code](https://code.visualstudio.com/).
 
 ## Creating your project
 
-Create a new repository on your personal `GitHub` organisation from our
+Create a new, public repository on your personal GitHub organisation from our
 [template project](https://github.com/aelsayed95/the-office), by clicking on the green button
 "**Use this template**" near the top. Name your repo `the-office`, and check ✅ the option
 "**Include all branches**".

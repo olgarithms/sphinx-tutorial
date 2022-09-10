@@ -4,11 +4,11 @@ title: 2. Getting started with Sphinx
 nav_order: 2
 ---
 
-# Getting started with `Sphinx`
+# Getting started with Sphinx
 
 ---
 
-Begin by installing `Sphinx` inside your virtual environment.
+Begin by installing Sphinx inside your virtual environment.
 
 ```sh
 python3.10 -m pip install sphinx
@@ -21,7 +21,7 @@ output files will live.
 mkdir docs
 ```
 
-We are now ready to start using `Sphinx`. Begin by the following script:
+We are now ready to start using Sphinx. Begin by the following script:
 
 ```sh
 sphinx-quickstart docs
@@ -31,13 +31,13 @@ It will ask you a few questions to setup your documentation. When asked for `Pro
 "The Office" and add your name as `Author name`. For everything else choose the default options for
 this tutorial. Once the script has run, you should find the following in your `docs` directory:
 
-- `conf.py`: configuration file which allows you to set `Sphinx`'s behaviour (see configuration
+- `conf.py`: configuration file which allows you to set Sphinx's behaviour (see configuration
   options on the [docs](https://www.sphinx-doc.org/en/master/usage/configuration.html))
 - `index.rst`: the source file for your documentation's home page
 - `Makefile`/`make.bat`: contain convenient `make` targets for generating documentation
 - `_build/`: directory where your output documentation files will live
 - `_static/:`: directory where all your static files, e.g. images, go to
-- `_templates/`: directory where you can override `Sphinx` template files to customise the look of
+- `_templates/`: directory where you can override Sphinx template files to customise the look of
   your documentation
 
 Take a moment to look at the content of each of these files. We are now ready to build our
@@ -49,7 +49,7 @@ make html
 ```
 
 As you might have seen in the `Makefile`, this runs `sphinx-build`, pointing to the source and
-build directories to use and instructs `Sphinx` to build `html` pages out of your `rst` files.
+build directories to use and instructs Sphinx to build `html` pages out of your `rst` files.
 
 ### Previewing your docs
 

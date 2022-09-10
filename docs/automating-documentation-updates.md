@@ -8,14 +8,14 @@ nav_order: 8
 
 ---
 
-So far, we'd been manually building our documentation files locally, then pushing the output `html`
-to `GitHub Pages` to host it. In this section, we will learn how to automate this process using
-`GitHub Actions`. `GitHub Actions` allow `GitHub` users to automatically execute workflows. We can
+So far, we've been manually building our documentation files locally, then pushing the output `html`
+to GitHub Pages to host it. In this section, we will learn how to automate this process using
+GitHub Actions. GitHub Actions allow GitHub users to automatically execute workflows. We can
 use this to automate building and deploying new versions of our documentation.
 
 ## Creating a simple GitHub Action
 
-First, let's build a simple `GitHub Actions` workflow to understand how it works. Let's create a
+First, let's build a simple GitHub Actions workflow to understand how it works. Let's create a
 workflow that prints "Hello, World!" when a commit is pushed to `main`:
 
 From your repo's root, create a new file `.github/workflows/hello.yaml` with the following
@@ -42,12 +42,12 @@ The job has a single step named `say hello` that prints `Hello, Wolrd!` to stdou
 commit and push this file to `main`.
 
 ```sh
-git add ./.github/workflows/hello.yaml
+git add .github/workflows/hello.yaml
 git commit -m "hello world workflow"
 git push origin main
 ```
 
-Now, navigate to the `Actions` tab on your repo's `GitHub` URL. You should see that a `workflow`
+Now, navigate to the `Actions` tab on your repo's GitHub URL. You should see that a `workflow`
 with the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click
 on the job `hello`. Now expand the step `say hello` to see its details. You should see the message
 `Hello, World!` printed to stdout.
@@ -70,7 +70,7 @@ on:
 We'll trigger this workflow when a `pull_request` "closed" event occurs - meaning when a PR is
 closed. See
 [this reference](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
-for a full list of events that trigger `GitHub` workflows. Next, let's define a job, we'll call it
+for a full list of events that trigger GitHub workflows. Next, let's define a job, we'll call it
 `deploy docs`. We only want to trigger our workflow if a PR is merged, so we add the following
 condition:
 
@@ -94,7 +94,7 @@ steps:
       pip install sphinx furo
 ```
 
-Next, we checkout the current repo, and configure `GitHub` to allow us to push to the `gh-pages`
+Next, we checkout the current repo, and configure GitHub to allow us to push to the `gh-pages`
 branch:
 
 ```yaml
@@ -184,13 +184,13 @@ git commit -m "update docs"
 git push origin update_docs
 ```
 
-Now, create a PR to merge `update_docs` into `main`. From your repo's `GitHub` URL, create and
+Now, create a PR to merge `update_docs` into `main`. From your repo's GitHub URL, create and
 merge your PR. Go to the `Actions` tab, you should see that the workflow `Deploy Documentation` is
 running. Click on it to observe the details of each step. Once all steps have completed, you'll see
-that a new workflow `pages-build-deployment` has kicked off. This workflow is triggered by `GitHub`
+that a new workflow `pages-build-deployment` has kicked off. This workflow is triggered by GitHub
 when changes are pushed to `gh-pages`.
 
-When this workflow is completed, refresh your `GitHub Pages` URL. You should see the new change on
+When this workflow is completed, refresh your GitHub Pages URL. You should see the new change on
 your site.
 
 With this new workflow in place, from now on every newly merged Pull Request into your project is

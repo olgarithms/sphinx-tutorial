@@ -83,8 +83,8 @@ git push origin main
 
 To test this, create a new branch `update_docs2`, make a small change to `docs/index.rst`. Commit
 and push the change to your new branch. Create a PR. When you merge the PR, from the `Pages` tab on
-your repo's `GitHub` URL, you should see that the `Deploy Documentation` workflow has kicked off.
-Inspect the job details to verify that `sphinx-multiversion` has run. Refresh your `GitHub Pages`
+your repo's GitHub URL, you should see that the `Deploy Documentation` workflow has kicked off.
+Inspect the job details to verify that `sphinx-multiversion` has run. Refresh your GitHub Pages
 URL. You should see your update has taken place on the `main` version as well as the `update_docs2`
 version of your docs.
 

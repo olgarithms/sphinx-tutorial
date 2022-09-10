@@ -9,11 +9,11 @@ nav_order: 6
 ---
 
 What if you wanted a different appearance for your website? Sphinx ships with a number of built-in
-themes. You can also install and use a theme from `PyPI`. We'll cover how to do both in this
+themes. You can also install and use a theme from PyPI. We'll cover how to do both in this
 section.
 
 ### Using a built-in theme
-First, browse through `Sphinx`'s
+First, browse through Sphinx's
 [built-in themes](https://www.sphinx-doc.org/en/master/usage/theming.html#builtin-themes) and
 select your favourite. We picked the theme `classic`. In `conf.py`, navigate to the section
 `Options for HTML output` and edit the `html_theme` variable:
@@ -34,7 +34,7 @@ make html
 And view `index.html` in your browser, you should be able to see that the theme has changed.
 
 ### Using a PyPI Theme
-In addition to Sphinx's built-in themes, there are many themes available on `PyPI`. Our favourite is
+In addition to Sphinx's built-in themes, there are many themes available on PyPI. Our favourite is
 [`furo`](https://github.com/pradyunsg/furo). Let's install it:
 
 ```sh

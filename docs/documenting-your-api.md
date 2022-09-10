@@ -8,19 +8,16 @@ nav_order: 4
 
 ---
 
-One of the most powerful and popular `Sphinx` extensions is `sphinx.ext.autodoc`. It allows you to
-generate easy to read API documentation and keep it in sync with your code. Let's learn how to use
-it.
+Before generating our documentation with Sphinx we need to document our code.
 
 Open the file `office.py`. We are going to add
-[Python docstrings](https://peps.python.org/pep-0257/) to the class `TheOffice` to document how to
-use the API. In this tutorial we will follow the
+[Python docstrings](https://peps.python.org/pep-0257/) to the class `TheOffice`  In this tutorial we will follow the
 [Google-style](https://google.github.io/styleguide/pyguide.html#38-comments-and-docstrings)
 docstring. You can browse examples of this style
-[here](ttps://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
+[here](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
 {: .tip }
-`Sphinx` docstrings are traditionally written in `reStructuredText`, but they
+Sphinx docstrings are traditionally written in `reStructuredText`, but they
 are much more dense and hard to read. The Google-style docstring is friendlier
 to the eye while browsing the source code.
 
@@ -40,12 +37,13 @@ def get_employee_sales(self, employee: Employee) -> int:
 
 {: .tip }
 In VS Code, you can install the extension `autoDocstring` which will generate python
-docstring prompts, so you only need to fill them in. `PyCharm` supports this as well.
+docstring prompts, so you only need to fill them in. PyCharm supports this as well.
 
 Continue adding documentation for the rest of the methods and for the class itself. Repeat for
 `employee.py`.
 
 When you're done, commit the changes you made:
+
 ```sh
 git add office.py employee.py
 git commit -m "Added docstrings"

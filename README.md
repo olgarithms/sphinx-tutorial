@@ -3,8 +3,8 @@
 This repo is hosting the source files for the
 [`sphinx-tutorial` website](https://olgarithms.github.io/sphinx-tutorial/).
 
-This workshop will walk you through the steps of using the `Sphinx` tool for documentation
-generation for a Python API, hosting them on `GitHub Pages` and automatically creating new versions
+This workshop will walk you through the steps of using the Sphinx tool for documentation
+generation for a Python API, hosting them on GitHub Pages and automatically creating new versions
 on code updates.
 
 Accompanying the instructions there is

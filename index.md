@@ -11,7 +11,7 @@ nav_order: 0
 ## Contents
 
 1. [Environment setup](docs/environment-setup.md)
-2. [Getting started with `Sphinx`](docs/getting-started-with-sphinx.md)
+2. [Getting started with Sphinx](docs/getting-started-with-sphinx.md)
 3. [reStructuredText basics](docs/restructuredtext-basics.md)
 4. [Documenting your API](docs/documenting-your-api.md)
 5. [Generating HTML docs from docstrings](docs/generating-docs.md)
@@ -27,7 +27,7 @@ nav_order: 0
 
 ## Workshop overview
 
-This workshop will walk you through the steps of using the `Sphinx` tool for documentation
+This workshop will walk you through the steps of using the Sphinx tool for documentation
 generation for a Python API, hosting them on GitHub pages and automatically creating new versions
 on code updates.
 
@@ -35,7 +35,7 @@ Accompanying the instructions there is [this example project](https://github.com
 
 Moreover, all the steps of the tutorial have been applied in corresponding commits and branches, so
 if anything doesn't quite work for you, you can refer to a previous/next step branch by using
-`git checkout` (or browse the branch on `GitHub`) and continuing from there.
+`git checkout` (or browse the branch on GitHub) and continuing from there.
 
 [Next: Environment setup](docs/environment-setup.md){: .btn .btn-purple .float-right}
 <br />

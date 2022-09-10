@@ -60,7 +60,7 @@ versions (git tags and branches) on the website sidebar:
 {% endraw %}
 {% endhighlight %}
 
-Next, we need to point `Sphinx` to use this file. In `conf.py`, add the following:
+Next, we need to point Sphinx to use this file. In `conf.py`, add the following:
 
 ```py
 templates_path = [
@@ -134,16 +134,16 @@ git commit -m "versioning support"
 git push origin gh-pages
 ```
 
-Refresh your `GitHub Pages` URL. You'll notice that you'll get a `404 File not found` error. Why is
+Refresh your GitHub Pages URL. You'll notice that you'll get a `404 File not found` error. Why is
 that?
 
 ### Choosing a default version
 
-`GitHub Pages` looks for an `index.html` file at the root level of the `gh-pages` branch. Since we
+GitHub Pages looks for an `index.html` file at the root level of the `gh-pages` branch. Since we
 have been using `sphinx-multiversion` we're storing `index.html` files under their respective git
-branch or tag folders now and `GitHub` could not find a page to load.
+branch or tag folders now and GitHub could not find a page to load.
 
-Modify your `GitHub Pages` URL to append a branch or a tag name name:
+Modify your GitHub Pages URL to append a branch or a tag name name:
 
 `https://<username>.github.io/the-office/main`
 
