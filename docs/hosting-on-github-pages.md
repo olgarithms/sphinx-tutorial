@@ -97,7 +97,7 @@ Before we can deploy our API docs on `GitHub Pages`, we need to tell `GitHub` no
 static site generator tool that `GitHub Pages` uses by default. We could turn off its usage by
 committing an empty `.nojekyll` file our `_build/html` folder.
 
-{: .tip }
+
 Instead of committing a `.nojekyll` file, you can add the extension
 `sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
 `make html`.
@@ -105,8 +105,8 @@ Instead of committing a `.nojekyll` file, you can add the extension
 ```py
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
+    "sphinx.ext.githubpages",
 ]
 ```
 

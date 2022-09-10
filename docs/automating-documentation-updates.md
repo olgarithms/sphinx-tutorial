@@ -47,9 +47,9 @@ git commit -m "hello world workflow"
 git push origin main
 ```
 
-Now, navigate to the `Actions` tab on your repo's `GitHub` URL. You should see that a `workflow` with
-the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click on the
-job `hello`. Now expand the step `say hello` to see its details. You should see the message
+Now, navigate to the `Actions` tab on your repo's `GitHub` URL. You should see that a `workflow`
+with the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click
+on the job `hello`. Now expand the step `say hello` to see its details. You should see the message
 `Hello, World!` printed to stdout.
 
 ## Deploying your docs automatically
@@ -184,14 +184,11 @@ git commit -m "update docs"
 git push origin update_docs
 ```
 
-Now, create a PR to merge `update_docs` into `main`. As this is a forked repo, make sure the base
-is your own fork's `main` branch as opposed to the default PR behaviour which chooses the original
-fork's `main` branch as the base of your PR.
-
-From your repo's `GitHub` URL, create and merge your PR. Go to the `Actions` tab, you should see that
-the workflow `Deploy Documentation` is running. Click on it to observe the details of each step.
-Once all steps have completed, you'll see that a new workflow `pages-build-deployment` has kicked
-off. This workflow is triggered by `GitHub` when changes are pushed to `gh-pages`.
+Now, create a PR to merge `update_docs` into `main`. From your repo's `GitHub` URL, create and
+merge your PR. Go to the `Actions` tab, you should see that the workflow `Deploy Documentation` is
+running. Click on it to observe the details of each step. Once all steps have completed, you'll see
+that a new workflow `pages-build-deployment` has kicked off. This workflow is triggered by `GitHub`
+when changes are pushed to `gh-pages`.
 
 When this workflow is completed, refresh your `GitHub Pages` URL. You should see the new change on
 your site.
@@ -199,8 +196,7 @@ your site.
 With this new workflow in place, from now on every newly merged Pull Request into your project is
 going to trigger a new deployment of your documentation!
 
-{: .hint }
-🙌 You have now reached the
+{: .hint } 🙌 You have now reached the
 [`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part
 of the tutorial. If not, check-out that branch and
 [`8-gh-pages`](https://github.com/aelsayed95/the-office/tree/8-gh-pages) branch for `gh-pages` and

@@ -25,7 +25,7 @@ select your favorite. We picked the theme `classic`. In `conf.py`, navigate to t
 html_theme = 'classic'
 ```
 
-Now from the `docs`directory re-build your HTML files:
+Now from the `docs` directory re-build your HTML files:
 
 ```sh
 make html
@@ -35,7 +35,7 @@ And view `index.html` in your browser, you should be able to see that the theme 
 
 ### Using a PyPI Theme
 In addition to Sphinx's built-in themes, there are many themes available on `PyPI`. Our favorite is
-Read The Docs. Let's install [`furo`](https://github.com/pradyunsg/furo):
+[`furo`](https://github.com/pradyunsg/furo). Let's install it:
 
 ```sh
 python3.10 -m pip install furo
