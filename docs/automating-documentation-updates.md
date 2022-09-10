@@ -85,43 +85,43 @@ Next, we need to define the `steps` that make up our job. First we setup Python,
 version, and install required dependencies:
 
 ```yaml
-steps:
-  - uses: actions/setup-python@v3
-    with:
-      python-version: "3.10"
-  - name: Install dependencies
-    run: |
-      pip install sphinx furo
+    steps:
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          pip install sphinx furo
 ```
 
 Next, we checkout the current repo, and configure GitHub to allow us to push to the `gh-pages`
 branch:
 
 ```yaml
-- uses: actions/checkout@v3
-  with:
-    fetch-depth: 0
-- name: Git config
-  run: |
-    git config user.email "your email"
-    git config user.name "your name"
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Git config
+        run: |
+          git config user.email "your email"
+          git config user.name "your name"
 ```
 
 Finally, we build our Sphinx documentation using `sphinx-build` (run by `make html`) and push the
 output `_build/html` folder to `gh-pages`:
 
 ```yaml
-- name: Sphinx build
-  run: |
-    git worktree add docs/_build/html gh-pages
-    cd docs
-    make html
-- name: Deploy docs
-  run: |
-    cd docs/_build/html
-    git add --all
-    git commit -m "deploy documentation updates"
-    git push origin gh-pages
+      - name: Sphinx build
+        run: |
+          git worktree add docs/_build/html gh-pages
+          cd docs
+          make html
+      - name: Deploy docs
+        run: |
+          cd docs/_build/html
+          git add --all
+          git commit -m "deploy documentation updates"
+          git push origin gh-pages
 ```
 
 Putting it all together, your `docs.yaml` should look like this:

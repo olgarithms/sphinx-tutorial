@@ -11,7 +11,7 @@ nav_order: 10
 We are now ready to integrate `sphinx-multiversion` into our automated deployment workflow. We'll
 modify our existing workflow so that it uses `sphinx-multiversion`.
 
-Open up `.gitub/workflows/docs.yaml`. First, modify the step `Install dependencies` to install
+Open up `.github/workflows/docs.yaml`. First, modify the step `Install dependencies` to install
 `sphinx_multiversion`:
 
 ```yaml
