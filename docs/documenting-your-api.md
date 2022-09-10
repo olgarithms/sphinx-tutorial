@@ -45,6 +45,13 @@ docstring prompts, so you only need to fill them in. `PyCharm` supports this as 
 Continue adding documentation for the rest of the methods and for the class itself. Repeat for
 `employee.py`.
 
+When you're done, commit the changes you made:
+```sh
+git add office.py employee.py
+git commit -m "Added docstrings"
+git push origin main
+```
+
 {: .hint }
 🙌 You have now reached the
 [`4-documenting-your-api`](https://github.com/aelsayed95/the-office/tree/4-documenting-your-api)
