@@ -19,7 +19,7 @@ use the API. In this tutorial we will follow the
 docstring. You can browse examples of this style
 [here](ttps://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html).
 
-{ .tip }
+{: .tip }
 `Sphinx` docstrings are traditionally written in `reStructuredText`, but they
 are much more dense and hard to read. The Google-style docstring is friendlier
 to the eye while browsing the source code.
