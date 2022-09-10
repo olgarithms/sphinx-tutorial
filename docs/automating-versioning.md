@@ -11,7 +11,7 @@ nav_order: 10
 We are now ready to integrate `sphinx-multiversion` into our automated deployment workflow. We'll
 modify our existing workflow so that it uses `sphinx-multiversion`.
 
-Open up `.gitub/workflows/docs.yaml`. First, modify the step `Install dependencies` to install
+Open up `.github/workflows/docs.yaml`. First, modify the step `Install dependencies` to install
 `sphinx_multiversion`:
 
 ```yaml
@@ -31,7 +31,7 @@ documentation:
     sphinx-multiversion . ./_build/html
 ```
 
-Your file `.gitub/workflows/docs.yaml` should now look like this:
+Your file `.github/workflows/docs.yaml` should now look like this:
 
 ```yaml
 name: Deploy Documentation
@@ -76,7 +76,7 @@ Now, commit your updated workflow to `main`:
 
 ```sh
 # from the repo's root
-git add .gitub/workflows/docs.yaml
+git add .github/workflows/docs.yaml
 git commit -m "use sphinx-multiversion"
 git push origin main
 ```
@@ -151,7 +151,7 @@ running, and the subsequent `pages-build-deployment` has finished running, refre
 You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
 
 Finally, you'll notice that not all branches appear on your website when `sphinx-multiversion` ran
-remotely. If you want to changee this, you can configure this behaviour by adding the following to
+remotely. If you want to change this, you can configure this behaviour by adding the following to
 `conf.py`:
 
 ```py
