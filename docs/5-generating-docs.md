@@ -20,7 +20,7 @@ Open `conf.py`, and modify the extensions list:
 ```py
 extensions = [
     "sphinx.ext.autodoc",
-    "sphinx.ext.napoleon"
+    "sphinx.ext.napoleon",
 ]
 ```
 
