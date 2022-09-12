@@ -58,5 +58,5 @@ part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
 [Previous: reStructuredText basics](./restructuredtext-basics.md){: .btn .float-left}
-[Next: Generating HTML docs from docstrings](./generating-docs.md){: .btn .btn-purple .float-right}
+[Next: Generating HTML docs from docstrings](./5-generating-docs.md){: .btn .btn-purple .float-right}
 <br />

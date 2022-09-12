@@ -44,7 +44,7 @@ python3.10 -m venv venv
 source venv/bin/activate
 ```
 
-{ .tip }
+{: .tip }
 If you are using a different OS and/or shell the command to activate
 your virtual environment might differ, so check the *Platform |
 Shell | Command* table in the [docs](https://docs.python.org/3/library/venv.html#creating-virtual-environments).
@@ -57,5 +57,5 @@ deactivate
 
 <br />
 [Previous: Home](../index.md){: .btn .float-left}
-[Next: Getting started with Sphinx](./getting-started-with-sphinx.md){: .btn .btn-purple .float-right}
+[Next: Getting started with Sphinx](./2-getting-started-with-sphinx.md){: .btn .btn-purple .float-right}
 <br />

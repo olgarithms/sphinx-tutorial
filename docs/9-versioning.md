@@ -204,6 +204,6 @@ If not, check-out that branch and
 continue from there.
 
 <br />
-[Previous: Automating documentation updates](./automating-documentation-updates.md){: .btn .float-left}
-[Next: Automating versioning](./automating-versioning.md){: .btn .btn-purple .float-right}
+[Previous: Automating documentation updates](./8-automating-documentation-updates.md){: .btn .float-left}
+[Next: Automating versioning](./10-automating-versioning.md){: .btn .btn-purple .float-right}
 <br />

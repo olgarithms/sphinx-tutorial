@@ -206,6 +206,6 @@ of the tutorial. If not, check-out that branch and
 continue from there.
 
 <br />
-[Previous: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .float-left}
-[Next: Versioning](./versioning.md){: .btn .btn-purple .float-right}
+[Previous: Hosting on GitHub Pages](./7-hosting-on-github-pages.md){: .btn .float-left}
+[Next: Versioning](./9-versioning.md){: .btn .btn-purple .float-right}
 <br />

@@ -31,6 +31,6 @@ nav_order: 11
    the default, global Python package mirror.
 
 <br />
-[Previous: Automating versioning](./automating-versioning.md){: .btn .float-left}
-[Next: Further reading](./further-reading.md){: .btn .btn-purple .float-right}
+[Previous: Automating versioning](./10-automating-versioning.md){: .btn .float-left}
+[Next: Further reading](./12-further-reading.md){: .btn .btn-purple .float-right}
 <br />

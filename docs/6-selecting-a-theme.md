@@ -74,6 +74,6 @@ git push origin main
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
-[Previous: Generating HTML docs from docstrings](./generating-docs.md){: .btn .float-left}
-[Next: Hosting on GitHub Pages](./hosting-on-github-pages.md){: .btn .btn-purple .float-right}
+[Previous: Generating HTML docs from docstrings](./5-generating-docs.md){: .btn .float-left}
+[Next: Hosting on GitHub Pages](./7-hosting-on-github-pages.md){: .btn .btn-purple .float-right}
 <br />

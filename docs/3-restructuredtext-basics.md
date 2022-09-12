@@ -65,11 +65,12 @@ found online and downloaded from [unsplash](https://unsplash.com). Save your ima
 
 Now re-run `make html` to see your image rendered on the site.
 
-{: .hint } 🙌 You have now reached the
+{: .hint }
+🙌 You have now reached the
 [`3-rst-text-basics`](https://github.com/aelsayed95/the-office/tree/3-rst-text-basics) part of the
 tutorial. If not, check-out that branch and continue from there.
 
 <br />
-[Previous: Getting started with Sphinx](./getting-started-with-sphinx.md){: .btn .float-left}
-[Next: Documenting your API](./documenting-your-api.md){: .btn .btn-purple .float-right}
+[Previous: Getting started with Sphinx](./2-getting-started-with-sphinx.md){: .btn .float-left}
+[Next: Documenting your API](./4-documenting-your-api.md){: .btn .btn-purple .float-right}
 <br />

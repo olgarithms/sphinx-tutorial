@@ -36,5 +36,5 @@ nav_order: 12
 - `sphinx-multiversion` [[link](https://holzhaus.github.io/sphinx-multiversion/master/index.html)]
 
 <br />
-[Previous: Glossary](./glossary.md){: .btn .float-left}
+[Previous: Glossary](./11-glossary.md){: .btn .float-left}
 <br />
