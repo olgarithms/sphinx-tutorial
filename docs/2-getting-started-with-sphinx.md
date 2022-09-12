@@ -48,6 +48,10 @@ cd docs
 make html
 ```
 
+{: .tip }
+If you are using a Windows machine and `make` is not available, you can use the `make.bat` script
+instead of the `make` command: `.\make.bat html`.
+
 As you might have seen in the `Makefile`, this runs `sphinx-build`, pointing to the source and
 build directories to use and instructs Sphinx to build `html` pages out of your `rst` files.
 
