@@ -34,6 +34,14 @@ git clone git@github.com:<your-org>/the-office.git
 cd the-office
 ```
 
+and delete the `gh-pages` branch, both remotely and locally, so when you get to create yours there
+won't be any clashes!
+
+```sh
+git push -D origin gh-pages
+git branch -d gh-pages
+```
+
 ## Using a virtual environment
 
 Next, we will be setting up a [virtual environment](https://docs.python.org/3/tutorial/venv.html),
@@ -45,9 +53,9 @@ source venv/bin/activate
 ```
 
 {: .tip }
-If you are using a different OS and/or shell the command to activate
-your virtual environment might differ, so check the *Platform |
-Shell | Command* table in the [docs](https://docs.python.org/3/library/venv.html#creating-virtual-environments).
+If you are using a different OS and/or shell the command to activate your virtual
+environment might differ, so check the _Platform | Shell | Command_ table in the
+[docs](https://docs.python.org/3/library/venv.html#creating-virtual-environments).
 
 In order to exit your virtual environment at any point, you can run
 
