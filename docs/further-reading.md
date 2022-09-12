@@ -30,7 +30,7 @@ nav_order: 12
   [[link](https://www.sphinx-doc.org/en/master/usage/extensions/githubpages.html)]
 - `sphinx.ext.intersphinx`
   [[link](https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html)]
-- `sphinx.ext.mathjax` [[link](https://www.sphinx-doc.org/en/master/usage/extensions/mathjax.html)]
+- `sphinx.ext.mathjax` [[link](https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax)]
 - `sphinx.ext.napoleon`
   [[link](https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html)]
 - `sphinx-multiversion` [[link](https://holzhaus.github.io/sphinx-multiversion/master/index.html)]

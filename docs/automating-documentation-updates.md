@@ -56,7 +56,7 @@ on the job `hello`. Now expand the step `say hello` to see its details. You shou
 
 You now know how to build a simple workflow. Let's now write a workflow that would build and deploy
 our documentation when a PR is merged. Create a new file `.github/workflows/docs.yaml` (find the
-full file [here](automating-documentation-updates?plain=1#L129)):
+full file [here](#the-complete-deploy-documentation-github-action)):
 
 ```yaml
 name: Deploy Documentation
@@ -123,6 +123,8 @@ output `_build/html` folder to `gh-pages`:
           git commit -m "deploy documentation updates"
           git push origin gh-pages
 ```
+
+#### The complete "Deploy Documentation" GitHub Action
 
 Putting it all together, your `docs.yaml` should look like this:
 
