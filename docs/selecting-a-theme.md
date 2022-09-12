@@ -29,6 +29,7 @@ html_theme = 'classic'
 Now from the `docs` directory re-build your HTML files:
 
 ```sh
+# from the `docs` dir
 make html
 ```
 

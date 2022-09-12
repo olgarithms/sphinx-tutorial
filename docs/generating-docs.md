@@ -79,9 +79,10 @@ file at the root of your repository, so that these files are ignored by `git`:
 _build/
 ```
 
-Now from the project root commit and push your documentation src files:
+Now commit and push your documentation src files:
 
 ```sh
+# from the project root
 git add docs .gitignore
 git commit -m "Add documentation"
 git push origin main

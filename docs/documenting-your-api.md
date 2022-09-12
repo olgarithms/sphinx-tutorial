@@ -45,6 +45,7 @@ Continue adding documentation for the rest of the methods and for the class itse
 When you're done, commit the changes you made:
 
 ```sh
+# from the project root
 git add office.py employee.py
 git commit -m "Added docstrings"
 git push origin main
