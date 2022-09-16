@@ -8,13 +8,13 @@ nav_order: 3
 
 ---
 
-From the [docs](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html):
-`reStructuredText` is the default plaintext markup language used by Sphinx.
+[`reStructuredText`](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) is
+the default plaintext markup language used by Sphinx.
 
 ## The `index.rst` file
 
-There are many tutorials out there explaining the syntax of `.rst` files that you can try on your
-free time, so let's focus now on what exists in our `index.rst` file.
+There are many tutorials out there explaining the syntax of `.rst` files that you can try a
+separate time, so we will focus now on what exists in our `index.rst` file.
 
 ### Heading
 
@@ -38,8 +38,8 @@ text. Using the same character will create headings of the same level.
 - The `toctree` (table of contents tree) adds structure to your docs.
 - The `maxdepth` parameter specifies how many levels of headers you would like Sphinx to create
   in its output.
-- The `caption` parameter gives option to provide a toctree caption, i.e. the _title_ of the
-  toctree; in this case "Contents".
+- The `caption` parameter gives option to provide a `toctree` caption, i.e. the _title_ of the
+  `toctree`; in this case "Contents".
 
 ## Creating a section
 
