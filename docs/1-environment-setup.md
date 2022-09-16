@@ -38,8 +38,7 @@ and delete the `gh-pages` branch, both remotely and locally, so when you get to 
 won't be any clashes!
 
 ```sh
-git push -D origin gh-pages
-git branch -d gh-pages
+git push -d origin gh-pages
 ```
 
 ## Using a virtual environment

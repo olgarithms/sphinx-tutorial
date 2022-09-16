@@ -14,6 +14,14 @@ documentation, so your users can refer to it depending on the software version t
 
 Let's see how you can achieve that.
 
+Before you begin, make sure you are on the `main` branch in your project root and you pull the
+latest changes we merged into our remote.
+
+```sh
+git checkout main
+git pull
+```
+
 ## Using `sphinx-multiversion`
 
 We will be using [`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/), a
@@ -100,6 +108,15 @@ You will notice that now, in your `_build/html` folder, there is a subfolder cor
 branch and tag you have in your repo. For example, there's a `main` folder and an `update_docs`
 folder in which their corresponding output `HTML` files live. As you create more branches and tags,
 more output `HTML` folders will be created for them.
+
+Let's commit the changes we have done to support `sphinx-multiversion` to our `main` branch:
+
+```sh
+# from the project root
+git add docs/conf.py docs/_templates/sidebar/versions.html
+git commit -m "Add support for sphinx-multiversion extension"
+git push origin main
+```
 
 ### Generating different versions for your docs
 
@@ -190,9 +207,9 @@ Now, open up this file, and add the following logic:
 Let's commit and push it to the `gh-pages` branch:
 
 ```sh
-cd ./docs/_build/html
+# from the docs/_build/html dir
 git add index.html
-git commit -m "redirect to main branch"
+git commit -m "Add index.html to redirect to main branch"
 git push origin gh-pages
 ```
 

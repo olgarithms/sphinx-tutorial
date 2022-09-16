@@ -18,6 +18,7 @@ Let's create `gh-pages` as an empty
 [orphan branch](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnew-branchgt):
 
 ```sh
+# from the project root
 cd ./docs/_build/html
 git checkout --orphan gh-pages
 git reset --hard
@@ -34,7 +35,8 @@ Next, we locally mount the branch as a subdirectory using
 [`git worktree`](https://git-scm.com/docs/git-worktree).
 
 ```sh
-cd ./docs/_build/
+# from the docs/_build/html dir
+cd ..
 git checkout main
 rm -rf html # make sure you don't have an existing target directory
 git worktree add html gh-pages
@@ -60,6 +62,7 @@ Our branch `gh-pages` is completely empty. But GitHub will be looking for a top-
 `index.html`. So from the `./docs/_build/html` directory let's create a simple one:
 
 ```sh
+# from the docs/_build/html dir
 echo '<h1>Hello, World!</h1>' > index.html
 git add index.html
 git commit -m 'initial commit of gh-pages branch'
@@ -91,12 +94,20 @@ With these changes, `make clean` will clean the `_build/` directory, and populat
 directory with the current contents on the `gh-pages` branch. So it will effectively clean your
 local documentation changes.
 
+Commit your updated `Makefile`:
+
+```sh
+# from the project root
+git add docs/Makefile
+git commit -m "Add updated clean target in Makefile"
+git push origin main
+```
+
 ## Disabling Jekyll
 
 Before we can deploy our API docs on GitHub Pages, we need to tell GitHub not to use `Jekyll`: a
 static site generator tool that GitHub Pages uses by default. We could turn off its usage by
 committing an empty `.nojekyll` file our `_build/html` folder.
-
 
 Instead of committing a `.nojekyll` file, you can add the extension
 `sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
@@ -110,13 +121,22 @@ extensions = [
 ]
 ```
 
+Let's also commit the change in `conf.py`:
+
+```sh
+# from the project root
+git add docs/conf.py
+git commit -m "Add githubpages extension"
+git push origin main
+```
+
 ## Hosting the documentation
 
 Next, we want to add The Office documentation to `gh-pages`. Let's generate our documentation again
 and check in our output files.
 
 ```sh
-cd docs/
+cd docs
 make clean # clean and re-create the gh-pages worktree
 make html
 cd _build/html

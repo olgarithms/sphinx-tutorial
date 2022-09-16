@@ -27,9 +27,12 @@ We are now ready to start using Sphinx. Begin by the following script:
 sphinx-quickstart docs
 ```
 
-It will ask you a few questions to setup your documentation. When asked for `Project name` type
-"The Office" and add your name as `Author name`. For everything else choose the default options for
-this tutorial. Once the script has run, you should find the following in your `docs` directory:
+It will ask you a few questions to setup your documentation.
+
+When asked for `Project name` type "The Office" and add your name as `Author name`. For everything
+else choose the default options for this tutorial.
+
+Once the script has run, you should find the following in your `docs` directory:
 
 - `conf.py`: configuration file which allows you to set Sphinx's behaviour (see configuration
   options on the [docs](https://www.sphinx-doc.org/en/master/usage/configuration.html))
@@ -52,8 +55,11 @@ make html
 If you are using a Windows machine and `make` is not available, you can use the `make.bat` script
 instead of the `make` command: `.\make.bat html`.
 
-As you might have seen in the `Makefile`, this runs `sphinx-build`, pointing to the source and
+Executing `make html` runs `sphinx-build`, pointing to the source and
 build directories to use and instructs Sphinx to build `html` pages out of your `rst` files.
+
+{: .tip }
+You can run `make` without any arguments or `make help` to see what other targets are available.
 
 ### Previewing your docs
 

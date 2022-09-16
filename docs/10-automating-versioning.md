@@ -75,9 +75,9 @@ jobs:
 Now, commit your updated workflow to `main`:
 
 ```sh
-# from the repo's root
+# from the project root
 git add .github/workflows/docs.yaml
-git commit -m "use sphinx-multiversion"
+git commit -m "Use sphinx-multiversion in docs action"
 git push origin main
 ```
 
@@ -86,7 +86,7 @@ and push the change to your new branch. Create a PR. When you merge the PR, from
 your repo's GitHub URL, you should see that the `Deploy Documentation` workflow has kicked off.
 Inspect the job details to verify that `sphinx-multiversion` has run. Refresh your GitHub Pages
 URL. You should see your update has taken place on the `main` version as well as the `update_docs2`
-version of your docs.
+version of your docs. Make sure to pull the latest changes to your local `main`.
 
 ## Incrementing Documentation Versions Easily
 
@@ -94,7 +94,8 @@ To make incrementing the documentation version easier, we'll modify our workflow
 pull request uses the label `version++`, it will create a new git tag that's an increment on the
 previous tag. Otherwise, it will simply rebuild and deploy documentation updates to `main`.
 
-Let's create a simple shell script `create_tag.sh`, that will increment the git tag:
+Let's create a simple shell script `create_tag.sh` in the root of our project, that will increment
+the git tag:
 
 ```sh
 # get current tag
@@ -135,7 +136,7 @@ execute the script `create_tag.sh`, if the label `version++` is used:
 We now have all the components needed to automate versioning your documentation. Let's commit the
 change.
 
-```
+```sh
 git checkout main
 git add create_tag.sh
 git add .github/workflows/docs.yaml

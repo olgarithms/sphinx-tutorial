@@ -28,12 +28,15 @@ Now, we need to run the command `sphinx-apidoc` to build `rst` files out of our 
 need to specify the output path and module path, so from the root of your repo, run:
 
 ```sh
+# from the project root
 sphinx-apidoc --output-dir docs .
 ```
 
 You can see that Sphinx created an `rst` file per module, as well as a `modules.rst` file, which
-acts as a module directory. Note that these `.rst` files content is generic, so you do not need to
-re-run `sphinx-apidoc` if you modify their corresponding `.py` files! You'd only ever need to
+acts as a module directory.
+
+{: .tip }
+You do not need to re-run `sphinx-apidoc` to generate new `.rst` if you modify their corresponding `.py` files! You'd only ever need to
 re-run `sphinx-apidoc` if you add more modules to your project.
 
 Next, we are going to edit `index.rst` to add a reference to `modules`, so that it appears in the
@@ -47,8 +50,8 @@ Next, we are going to edit `index.rst` to add a reference to `modules`, so that 
    modules
 ```
 
-We also need to point Sphinx to the source python module's path. In `conf.py`, add the following
-code snippet to add the parent directory (which is the root of the repo) to the path:
+We also need to point Sphinx to the source python module's path. In the beginning of `conf.py`, add
+the following code snippet to add the parent directory (which is the root of the repo) to the path:
 
 ```py
 import os

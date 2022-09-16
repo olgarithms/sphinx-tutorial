@@ -167,7 +167,16 @@ jobs:
           git push origin gh-pages
 ```
 
-Commit and push your file to `main`. To test out our new command, make a quick change to
+Commit and push your file to `main`:
+
+```sh
+# from the project root
+git add .github/workflows/docs.yaml
+git commit -m "Add documentation build action"
+git push origin main
+```
+
+To test out our new command, make a quick change to
 `docs/index.rst`:
 
 ```
@@ -180,6 +189,7 @@ Explore The Office documentation.
 Commit your change to a new branch `update_docs`:
 
 ```sh
+# from the project root
 git checkout -b update_docs
 git add docs/index.rst
 git commit -m "update docs"
