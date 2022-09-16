@@ -38,7 +38,7 @@ jobs:
 ```
 
 This file defines a workflow named `Hello World`, which, when triggered, runs a single job `hello`
-The job has a single step named `say hello` that prints `Hello, Wolrd!` to stdout. To test it out,
+The job has a single step named `say hello` that prints `Hello, World!` to stdout. To test it out,
 commit and push this file to `main`.
 
 ```sh
