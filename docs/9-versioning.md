@@ -165,8 +165,8 @@ git commit -m "versioning support"
 git push -f origin gh-pages
 ```
 
-Refresh your GitHub Pages URL. You'll notice that you'll get a `404 File not found` error. Why is
-that?
+Once the `pages-build-deployment` workflow has completed, refresh your GitHub Pages URL. You'll
+notice that you'll get a `404 File not found` error. Why is that?
 
 ### Choosing a default version
 
