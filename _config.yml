@@ -2,7 +2,6 @@ title: Sphinx tutorial
 description: A step-by-step tutorial for documentation generation with Sphinx
 url: "https://olgarithms.github.io/sphinx-tutorial/"
 
-
 remote_theme: just-the-docs/just-the-docs
 
 heading_anchors: true
@@ -33,3 +32,6 @@ callouts:
 # Google Analytics Tracking
 ga_tracking: G-7L8KQ9QD6S
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
+
+plugins:
+  - jekyll-remote-theme

@@ -13,16 +13,16 @@ code to serve as a base for the rest of the workshop.
 
 ## Development
 
-Install the dependencies:
+- Install the dependencies:
 
-```sh
-bundle install
-```
+  ```sh
+  bundle install
+  ```
 
-Build and serve the site:
+- Build and serve the site:
 
-```sh
-bundle exec jekyll serve
-```
+  ```sh
+  bundle exec jekyll serve
+  ```
 
-And navigate to http://127.0.0.1:4000 to enjoy!
+- Navigate to http://127.0.0.1:4000 to enjoy!
