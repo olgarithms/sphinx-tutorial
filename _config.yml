@@ -29,3 +29,7 @@ callouts:
     title: Hint
     color: green
     opacity: 0.1
+
+# Google Analytics Tracking
+ga_tracking: G-7L8KQ9QD6S
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
