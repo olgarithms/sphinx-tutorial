@@ -21,16 +21,24 @@ output files will live.
 mkdir docs
 ```
 
+## Starting with Sphinx
+
 We are now ready to start using Sphinx. Begin by the following script:
 
 ```sh
 sphinx-quickstart docs
 ```
 
-It will ask you a few questions to setup your documentation.
+It will ask you a few questions to setup your documentation and we are going to go with the default
+options for this tutorial:
 
-When asked for `Project name` type "The Office" and add your name as `Author name`. For everything
-else choose the default options for this tutorial.
+```txt
+> Separate source and build directories (y/n) [n]:  <Press Enter>
+> Project name:                                     The Office
+> Author name(s):                                   <Enter your name>
+> Project release []:                               <Press Enter>
+> Project language [en]:                            <Press Enter>
+```
 
 Once the script has run, you should find the following in your `docs` directory:
 
@@ -55,13 +63,13 @@ make html
 If you are using a Windows machine and `make` is not available, you can use the `make.bat` script
 instead of the `make` command: `.\make.bat html`.
 
-Executing `make html` runs `sphinx-build`, pointing to the source and
-build directories to use and instructs Sphinx to build `html` pages out of your `rst` files.
+Executing `make html` runs `sphinx-build`, pointing to the source and build directories to use and
+instructs Sphinx to build `html` pages out of your `rst` files.
 
 {: .tip }
 You can run `make` without any arguments or `make help` to see what other targets are available.
 
-### Previewing your docs
+## Previewing your docs
 
 Now you preview your docs by manually opening the generated `_build/html/index.html` in your
 preferred browser.
