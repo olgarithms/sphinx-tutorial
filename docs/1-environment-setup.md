@@ -22,24 +22,25 @@ tips provided for a local workflow using [Visual Studio Code](https://code.visua
 
 ## Creating your project
 
-Create a new, public repository on your personal GitHub organisation from our
-[template project](https://github.com/aelsayed95/the-office), by clicking on the green button
-"**Use this template**" near the top. Name your repo `the-office`, and check ✅ the option
-"**Include all branches**".
+1. Create a new, public repository on your personal GitHub organisation from our
+   [template project](https://github.com/aelsayed95/the-office), by clicking on the
+   "[**Use this template**](https://github.com/aelsayed95/the-office/generate)" button.
 
-Next, clone your repo locally:
+2. Name your repo `the-office`, and check ✅ the option "**Include all branches**".
 
-```sh
-git clone git@github.com:<your-org>/the-office.git
-cd the-office
-```
+3. Clone your new repo locally:
 
-and delete the `gh-pages` branch, both remotely and locally, so when you get to create yours there
-won't be any clashes!
+    ```sh
+    git clone git@github.com:<your-org>/the-office.git
+    cd the-office
+    ```
 
-```sh
-git push -d origin gh-pages
-```
+4. Delete the `gh-pages` branch, both remotely and locally, so when you get to create yours there
+   won't be any clashes!
+
+    ```sh
+    git push -d origin gh-pages
+    ```
 
 ## Using a virtual environment
 
@@ -56,7 +57,7 @@ If you are using a different OS and/or shell the command to activate your virtua
 environment might differ, so check the _Platform | Shell | Command_ table in the
 [docs](https://docs.python.org/3/library/venv.html#creating-virtual-environments).
 
-In order to exit your virtual environment at any point, you can run
+In order to exit your virtual environment at any point, you can run:
 
 ```sh
 deactivate
