@@ -88,7 +88,7 @@ version, and install required dependencies:
     steps:
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.10"
+          python-version: "3.11"
       - name: Install dependencies
         run: |
           pip install sphinx furo
@@ -143,7 +143,7 @@ jobs:
     steps:
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.10"
+          python-version: "3.11"
       - name: Install dependencies
         run: |
           pip install sphinx furo

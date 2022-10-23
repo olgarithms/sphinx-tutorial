@@ -48,7 +48,7 @@ jobs:
     steps:
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.10"
+          python-version: "3.11"
       - name: Install dependencies
         run: |
           pip install sphinx furo sphinx_multiversion
