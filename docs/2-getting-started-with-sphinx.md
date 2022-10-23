@@ -32,8 +32,8 @@ sphinx-quickstart docs
 It will ask you a few questions to setup your documentation and we are going to go with the default
 options for this tutorial:
 
-```txt
-> Separate source and build directories (y/n) [n]:  <Press Enter>
+```
+> Separate source and build directories (y/n) [n]:  <Press Enter or n>
 > Project name:                                     The Office
 > Author name(s):                                   <Enter your name>
 > Project release []:                               <Press Enter>
