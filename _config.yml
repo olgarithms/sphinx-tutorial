@@ -2,7 +2,7 @@ title: Sphinx tutorial
 description: A step-by-step tutorial for documentation generation with Sphinx
 url: "https://olgarithms.github.io/sphinx-tutorial/"
 
-remote_theme: just-the-docs/just-the-docs@v0.4.0.rc3
+remote_theme: just-the-docs/just-the-docs
 
 heading_anchors: true
 
@@ -13,6 +13,8 @@ aux_links_new_tab: true
 
 back_to_top: true
 back_to_top_text: "Back to top"
+
+enable_copy_code_button: true
 
 gh_edit_link: true
 gh_edit_link_text: "View this page on GitHub."
