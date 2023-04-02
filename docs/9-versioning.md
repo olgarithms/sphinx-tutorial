@@ -213,6 +213,22 @@ git commit -m "Add index.html to redirect to main branch"
 git push origin gh-pages
 ```
 
+### Selecting Branches/Tags of Interest
+
+You may not want to include all branches or tags on your documentation website. To configure this
+behaviour, add the following to `conf.py`:
+
+```py
+# -- Sphinx Multiversion --------------------------------------------------
+# https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#
+smv_tag_whitelist = r'^v\d+\.\d+\.\d+$'
+smv_branch_whitelist = r'^.*$'
+smv_remote_whitelist = r'^.*$'
+```
+
+Now `sphinx-multiversion` will only generate documentation corresponding to branches and tags
+matching your regex expressions above. More nuanced settings can be found on the link above.
+
 {: .hint }
 🙌 You have now reached the
 [`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part of the tutorial.

@@ -151,18 +151,6 @@ successfully as part of your workflow and has created the tag `v0.0.2`. When you
 running, and the subsequent `pages-build-deployment` has finished running, refresh your Pages URL.
 You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
 
-Finally, you'll notice that not all branches appear on your website when `sphinx-multiversion` ran
-remotely. If you want to change this, you can configure this behaviour by adding the following to
-`conf.py`:
-
-```py
-# -- Sphinx Multiversion --------------------------------------------------
-# https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#
-smv_tag_whitelist = r'^v\d+\.\d+\.\d+$'
-smv_branch_whitelist = r'^.*$'
-smv_remote_whitelist = r'^.*$'
-```
-
 {: .hint }
 🙌 You have now reached the
 [`10-automating-versioning`](https://github.com/aelsayed95/the-office/tree/10-automating-versioning)
