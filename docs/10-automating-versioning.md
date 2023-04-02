@@ -24,13 +24,6 @@ on:
     types: [published]
 ```
 
-And remove the conditional run statement from your job as we're no longer interested in PR
-events:
-
-```yaml
-if: github.event.pull_request.merged == true
-```
-
 Next, modify the step `Install dependencies` to install `sphinx_multiversion`:
 
 ```yaml

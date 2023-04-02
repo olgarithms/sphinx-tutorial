@@ -55,29 +55,25 @@ on the job `hello`. Now expand the step `say hello` to see its details. You shou
 ## Deploying your docs automatically
 
 You now know how to build a simple workflow. Let's now write a workflow that would build and deploy
-our documentation when a PR is merged. Create a new file `.github/workflows/docs.yaml` (find the
-full file [here](#the-complete-deploy-documentation-github-action)):
+our documentation. Create a new file `.github/workflows/docs.yaml` (find the completed file [here](#the-complete-deploy-documentation-github-action)):
 
 ```yaml
 name: Deploy Documentation
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - main
 ```
 
-We'll trigger this workflow when a `pull_request` "closed" event occurs - meaning when a PR is
-closed. See
+As before, we'll trigger this workflow when a commit is pushed to main. See
 [this reference](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
 for a full list of events that trigger GitHub workflows. Next, let's define a job, we'll call it
-`deploy docs`. We only want to trigger our workflow if a PR is merged, so we add the following
-condition:
+`deploy docs`:
 
 ```yaml
 jobs:
   deploy_docs:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 ```
 
@@ -132,13 +128,12 @@ Putting it all together, your `docs.yaml` should look like this:
 name: Deploy Documentation
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - main
 
 jobs:
   deploy_docs:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-python@v3
@@ -186,27 +181,24 @@ Welcome to The Office's documentation!
 Explore The Office documentation.
 ```
 
-Commit your change to a new branch `update_docs`:
+Commit your change to `main`:
 
 ```sh
 # from the project root
-git checkout -b update_docs
 git add docs/index.rst
 git commit -m "update docs"
-git push origin update_docs
+git push origin main
 ```
 
-Now, create a PR to merge `update_docs` into `main`. From your repo's GitHub URL, create and
-merge your PR. Go to the `Actions` tab, you should see that the workflow `Deploy Documentation` is
-running. Click on it to observe the details of each step. Once all steps have completed, you'll see
-that a new workflow `pages-build-deployment` has kicked off. This workflow is triggered by GitHub
-when changes are pushed to `gh-pages`.
+From your repo's Github page, go to the `Actions` tab, you should see that the workflow `Deploy Documentation` is running. Click on it to observe the details of each step. Once all steps have
+completed, you'll see that a new workflow `pages-build-deployment` has kicked off. This workflow is
+triggered by GitHub when changes are pushed to `gh-pages`.
 
-When this workflow is completed, refresh your GitHub Pages URL. You should see the new change on
-your site.
+When `pages-build-deployment` is completed, refresh your GitHub Pages URL. You should see the new
+change on your site.
 
-With this new workflow in place, from now on every newly merged Pull Request into your project is
-going to trigger a new deployment of your documentation!
+With this new workflow in place, from now on every commit to `main` is going to automatically trigger
+a new deployment of your documentation!
 
 {: .hint }
 🙌 You have now reached the
