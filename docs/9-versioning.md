@@ -216,7 +216,10 @@ smv_remote_whitelist = r'^.*$'
 ```
 
 Now `sphinx-multiversion` will only generate documentation corresponding to branches and tags
-matching your regex expressions above. More nuanced settings can be found on the link above.
+matching your regex expressions above.
+
+{: .tip }
+More nuanced settings can be found on [`sphinx-multiversion` docs](https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#).
 
 {: .hint }
 🙌 You have now reached the
