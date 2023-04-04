@@ -14,14 +14,6 @@ documentation, so your users can refer to it depending on the software version t
 
 Let's see how you can achieve that.
 
-Before you begin, make sure you are on the `main` branch in your project root and you pull the
-latest changes we merged into our remote.
-
-```sh
-git checkout main
-git pull
-```
-
 ## Using `sphinx-multiversion`
 
 We will be using [`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/), a
@@ -105,9 +97,9 @@ sphinx-multiversion . ./_build/html
 ```
 
 You will notice that now, in your `_build/html` folder, there is a subfolder corresponding to each
-branch and tag you have in your repo. For example, there's a `main` folder and an `update_docs`
-folder in which their corresponding output `HTML` files live. As you create more branches and tags,
-more output `HTML` folders will be created for them.
+branch and tag you have in your repo. As we currently only have the `main` branch, there'll be one
+`main` folder in which their corresponding output `HTML` files live. As you create more branches
+and tags, more output `HTML` folders will be created for them.
 
 Let's commit the changes we have done to support `sphinx-multiversion` to our `main` branch:
 
@@ -135,7 +127,6 @@ Commit it to `main` and tag it:
 git checkout main
 git add docs
 git commit -m "update docs"
-git push origin main
 git tag -a v0.0.1 -m "first release"
 git push origin v0.0.1
 ```
@@ -146,11 +137,9 @@ Now re-run `sphinx-multiversion`:
 sphinx-multiversion docs ./docs/_build/html
 ```
 
-You should now see that a new HTML folder was generated: `./docs/_build/html/v0.0.1`. Preview all
-three `index.html` locally: `./docs/_build/html/main/index.html`,
-`./docs/_build/html/v0.0.1/index.html`, and `./docs/_build/html/update_docs/index.html`. As you'd
-expect, the modification will appear in the `main` and the tag `v0.0.1`'s `index.html`, but not in
-`update_docs`.
+You should now see that a new HTML folder was generated: `./docs/_build/html/v0.0.1`. Preview both
+`index.html` locally: `./docs/_build/html/main/index.html` and `./docs/_build/html/v0.0.1/index.html`.
+As you'd expect, the modification will appear on tag `v0.0.1`'s `index.html`, but not in `main`'s.
 
 You'll also notice the new sidebar section we added titled `Versions`, with links to all available
 versions of your documentation.
@@ -212,6 +201,25 @@ git add index.html
 git commit -m "Add index.html to redirect to main branch"
 git push origin gh-pages
 ```
+
+### Selecting Branches/Tags of Interest
+
+You may not want to include all branches or tags on your documentation website. To configure this
+behaviour, add the following to `conf.py`:
+
+```py
+# -- Sphinx Multiversion --------------------------------------------------
+# https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#
+smv_tag_whitelist = r'^v\d+\.\d+\.\d+$'
+smv_branch_whitelist = r'^.*$'
+smv_remote_whitelist = r'^.*$'
+```
+
+Now `sphinx-multiversion` will only generate documentation corresponding to branches and tags
+matching your regex expressions above.
+
+{: .tip }
+More nuanced settings can be found on [`sphinx-multiversion` docs](https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#).
 
 {: .hint }
 🙌 You have now reached the

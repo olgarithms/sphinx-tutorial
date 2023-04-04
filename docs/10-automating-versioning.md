@@ -8,11 +8,23 @@ nav_order: 10
 
 ---
 
-We are now ready to integrate `sphinx-multiversion` into our automated deployment workflow. We'll
-modify our existing workflow so that it uses `sphinx-multiversion`.
+We are now ready to integrate `sphinx-multiversion` into our automated deployment workflow.
+You probably want to release a new version of your documentation when you've released a new
+version of your API.
 
-Open up `.github/workflows/docs.yaml`. First, modify the step `Install dependencies` to install
-`sphinx_multiversion`:
+We'll modify our existing workflow so that runs on a release, and uses `sphinx-multiversion`
+to generate and publish your latest release's documentation.
+
+Open up `.github/workflows/docs.yaml`. First, modify the workflow trigger so that it runs on
+a new release:
+
+```yaml
+on:
+  release:
+    types: [published]
+```
+
+Next, modify the step `Install dependencies` to install `sphinx_multiversion`:
 
 ```yaml
 - name: Install dependencies
@@ -37,13 +49,11 @@ Your file `.github/workflows/docs.yaml` should now look like this:
 name: Deploy Documentation
 
 on:
-  pull_request:
-    types:
-      - closed
+  release:
+    types: [published]
 
 jobs:
   deploy_docs:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - uses: actions/setup-python@v3
@@ -81,87 +91,23 @@ git commit -m "Use sphinx-multiversion in docs action"
 git push origin main
 ```
 
-To test this, create a new branch `update_docs2`, make a small change to `docs/index.rst`. Commit
-and push the change to your new branch. Create a PR. When you merge the PR, from the `Pages` tab on
-your repo's GitHub URL, you should see that the `Deploy Documentation` workflow has kicked off.
-Inspect the job details to verify that `sphinx-multiversion` has run. Refresh your GitHub Pages
-URL. You should see your update has taken place on the `main` version as well as the `update_docs2`
-version of your docs. Make sure to pull the latest changes to your local `main`.
+To test this, make a small change to `docs/index.rst`, commit and push it to `main`.
 
-## Incrementing Documentation Versions Easily
-
-To make incrementing the documentation version easier, we'll modify our workflow so that if the
-pull request uses the label `version++`, it will create a new git tag that's an increment on the
-previous tag. Otherwise, it will simply rebuild and deploy documentation updates to `main`.
-
-Let's create a simple shell script `create_tag.sh` in the root of our project, that will increment
-the git tag:
-
-```sh
-# get current tag
-CURTAG=`git tag`;
-CURTAG="${CURTAG/v/}"
-echo "Current version is ${CURTAG}"
-
-# parse major, minor, patch
-IFS='.' read -a vers <<< "$CURTAG"
-MAJ=${vers[0]:-0}
-MIN=${vers[1]:-0}
-PATCH=${vers[2]:-0}
-
-# create new tag with patch++
-((PATCH+=1))
-NEWTAG="v$MAJ.$MIN.${PATCH}"
-echo "Next version is $NEWTAG"
-git tag -a $NEWTAG -m $NEWTAG
-git push origin $NEWTAG
-```
-
-Next, add execute permissions to the shell file:
-
-```sh
-chmod ugo+x create_tag.sh
-```
-
-Next, in `.github/workflow/docs.yaml` and add a new step, following the `Git config` step that will
-execute the script `create_tag.sh`, if the label `version++` is used:
-
-```yaml
-- name: Create new tag
-  if: contains(github.event.pull_request.labels.*.name, 'version++')
-  run: |
-    ./create_tag.sh
-```
-
-We now have all the components needed to automate versioning your documentation. Let's commit the
-change.
-
-```sh
-git checkout main
-git add create_tag.sh
-git add .github/workflows/docs.yaml
-git commit -m "increment docs version easily"
+```bash
+git add docs/index.rst
+git commit -m "Update docs"
 git push origin main
 ```
 
-Now, we are ready to test this. In a new branch, make a small addition to `index.rst`, commit, push
-and create a PR. On the PR, add a label `version++`. When you merge your PR, you should see that
-`Deploy Documentation` Action kicked off. Verify that the step `Create new tag` has run
-successfully as part of your workflow and has created the tag `v0.0.2`. When your workflow is done
-running, and the subsequent `pages-build-deployment` has finished running, refresh your Pages URL.
-You should now see the new tag `v0.0.2` is linked on the sidebar of your Pages site.
+From your repo's GitHub page, hit the link "Create a new release". From the tags dropdown
+menu, write down the next tag version to create `v0.0.2`. Write a brief description and hit
+`Publish Release`.
 
-Finally, you'll notice that not all branches appear on your website when `sphinx-multiversion` ran
-remotely. If you want to change this, you can configure this behaviour by adding the following to
-`conf.py`:
+From the `Pages` tab on your repo's GitHub URL, you should see that the `Deploy Documentation`
+workflow has kicked off. Inspect the job details to verify that `sphinx-multiversion` has run.
 
-```py
-# -- Sphinx Multiversion --------------------------------------------------
-# https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#
-smv_tag_whitelist = r'^v\d+\.\d+\.\d+$'
-smv_branch_whitelist = r'^.*$'
-smv_remote_whitelist = r'^.*$'
-```
+Now, refresh your GitHub Pages URL. You should see your update has taken place on the `main`
+version as well as `v0.0.2` of your docs.
 
 {: .hint }
 🙌 You have now reached the
