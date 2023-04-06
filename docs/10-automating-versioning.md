@@ -111,9 +111,9 @@ version as well as `v0.0.2` of your docs.
 
 {: .hint }
 🙌 You have now reached the
-[`10-automating-versioning`](https://github.com/aelsayed95/the-office/tree/10-automating-versioning)
+[`10-automating-versioning`](https://github.com/aelsayed95/sphinxy/tree/10-automating-versioning)
 part of the tutorial. If not, check-out that branch and
-[`10-gh-pages`](https://github.com/aelsayed95/the-office/tree/10-gh-pages) branch for `gh-pages`
+[`10-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/10-gh-pages) branch for `gh-pages`
 and continue from there.
 
 We are done! We recommend you take a look at the [Further reading](#further-reading) section if you

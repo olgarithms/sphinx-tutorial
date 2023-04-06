@@ -93,7 +93,7 @@ git push origin main
 
 {: .hint }
 🙌 You have now reached the
-[`5-generating-documention`](https://github.com/aelsayed95/the-office/tree/5-generating-documention)
+[`5-generating-documention`](https://github.com/aelsayed95/sphinxy/tree/5-generating-documention)
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />

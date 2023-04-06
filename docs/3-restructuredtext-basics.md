@@ -19,7 +19,7 @@ separate time, so we will focus now on what exists in our `index.rst` file.
 ### Heading
 
 ```
-Welcome to The Office's documentation!
+Welcome to Sphinxy's documentation!
 ======================================
 ```
 
@@ -44,7 +44,7 @@ text. Using the same character will create headings of the same level.
 ## Creating a section
 
 Now let's add some more content by modifying the file `index.rst`. We are going to add a new
-section that has some more information and a picture of the workspace in the office.
+section that has some more information and a picture of a sphinx.
 
 Create a new section **above** the "Indices and tables" one:
 
@@ -60,14 +60,14 @@ found online and downloaded from [unsplash](https://unsplash.com). Save your ima
 `docs/_static` directory and type under your header:
 
 ```
-.. image:: _static/workspace.jpg
+.. image:: _static/sphinx.jpg
 ```
 
 Now re-run `make html` to see your image rendered on the site.
 
 {: .hint }
 🙌 You have now reached the
-[`3-rst-text-basics`](https://github.com/aelsayed95/the-office/tree/3-rst-text-basics) part of the
+[`3-rst-text-basics`](https://github.com/aelsayed95/sphinxy/tree/3-rst-text-basics) part of the
 tutorial. If not, check-out that branch and continue from there.
 
 <br />

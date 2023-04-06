@@ -28,7 +28,7 @@ git push origin gh-pages
 
 In your remote repository, you should now see a new empty `gh-pages` branch. You will notice that
 under `Settings > Pages`, GitHub has enabled `Pages` and started hosting your site at a URL like
-`https://<username>.github.io/the-office/`. Of course, if you visit the URL, you get a 404 Error
+`https://<username>.github.io/sphinxy/`. Of course, if you visit the URL, you get a 404 Error
 because there are no files yet on the `gh-pages` branch.
 
 Next, we locally mount the branch as a subdirectory using
@@ -132,7 +132,7 @@ git push origin main
 
 ## Hosting the documentation
 
-Next, we want to add The Office documentation to `gh-pages`. Let's generate our documentation again
+Next, we want to add the Sphinxy documentation to `gh-pages`. Let's generate our documentation again
 and check in our output files.
 
 ```sh
@@ -156,9 +156,9 @@ website and share the URL with the world.
 
 {: .hint }
 🙌 You have now reached the
-[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-hosting-on-gh-pages) part
+[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/7-hosting-on-gh-pages) part
 of the tutorial. If not, check-out that branch and
-[`7-gh-pages`](https://github.com/aelsayed95/the-office/tree/7-gh-pages) branch for `gh-pages` and
+[`7-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/7-gh-pages) branch for `gh-pages` and
 continue from there.
 
 <br />

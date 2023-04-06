@@ -175,10 +175,10 @@ To test out our new command, make a quick change to
 `docs/index.rst`:
 
 ```
-Welcome to The Office's documentation!
+Welcome to Sphinxy's documentation!
 ======================================
 
-Explore The Office documentation.
+Explore Sphinxy's documentation.
 ```
 
 Commit your change to `main`:
@@ -202,9 +202,9 @@ a new deployment of your documentation!
 
 {: .hint }
 🙌 You have now reached the
-[`8-automating-updates`](https://github.com/aelsayed95/the-office/tree/8-automating-updates) part
+[`8-automating-updates`](https://github.com/aelsayed95/sphinxy/tree/8-automating-updates) part
 of the tutorial. If not, check-out that branch and
-[`8-gh-pages`](https://github.com/aelsayed95/the-office/tree/8-gh-pages) branch for `gh-pages` and
+[`8-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/8-gh-pages) branch for `gh-pages` and
 continue from there.
 
 <br />

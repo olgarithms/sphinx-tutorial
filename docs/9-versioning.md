@@ -115,10 +115,10 @@ git push origin main
 Let's test this out. Make a small change in `index.rst`.
 
 ```
-Welcome to The Office's documentation!
+Welcome to Sphinxy's documentation!
 ======================================
 
-Explore The Office documentation by browsing the different modules.
+Explore Sphinxy's documentation by browsing the different modules.
 ```
 
 Commit it to `main` and tag it:
@@ -165,7 +165,7 @@ branch or tag folders now and GitHub could not find a page to load.
 
 Modify your GitHub Pages URL to append a branch or a tag name name:
 
-`https://<username>.github.io/the-office/main`
+`https://<username>.github.io/sphinxy/main`
 
 You'll be redirected to that version's index page. Of course, this is not convenient. We want to
 automatically redirect the user to the latest version. Say, the version on the `main` branch. To do
@@ -188,7 +188,7 @@ Now, open up this file, and add the following logic:
     <title>Redirecting to main branch</title>
     <meta charset="utf-8" />
     <meta http-equiv="refresh" content="0; url=./main/index.html" />
-    <link rel="canonical" href="https://<username>.github.io/the-office/main/index.html" />
+    <link rel="canonical" href="https://<username>.github.io/sphinxy/main/index.html" />
   </head>
 </html>
 ```
@@ -223,9 +223,9 @@ More nuanced settings can be found on [`sphinx-multiversion` docs](https://holzh
 
 {: .hint }
 🙌 You have now reached the
-[`9-versioning`](https://github.com/aelsayed95/the-office/tree/9-versioning) part of the tutorial.
+[`9-versioning`](https://github.com/aelsayed95/sphinxy/tree/9-versioning) part of the tutorial.
 If not, check-out that branch and
-[`9-gh-pages`](https://github.com/aelsayed95/the-office/tree/9-gh-pages) branch for `gh-pages` and
+[`9-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/9-gh-pages) branch for `gh-pages` and
 continue from there.
 
 <br />

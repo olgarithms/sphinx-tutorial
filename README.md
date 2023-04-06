@@ -8,7 +8,7 @@ generation for a Python API, hosting them on GitHub Pages and automatically crea
 on code updates.
 
 Accompanying the instructions there is
-[this example project](https://github.com/aelsayed95/the-office) where you can find some sample
+[this example project](https://github.com/aelsayed95/sphinxy) where you can find some sample
 code to serve as a base for the rest of the workshop.
 
 ## Development
