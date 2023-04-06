@@ -8,7 +8,7 @@ heading_anchors: true
 
 aux_links:
   "Example project":
-    - "//github.com/aelsayed95/the-office"
+    - "//github.com/aelsayed95/sphinxy"
 aux_links_new_tab: true
 
 back_to_top: true

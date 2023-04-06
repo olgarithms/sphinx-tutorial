@@ -34,7 +34,7 @@ options for this tutorial:
 
 ```
 > Separate source and build directories (y/n) [n]:  <Press Enter or n>
-> Project name:                                     The Office
+> Project name:                                     Sphinxy
 > Author name(s):                                   <Enter your name>
 > Project release []:                               <Press Enter>
 > Project language [en]:                            <Press Enter>
@@ -90,7 +90,7 @@ show you the latest updates.
 
 {: .hint }
 🙌 You have now reached the
-[`2-getting-started-with-sphinx`](https://github.com/aelsayed95/the-office/tree/2-getting-started-with-sphinx)
+[`2-getting-started-with-sphinx`](https://github.com/aelsayed95/sphinxy/tree/2-getting-started-with-sphinx)
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />

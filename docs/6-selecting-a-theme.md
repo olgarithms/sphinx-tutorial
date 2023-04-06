@@ -70,7 +70,7 @@ git push origin main
 
 {: .hint }
 🙌 You have now reached the
-[`6-selecting-a-theme`](https://github.com/aelsayed95/the-office/tree/6-selecting-a-theme)
+[`6-selecting-a-theme`](https://github.com/aelsayed95/sphinxy/tree/6-selecting-a-theme)
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
