@@ -88,6 +88,8 @@ which opens a web server at port `8000`. Access your docs by visiting
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
 show you the latest updates.
 
+You may have noticed that the `Module Index` link doesn't work. This is because we have yet to document our API and link the module doc files to our sphinx website. You'll learn how to do that in the next few sections.
+
 {: .hint }
 🙌 You have now reached the
 [`2-getting-started-with-sphinx`](https://github.com/aelsayed95/sphinxy/tree/2-getting-started-with-sphinx)

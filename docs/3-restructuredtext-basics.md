@@ -18,7 +18,7 @@ separate time, so we will focus now on what exists in our `index.rst` file.
 
 ### Heading
 
-```
+```rst
 Welcome to Sphinxy's documentation!
 ======================================
 ```
@@ -29,7 +29,7 @@ text. Using the same character will create headings of the same level.
 
 ### Table of contents tree
 
-```
+```rst
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -48,22 +48,20 @@ section that has some more information and a picture of a sphinx.
 
 Create a new section **above** the "Indices and tables" one:
 
-```
-Workspace
----------
+```rst
+Meet Sphinx
+-----------
 ```
 
 ### Image
 
-And now let's add a picture to our new section. You can use any image you like; we chose one we
-found online and downloaded from [unsplash](https://unsplash.com). Save your image in the
-`docs/_static` directory and type under your header:
+And now let's add a picture to our new section. You can use any image you like; we used [flickr](https://www.flickr.com/) and searched for `greek sphinx`. Save your image in the `docs/_static` directory and link it  under your header as follows:
 
-```
+```rst
 .. image:: _static/sphinx.jpg
 ```
 
-Now re-run `make html` to see your image rendered on the site.
+Now, from your `docs/` directory, re-run `make html` to see your image rendered on the site.
 
 {: .hint }
 🙌 You have now reached the

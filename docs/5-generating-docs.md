@@ -29,10 +29,10 @@ need to specify the output path and module path, so from the root of your repo, 
 
 ```sh
 # from the project root
-sphinx-apidoc --output-dir docs .
+sphinx-apidoc --output-dir docs src/sphinxy
 ```
 
-You can see that Sphinx created an `rst` file per module, as well as a `modules.rst` file, which
+You can see that Sphinx created an `rst` file for the `sphinxy` module, as well as a `modules.rst` file, which
 acts as a module directory.
 
 {: .tip }
