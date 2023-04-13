@@ -62,6 +62,7 @@ sys.path.insert(0, os.path.abspath('..'))
 Now, we're ready to build our docs again:
 
 ```sh
+# from the docs dir
 make html
 ```
 

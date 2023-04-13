@@ -78,7 +78,7 @@ Alternatively, we can run our own python server in the `_build/html` directory, 
 move around the pages. From the `docs` directory run the command:
 
 ```py
-# from the `docs` dir
+# from the docs dir
 python -m http.server --directory _build/html
 ```
 

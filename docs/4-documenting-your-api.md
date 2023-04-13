@@ -25,12 +25,12 @@ Locate the method `check_riddle_answer()` and add a Google-style docstring to do
 
 ```py
 def check_riddle_answer(self, answer: str, return_hint: bool = False) -> str:
-        """Evaluates the answer given for he riddle.
+        """Evaluates the given answer to the riddle.
 
         Args:
             answer (str): The given answer to the riddle.
-            return_hint (bool, optional): Controls whether a hint for the riddle should be returned.
-                Defaults to False.
+            return_hint (bool, optional): Controls whether a hint for the riddle should
+                be returned. Defaults to False.
 
         Raises:
             IncorrectAnswer: Exception for incorrect answer.
@@ -62,6 +62,6 @@ git push origin main
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />
-[Previous: reStructuredText basics](./restructuredtext-basics.md){: .btn .float-left}
+[Previous: reStructuredText basics](./3-restructuredtext-basics.md){: .btn .float-left}
 [Next: Generating HTML docs from docstrings](./5-generating-docs.md){: .btn .btn-purple .float-right}
 <br />
