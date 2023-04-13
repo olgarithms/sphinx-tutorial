@@ -29,7 +29,7 @@ html_theme = 'classic'
 Now from the `docs` directory re-build your HTML files:
 
 ```sh
-# from the `docs` dir
+# from the docs dir
 make html
 ```
 
@@ -65,6 +65,36 @@ commit and push your changes:
 # from the project root
 git add docs/conf.py
 git commit -m "Use furo theme"
+git push origin main
+```
+
+## Adding a favicon
+
+To finish styling our website, let's see how we can add a favicon.
+
+Sphinx has integrated support for this feature. Find an image you would like to use and move it to
+the `_static` directory under `docs`. You could also use the one provided in `images/favicon.ico`.
+
+Then in your `conf.py`, add
+
+```py
+html_favicon = "_static/favicon.ico"
+```
+
+and run again
+
+```sh
+make html
+```
+
+The favicon should now appear on your browser tab!
+
+Commit and push your changes:
+
+```sh
+# from the project root
+git add docs/conf.py docs/_static/favicon.ico
+git commit -m "Add favicon"
 git push origin main
 ```
 
