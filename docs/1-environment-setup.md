@@ -30,17 +30,17 @@ tips provided for a local workflow using [Visual Studio Code](https://code.visua
 
 3. Clone your new repo locally:
 
-    ```sh
-    git clone git@github.com:<your-org>/sphinxy.git
-    cd sphinxy
-    ```
+   ```sh
+   git clone git@github.com:<your-org>/sphinxy.git
+   cd sphinxy
+   ```
 
 4. Delete the `gh-pages` branch, both remotely and locally, so when you get to create yours there
    won't be any clashes!
 
-    ```sh
-    git push -d origin gh-pages
-    ```
+   ```sh
+   git push -d origin gh-pages
+   ```
 
 ## Using a virtual environment
 
@@ -50,6 +50,13 @@ where later we will be installing everything else we need for the workshop.
 ```sh
 python3.11 -m venv venv
 source venv/bin/activate
+```
+
+Finally, we'll install our package in edit mode. This will be needed later by some Sphinx
+extensions:
+
+```sh
+pip install -e .
 ```
 
 {: .tip }

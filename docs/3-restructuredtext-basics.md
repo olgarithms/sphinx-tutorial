@@ -36,8 +36,8 @@ text. Using the same character will create headings of the same level.
 ```
 
 - The `toctree` (table of contents tree) adds structure to your docs.
-- The `maxdepth` parameter specifies how many levels of headers you would like Sphinx to create
-  in its output.
+- The `maxdepth` parameter specifies how many levels of headers you would like Sphinx to create in
+  its output.
 - The `caption` parameter gives option to provide a `toctree` caption, i.e. the _title_ of the
   `toctree`; in this case "Contents".
 
@@ -49,21 +49,21 @@ section that has some more information and a picture of a sphinx.
 Create a new section **above** the "Indices and tables" one:
 
 ```
-Workspace
----------
+The Egyptian Sphinx
+--------------------
 ```
 
 ### Image
 
-And now let's add a picture to our new section. You can use any image you like; we chose one we
-found online and downloaded from [unsplash](https://unsplash.com). Save your image in the
-`docs/_static` directory and type under your header:
+And now let's add a picture to our new section. You can use any image you like; we downloaded one
+from [Unsplash](https://unsplash.com). You can find it under `images/sphinx.png`. Move your
+preferred image in the `docs/_static` directory and type under your header:
 
 ```
-.. image:: _static/sphinx.jpg
+.. image:: _static/sphinx.png
 ```
 
-Now re-run `make html` to see your image rendered on the site.
+Now, from your `docs/` directory, re-run `make html` to see your image rendered on the site.
 
 {: .hint }
 🙌 You have now reached the
