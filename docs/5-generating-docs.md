@@ -24,6 +24,13 @@ extensions = [
 ]
 ```
 
+and add the option to display documentation both from a class docstring and its `__init__`
+methods's.
+
+```py
+autoclass_content = 'both'
+```
+
 Now, we need to run the command `sphinx-apidoc` to build `rst` files out of our `docstrings`. We
 need to specify the output path and module path, so from the root of your repo, run:
 

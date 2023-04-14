@@ -62,7 +62,7 @@ versions (git tags and branches):
 {% endraw %}
 {% endhighlight %}
 
-Next, we need to point Sphinx to use this file. In `conf.py`, add the following:
+In order to point Sphinx to use this file, add the following in your `conf.py`:
 
 ```py
 templates_path = [

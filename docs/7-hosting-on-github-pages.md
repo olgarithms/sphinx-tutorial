@@ -10,19 +10,20 @@ nav_order: 7
 
 ## Creating a `gh-pages` branch
 
-To host your docs on GitHub Pages, we need to enable GitHub Pages for our repo. To do that, we
-need to create a branch that only contains `html` files. We'll name this branch `gh-pages`, as
-GitHub looks for this name and automatically starts hosting your documentation on `pages`.
+To host your docs on GitHub Pages, we need to enable GitHub Pages for our repo. To do that, we need
+to create a branch that only contains `html` files. We'll name this branch `gh-pages`, as GitHub
+looks for this name and automatically starts hosting your documentation on `pages`.
 
-Let's create `gh-pages` as an empty
-[orphan branch](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnew-branchgt):
+Let's create `gh-pages` as an
+[orphan branch](https://git-scm.com/docs/git-checkout#Documentation/git-checkout.txt---orphanltnew-branchgt),
+which means there is no previous history and commits:
 
 ```sh
 # from the project root
 cd ./docs/_build/html
-git checkout --orphan gh-pages
-git reset --hard
-git commit --allow-empty -m "Init"
+git checkout --orphan gh-pages      # create the orphan branch
+git reset --hard                    # overwrite all changes in the directory
+git commit --allow-empty -m "Init"  # create a commit without any changes
 git push origin gh-pages
 ```
 
@@ -31,14 +32,14 @@ under `Settings > Pages`, GitHub has enabled `Pages` and started hosting your si
 `https://<username>.github.io/sphinxy/`. Of course, if you visit the URL, you get a 404 Error
 because there are no files yet on the `gh-pages` branch.
 
-Next, we locally mount the branch as a subdirectory using
+Next, we locally mount the orphan` gh-pages` branch as a subdirectory using
 [`git worktree`](https://git-scm.com/docs/git-worktree).
 
 ```sh
 # from the docs/_build/html dir
 cd ..
 git checkout main
-rm -rf html # make sure you don't have an existing target directory
+rm -rf html  # make sure you don't have an existing target directory
 git worktree add html gh-pages
 ```
 
@@ -58,8 +59,8 @@ $ git branch
     main
 ```
 
-Our branch `gh-pages` is completely empty. But GitHub will be looking for a top-level
-`index.html`. So from the `./docs/_build/html` directory let's create a simple one:
+Our branch `gh-pages` is completely empty. But GitHub will be looking for a top-level `index.html`.
+So from the `./docs/_build/html` directory let's create a simple one:
 
 ```sh
 # from the docs/_build/html dir
@@ -109,9 +110,8 @@ Before we can deploy our API docs on GitHub Pages, we need to tell GitHub not to
 static site generator tool that GitHub Pages uses by default. We could turn off its usage by
 committing an empty `.nojekyll` file our `_build/html` folder.
 
-Instead of committing a `.nojekyll` file, you can add the extension
-`sphinx.ext.githubpages` to your `conf.py`. It automatically adds the `.nojekyll` file on
-`make html`.
+Instead of committing a `.nojekyll` file, you can add the extension `sphinx.ext.githubpages` to
+your `conf.py`. It automatically adds the `.nojekyll` file on `make html`.
 
 ```py
 extensions = [
@@ -132,8 +132,8 @@ git push origin main
 
 ## Hosting the documentation
 
-Next, we want to add the Sphinxy documentation to `gh-pages`. Let's generate our documentation again
-and check in our output files.
+Next, we want to add the Sphinxy documentation to `gh-pages`. Let's generate our documentation
+again and check in our output files.
 
 ```sh
 cd docs
