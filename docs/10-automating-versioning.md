@@ -99,7 +99,7 @@ Welcome to Sphinxy's documentation!
 
 Explore Sphinxy's documentation by browsing the different modules.
 
-Choose one from below:
+Choose one from below.
 ```
 
 ```bash
