@@ -8,9 +8,9 @@ nav_order: 8
 
 ---
 
-So far, we've been manually building our documentation files locally, then pushing the output `html`
-to GitHub Pages to host it. In this section, we will learn how to automate this process using
-GitHub Actions. GitHub Actions allow GitHub users to automatically execute workflows. We can
+So far, we've been manually building our documentation files locally, then pushing the output
+`html` to GitHub Pages to host it. In this section, we will learn how to automate this process
+using GitHub Actions. GitHub Actions allow GitHub users to automatically execute workflows. We can
 use this to automate building and deploying new versions of our documentation.
 
 ## Creating a simple GitHub Action
@@ -38,8 +38,8 @@ jobs:
 ```
 
 This file defines a workflow named `Hello World`, which, when triggered, runs a single job `hello`
-The job has a single step named `say hello` that prints `Hello, World!` to stdout. To test it out,
-commit and push this file to `main`.
+The job has a single step named `say hello` that prints `Hello, World!` to standard output. To test
+it out, commit and push this file to `main`.
 
 ```sh
 git add .github/workflows/hello.yaml
@@ -47,15 +47,20 @@ git commit -m "hello world workflow"
 git push origin main
 ```
 
-Now, navigate to the `Actions` tab on your repo's GitHub URL. You should see that a `workflow`
-with the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click
-on the job `hello`. Now expand the step `say hello` to see its details. You should see the message
+Now, navigate to the `Actions` tab on your repo's GitHub URL. You should see that a `workflow` with
+the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click on the
+job `hello`. Now expand the step `say hello` to see its details. You should see the message
 `Hello, World!` printed to stdout.
+
+{: .tip }
+You can disable an action by following
+[these instructions](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow).
 
 ## Deploying your docs automatically
 
-You now know how to build a simple workflow. Let's now write a workflow that would build and deploy
-our documentation. Create a new file `.github/workflows/docs.yaml` (find the completed file [here](#the-complete-deploy-documentation-github-action)):
+You now know how to build a simple workflow. Let's now write a workflow that would build and
+publish our documentation. Create a new file `.github/workflows/docs.yaml` (find the completed file
+[here](#the-complete-deploy-documentation-github-action)):
 
 ```yaml
 name: Deploy Documentation
@@ -171,12 +176,11 @@ git commit -m "Add documentation build action"
 git push origin main
 ```
 
-To test out our new command, make a quick change to
-`docs/index.rst`:
+To test out our new command, make a quick change to `docs/index.rst`:
 
 ```
 Welcome to Sphinxy's documentation!
-======================================
+===================================
 
 Explore Sphinxy's documentation.
 ```
@@ -197,8 +201,8 @@ triggered by GitHub when changes are pushed to `gh-pages`.
 When `pages-build-deployment` is completed, refresh your GitHub Pages URL. You should see the new
 change on your site.
 
-With this new workflow in place, from now on every commit to `main` is going to automatically trigger
-a new deployment of your documentation!
+With this new workflow in place, from now on every commit to `main` is going to automatically
+trigger a new deployment of your documentation!
 
 {: .hint }
 🙌 You have now reached the

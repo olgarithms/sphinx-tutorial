@@ -137,10 +137,10 @@ again and check in our output files.
 
 ```sh
 cd docs
-make clean # clean and re-create the gh-pages worktree
+make clean  # clean and re-create the gh-pages worktree
 make html
 cd _build/html
-git branch # verify you're in gh-pages branch
+git branch  # verify you're in gh-pages branch
 git add -A
 git commit -m "First documentation commit"
 git push origin gh-pages

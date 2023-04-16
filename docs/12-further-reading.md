@@ -13,13 +13,15 @@ nav_order: 12
 - Restructured text basics
   [[link](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html)]
 - Deploying a Sphinx project online
-- [link](https://www.sphinx-doc.org/en/master/tutorial/deploying.html)]
+  [link](https://www.sphinx-doc.org/en/master/tutorial/deploying.html)]
 - Sphinx themes database [[link](https://sphinx-themes.org/)]
 - MyST documentation (an alternative to `reStructuredText`)
   [[link](https://myst-parser.readthedocs.io/en/latest/index.html)]
 - [GitHub Actions](https://docs.github.com/en/actions/)
+- Workflow syntax for GitHub Actions
+  [link](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)]
 - GitHub Actions for GitHub Pages
-- [link](https://github.com/peaceiris/actions-gh-pages)]
+  [link](https://github.com/peaceiris/actions-gh-pages)]
 - Carol Willing - Practical Sphinx - PyCon 2018
   [[video](https://www.youtube.com/watch?v=0ROZRNZkPS8)]
 

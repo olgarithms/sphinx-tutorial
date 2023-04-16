@@ -8,15 +8,15 @@ nav_order: 10
 
 ---
 
-We are now ready to integrate `sphinx-multiversion` into our automated deployment workflow.
-You probably want to release a new version of your documentation when you've released a new
-version of your API.
+We are now ready to integrate `sphinx-multiversion` into our automated deployment workflow. You
+probably want to release a new version of your documentation when you've released a new version of
+your API.
 
-We'll modify our existing workflow so that runs on a release, and uses `sphinx-multiversion`
-to generate and publish your latest release's documentation.
+We'll modify our existing workflow so that it runs on a release, and uses `sphinx-multiversion` to
+generate and publish your latest release's documentation.
 
-Open up `.github/workflows/docs.yaml`. First, modify the workflow trigger so that it runs on
-a new release:
+Open up `.github/workflows/docs.yaml`. First, modify the workflow trigger so that it runs on a new
+release:
 
 ```yaml
 on:
@@ -93,17 +93,26 @@ git push origin main
 
 To test this, make a small change to `docs/index.rst`, commit and push it to `main`.
 
+```
+Welcome to Sphinxy's documentation!
+===================================
+
+Explore Sphinxy's documentation by browsing the different modules.
+
+Choose one from below:
+```
+
 ```bash
 git add docs/index.rst
-git commit -m "Update docs"
+git commit -m "Update index doc"
 git push origin main
 ```
 
-From your repo's GitHub page, hit the link "Create a new release". From the tags dropdown
-menu, write down the next tag version to create `v0.0.2`. Write a brief description and hit
+From your repo's GitHub page, hit the link "Create a new release". From the tags dropdown menu,
+write down the next tag version to create `v0.0.2`. Write a brief description and hit
 `Publish Release`.
 
-From the `Pages` tab on your repo's GitHub URL, you should see that the `Deploy Documentation`
+From the `Actions` tab on your repo's GitHub URL, you should see that the `Deploy Documentation`
 workflow has kicked off. Inspect the job details to verify that `sphinx-multiversion` has run.
 
 Now, refresh your GitHub Pages URL. You should see your update has taken place on the `main`
@@ -113,8 +122,10 @@ version as well as `v0.0.2` of your docs.
 🙌 You have now reached the
 [`10-automating-versioning`](https://github.com/aelsayed95/sphinxy/tree/10-automating-versioning)
 part of the tutorial. If not, check-out that branch and
-[`10-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/10-gh-pages) branch for `gh-pages`
-and continue from there.
+[`10-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/10-gh-pages) branch for `gh-pages` and
+continue from there.
+
+🎉 **Congratulations!** 🎉
 
 We are done! We recommend you take a look at the [Further reading](#further-reading) section if you
 want to learn more about documentation generation.
