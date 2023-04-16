@@ -8,9 +8,9 @@ nav_order: 8
 
 ---
 
-So far, we've been manually building our documentation files locally, then pushing the output `html`
-to GitHub Pages to host it. In this section, we will learn how to automate this process using
-GitHub Actions. GitHub Actions allow GitHub users to automatically execute workflows. We can
+So far, we've been manually building our documentation files locally, then pushing the output
+`html` to GitHub Pages to host it. In this section, we will learn how to automate this process
+using GitHub Actions. GitHub Actions allow GitHub users to automatically execute workflows. We can
 use this to automate building and deploying new versions of our documentation.
 
 ## Creating a simple GitHub Action
@@ -38,8 +38,8 @@ jobs:
 ```
 
 This file defines a workflow named `Hello World`, which, when triggered, runs a single job `hello`
-The job has a single step named `say hello` that prints `Hello, World!` to stdout. To test it out,
-commit and push this file to `main`.
+The job has a single step named `say hello` that prints `Hello, World!` to standard output. To test
+it out, commit and push this file to `main`.
 
 ```sh
 git add .github/workflows/hello.yaml
@@ -47,18 +47,23 @@ git commit -m "hello world workflow"
 git push origin main
 ```
 
-Now, navigate to the `Actions` tab on your repo's GitHub URL. You should see that a `workflow`
-with the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click
-on the job `hello`. Now expand the step `say hello` to see its details. You should see the message
+Now, navigate to the `Actions` tab on your repo's GitHub URL. You should see that a `workflow` with
+the name `Hello World` has run. Click on the workflow, and click on the latest commit. Click on the
+job `hello`. Now expand the step `say hello` to see its details. You should see the message
 `Hello, World!` printed to stdout.
+
+{: .tip }
+You can disable an action by following
+[these instructions](https://docs.github.com/en/actions/managing-workflow-runs/disabling-and-enabling-a-workflow).
 
 ## Deploying your docs automatically
 
-You now know how to build a simple workflow. Let's now write a workflow that would build and deploy
-our documentation. Create a new file `.github/workflows/docs.yaml` (find the completed file [here](#the-complete-deploy-documentation-github-action)):
+You now know how to build a simple workflow. Let's now write a workflow that would build and
+publish our documentation. Create a new file `.github/workflows/docs.yaml` (find the completed file
+[here](#the-complete-deploy-documentation-github-action)):
 
 ```yaml
-name: Deploy Documentation
+name: Publish Sphinx Documentation
 
 on:
   push:
@@ -68,64 +73,66 @@ on:
 
 As before, we'll trigger this workflow when a commit is pushed to main. See
 [this reference](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)
-for a full list of events that trigger GitHub workflows. Next, let's define a job, we'll call it
-`deploy docs`:
+for a full list of events that trigger GitHub workflows. Next, let's define a job
+`publish_sphinx_docs` and give `write` permissions to the
+[contents scope](https://docs.github.com/en/rest/overview/permissions-required-for-github-apps?apiVersion=2022-11-28#contents):
 
 ```yaml
 jobs:
-  deploy_docs:
+  publish_sphinx_docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 ```
 
-Next, we need to define the `steps` that make up our job. First we setup Python, choose the
-version, and install required dependencies:
+Now we can start defining the `steps` that make up our job. We are going to use two actions for
+this:
+
+- one to check-out our repository, so the workflow can access it
+- one to install and set up python with our preferred version
 
 ```yaml
-    steps:
-      - uses: actions/setup-python@v3
-        with:
-          python-version: "3.11"
-      - name: Install dependencies
-        run: |
-          pip install sphinx furo
+steps:
+  - uses: actions/checkout@v3
+  - uses: actions/setup-python@v3
 ```
 
-Next, we checkout the current repo, and configure GitHub to allow us to push to the `gh-pages`
-branch:
+The first step is to install our package and the sphinx-related dependencies:
 
 ```yaml
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Git config
-        run: |
-          git config user.email "your email"
-          git config user.name "your name"
+- name: Install dependencies
+  run: |
+    pip install -e .
+    pip install sphinx furo
 ```
 
-Finally, we build our Sphinx documentation using `sphinx-build` (run by `make html`) and push the
-output `_build/html` folder to `gh-pages`:
+Then, we build our Sphinx documentation using `sphinx-apidoc` and `sphinx-build`:
 
 ```yaml
-      - name: Sphinx build
-        run: |
-          git worktree add docs/_build/html gh-pages
-          cd docs
-          make html
-      - name: Deploy docs
-        run: |
-          cd docs/_build/html
-          git add --all
-          git commit -m "deploy documentation updates"
-          git push origin gh-pages
+- name: Sphinx build
+  run: |
+    sphinx-apidoc -o docs src/sphinxy/ --separate --force
+    sphinx-build docs docs/_build/html
 ```
 
-#### The complete "Deploy Documentation" GitHub Action
+Finally, we deploy our Sphinx documentation to `gh-pages` by using the
+[actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) action:
+
+```yaml
+- name: Deploy
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    publish_branch: gh-pages
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: docs/_build/html
+```
+
+### The complete "Publish Sphinx Documentation" GitHub Action
 
 Putting it all together, your `docs.yaml` should look like this:
 
 ```yaml
-name: Deploy Documentation
+name: Publish Sphinx Documentation
 
 on:
   push:
@@ -133,33 +140,29 @@ on:
       - main
 
 jobs:
-  deploy_docs:
+  publish_sphinx_docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
           python-version: "3.11"
       - name: Install dependencies
         run: |
+          pip install -e .
           pip install sphinx furo
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Git config
-        run: |
-          git config user.email "your email"
-          git config user.name "your name"
       - name: Sphinx build
         run: |
-          git worktree add docs/_build/html gh-pages
-          cd docs
-          make html
-      - name: Deploy docs
-        run: |
-          cd docs/_build/html
-          git add --all
-          git commit -m "deploy documentation updates"
-          git push origin gh-pages
+          sphinx-apidoc -o docs src/sphinxy/ --separate --force
+          sphinx-build docs docs/_build/html
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
 ```
 
 Commit and push your file to `main`:
@@ -171,12 +174,11 @@ git commit -m "Add documentation build action"
 git push origin main
 ```
 
-To test out our new command, make a quick change to
-`docs/index.rst`:
+To test out our new command, make a quick change to `docs/index.rst`:
 
 ```
 Welcome to Sphinxy's documentation!
-======================================
+===================================
 
 Explore Sphinxy's documentation.
 ```
@@ -190,15 +192,16 @@ git commit -m "update docs"
 git push origin main
 ```
 
-From your repo's Github page, go to the `Actions` tab, you should see that the workflow `Deploy Documentation` is running. Click on it to observe the details of each step. Once all steps have
-completed, you'll see that a new workflow `pages-build-deployment` has kicked off. This workflow is
-triggered by GitHub when changes are pushed to `gh-pages`.
+From your repo's Github page, go to the `Actions` tab, you should see that the workflow
+`Publish Sphinx Documentation` is running. Click on it to observe the details of each step. Once all steps
+have completed, you'll see that a new workflow `pages-build-deployment` has kicked off. This
+workflow is triggered by GitHub when changes are pushed to `gh-pages`.
 
 When `pages-build-deployment` is completed, refresh your GitHub Pages URL. You should see the new
 change on your site.
 
-With this new workflow in place, from now on every commit to `main` is going to automatically trigger
-a new deployment of your documentation!
+With this new workflow in place, from now on every commit to `main` is going to automatically
+trigger a new deployment of your documentation!
 
 {: .hint }
 🙌 You have now reached the
