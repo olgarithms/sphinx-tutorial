@@ -18,7 +18,7 @@ Let's see how you can achieve that.
 
 We will be using [`sphinx-multiversion`](https://holzhaus.github.io/sphinx-multiversion/master/), a
 popular extension that makes versioning your documentation easy. This will replace the traditional
-`sphinx-build` command (which was executed under the hood when we ran `make html`!)
+`sphinx-build` command (which was executed under the hood when we ran `make html`!).
 
 In your virtual environment, install:
 
@@ -37,7 +37,10 @@ extensions = [
 ]
 ```
 
-Next, to render a list of links to past versions on your site's sidebar, you'll need to add an HTML
+### Configuring the site's sidebar
+
+We want to give our website visitors the option to select which version of the docs they would like
+to view. For this reason, we need to configure our sidebar to display them by adding an html
 template. Let's create a file `docs/_templates/sidebar/versions.html` that will display a list of
 versions (git tags and branches):
 
@@ -81,27 +84,31 @@ html_sidebars = {
 ```
 
 We've only added a `versions.html` to `_templates/sidebar/` folder. So where are the other `html`
-files coming from? They are the default `sidebar` components that ship with `furo`: namely: the
-website title, the search bar, and the content tree. Now that we are overriding the html_sidebar
-contents, we need to explicitly tell `furo` we still want those components in our sidebar in
-addition to our custom `versions` section. `scroll-start.html` and `scroll-end.html` determine the
-scrollable section of the sidebar.
+files coming from? They are the default `sidebar` components that ship with `furo`, namely:
+
+- the website title
+- the search bar
+- the content tree
+- the scrollable section of the sidebar
+
+Now that we are overriding the html_sidebar contents, we need to explicitly tell `furo` we still
+want those components in our sidebar in addition to our custom `versions` section.
 
 Finally, we are ready to test this command locally. From the `docs/` dir, run:
 
 ```sh
 cd docs
 make clean
-rm -rf _build/html/*    # wipe out the current html folder contents
+rm -rf _build/html/*  # wipe out the current html folder contents
 sphinx-multiversion . ./_build/html
 ```
 
 You will notice that now, in your `_build/html` folder, there is a subfolder corresponding to each
-branch and tag you have in your repo. As we currently only have the `main` branch, there'll be one
-`main` folder in which their corresponding output `HTML` files live. As you create more branches
-and tags, more output `HTML` folders will be created for them.
+branch and tag you have in your repo. Since you currently only have the `main` branch, there'll be
+one `main` folder in which their corresponding output `html` files live. As you create more
+branches and tags, more output `html` folders will be created for them.
 
-Let's commit the changes we have done to support `sphinx-multiversion` to our `main` branch:
+Let's commit the changes we have done to support `sphinx-multiversion` to the `main` branch:
 
 ```sh
 # from the project root
@@ -116,7 +123,7 @@ Let's test this out. Make a small change in `index.rst`.
 
 ```
 Welcome to Sphinxy's documentation!
-======================================
+===================================
 
 Explore Sphinxy's documentation by browsing the different modules.
 ```
@@ -125,8 +132,8 @@ Commit it to `main` and tag it:
 
 ```sh
 git checkout main
-git add docs
-git commit -m "update docs"
+git add docs/conf.py
+git commit -m "Update docs"
 git tag -a v0.0.1 -m "first release"
 git push origin v0.0.1
 ```
@@ -134,12 +141,14 @@ git push origin v0.0.1
 Now re-run `sphinx-multiversion`:
 
 ```sh
+# from the project root
 sphinx-multiversion docs ./docs/_build/html
 ```
 
 You should now see that a new HTML folder was generated: `./docs/_build/html/v0.0.1`. Preview both
-`index.html` locally: `./docs/_build/html/main/index.html` and `./docs/_build/html/v0.0.1/index.html`.
-As you'd expect, the modification will appear on tag `v0.0.1`'s `index.html`, but not in `main`'s.
+`index.html` locally: `./docs/_build/html/main/index.html` and
+`./docs/_build/html/v0.0.1/index.html`. As you would expect, the modification will appear on tag
+`v0.0.1`'s `index.html`, but not on `main`'s.
 
 You'll also notice the new sidebar section we added titled `Versions`, with links to all available
 versions of your documentation.
@@ -150,7 +159,7 @@ Finally, let's push the latest contents of the `html/` folder to `gh-pages`:
 cd ./docs/_build/html
 git branch # ensure you are on the gh-pages branch
 git add .
-git commit -m "versioning support"
+git commit -m "Add versioning support"
 git push -f origin gh-pages
 ```
 
@@ -167,11 +176,13 @@ Modify your GitHub Pages URL to append a branch or a tag name name:
 
 `https://<username>.github.io/sphinxy/main`
 
-You'll be redirected to that version's index page. Of course, this is not convenient. We want to
-automatically redirect the user to the latest version. Say, the version on the `main` branch. To do
-that, we need to add an new file `index.html` at the root of the `gh-pages` branch that has this
-redirection logic (see the
+You'll be redirected to that version's index page and everything looks as expected.
+
+Of course, this is not convenient. We want to automatically redirect the user to the latest
+version; in our case the version on the `main` branch. In order to achieve that, we need to add an
+new file `index.html` at the root of the `gh-pages` branch that has this redirection logic (see the
 [docs](https://holzhaus.github.io/sphinx-multiversion/master/github_pages.html?highlight=meta%20http%20equiv%20refresh#redirecting-from-the-document-root)).
+
 First, we create a new file:
 
 ```sh
@@ -202,6 +213,9 @@ git commit -m "Add index.html to redirect to main branch"
 git push origin gh-pages
 ```
 
+You should now be able to browse the documentation of your `main` branch on
+`https://<username>.github.io/sphinxy/main`!
+
 ### Selecting Branches/Tags of Interest
 
 You may not want to include all branches or tags on your documentation website. To configure this
@@ -219,12 +233,13 @@ Now `sphinx-multiversion` will only generate documentation corresponding to bran
 matching your regex expressions above.
 
 {: .tip }
-More nuanced settings can be found on [`sphinx-multiversion` docs](https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#).
+More nuanced settings can be found on
+[`sphinx-multiversion` docs](https://holzhaus.github.io/sphinx-multiversion/master/configuration.html#).
 
 {: .hint }
 🙌 You have now reached the
-[`9-versioning`](https://github.com/aelsayed95/sphinxy/tree/9-versioning) part of the tutorial.
-If not, check-out that branch and
+[`9-versioning`](https://github.com/aelsayed95/sphinxy/tree/9-versioning) part of the tutorial. If
+not, check-out that branch and
 [`9-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/9-gh-pages) branch for `gh-pages` and
 continue from there.
 
