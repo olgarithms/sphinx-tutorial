@@ -66,7 +66,7 @@ So from the `./docs/_build/html` directory let's create a simple one:
 # from the docs/_build/html dir
 echo '<h1>Hello, World!</h1>' > index.html
 git add index.html
-git commit -m 'hello world landing page'
+git commit -m 'Add hello world landing page'
 git push origin gh-pages
 ```
 
