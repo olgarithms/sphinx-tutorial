@@ -121,8 +121,7 @@ git push origin main
 
 Let's test this out.
 
-Let's tag the current version of our docs with `v0.0.1`. We'll create a tag and push it to our
-remote repository:
+We'll create a tag, `v0.0.1`, for our current version and push it to our remote repository:
 
 ```sh
 git tag -a v0.0.1 -m "first tag"
