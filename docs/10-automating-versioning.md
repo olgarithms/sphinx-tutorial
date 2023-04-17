@@ -24,11 +24,20 @@ on:
     types: [published]
 ```
 
-Next, modify the step `Install dependencies` to install `sphinx_multiversion`:
+Since we need to display the content of other git branches and tags, we need to have all history available. On the step of checking-out our repo, configure the `Checkout V3` action to fetch all history for all branches and tags:
+
+```yaml
+- uses: actions/checkout@v3
+  with:
+    fetch-depth: 0
+```
+
+As expected, you need to install `sphinx_multiversion` in `Install dependencies` step:
 
 ```yaml
 - name: Install dependencies
   run: |
+    pip install -e .
     pip install sphinx furo sphinx_multiversion
 ```
 
@@ -38,48 +47,44 @@ documentation:
 ```yaml
 - name: Sphinx build
   run: |
-    git worktree add docs/_build/html gh-pages
-    cd docs
-    sphinx-multiversion . ./_build/html
+    sphinx-multiversion docs docs/_build/html
 ```
 
 Your file `.github/workflows/docs.yaml` should now look like this:
 
 ```yaml
-name: Deploy Documentation
+name: Publish Sphinx Documentation
 
 on:
   release:
     types: [published]
 
 jobs:
-  deploy_docs:
+  publish_sphinx_docs:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v3
         with:
           python-version: "3.11"
       - name: Install dependencies
         run: |
+          pip install -e .
           pip install sphinx furo sphinx_multiversion
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Git config
-        run: |
-          git config user.email "your email"
-          git config user.name "your name"
       - name: Sphinx build
         run: |
-          git worktree add docs/_build/html gh-pages
-          cd docs
-          sphinx-multiversion . ./_build/html
-      - name: Deploy docs
-        run: |
-          cd docs/_build/html
-          git add --all
-          git commit -m "deploy documentation updates"
-          git push origin gh-pages
+          sphinx-multiversion docs docs/_build/html
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/html
+          force_orphan: true
 ```
 
 Now, commit your updated workflow to `main`:
@@ -99,7 +104,7 @@ Welcome to Sphinxy's documentation!
 
 Explore Sphinxy's documentation by browsing the different modules.
 
-Choose one from below:
+Choose one from below.
 ```
 
 ```bash
@@ -112,8 +117,9 @@ From your repo's GitHub page, hit the link "Create a new release". From the tags
 write down the next tag version to create `v0.0.2`. Write a brief description and hit
 `Publish Release`.
 
-From the `Actions` tab on your repo's GitHub URL, you should see that the `Deploy Documentation`
-workflow has kicked off. Inspect the job details to verify that `sphinx-multiversion` has run.
+From the `Actions` tab on your repo's GitHub URL, you should see that the
+`Publish Sphinx Documentation` workflow has kicked off. Inspect the job details to verify that
+`sphinx-multiversion` has run.
 
 Now, refresh your GitHub Pages URL. You should see your update has taken place on the `main`
 version as well as `v0.0.2` of your docs.
