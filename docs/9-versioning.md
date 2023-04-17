@@ -134,7 +134,7 @@ Next, make a small change in `index.rst`.
 Welcome to Sphinxy's documentation!
 ===================================
 
-Explore Sphinxy's documentation by browsing the different modules.
+Explore Sphinxy's documentation.
 ```
 
 Now, push your changes to `main`:
