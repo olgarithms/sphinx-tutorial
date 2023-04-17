@@ -13,7 +13,8 @@ probably want to release a new version of your documentation when you've release
 your API.
 
 We'll modify our existing workflow so that it runs on a release, and uses `sphinx-multiversion` to
-generate and publish your latest release's documentation.
+generate and publish your latest release's documentation (find the completed file
+[here](#the-updated-publish-sphinx-documentation-github-action-using-sphinx-multiversion)):.
 
 Open up `.github/workflows/docs.yaml`. First, modify the workflow trigger so that it runs on a new
 release:
@@ -24,7 +25,9 @@ on:
     types: [published]
 ```
 
-Since we need to display the content of other git branches and tags, we need to have all history available. On the step of checking-out our repo, configure the `Checkout V3` action to fetch all history for all branches and tags:
+Since we need to display the content of other git branches and tags, we need to have all history
+available. On the step of checking-out our repo, configure the `Checkout V3` action to fetch all
+history for all branches and tags:
 
 ```yaml
 - uses: actions/checkout@v3
@@ -49,6 +52,30 @@ documentation:
   run: |
     sphinx-multiversion docs docs/_build/html
 ```
+
+In the [previous chapter](./9-versioning.md#choosing-a-default-version), we saw how we need to
+choose a default version to redirect to the `main` branch and we need to include it in our action.
+Copy the logic of `index.html` to a file called `gh-pages-redirect.html` under `docs/_templates/`
+and commit it to your `main` branch. This way we ensure we have a template ready to be copied every
+time we regenerate our docs with the action.
+
+```sh
+# from the project root
+cp ./docs/_build/html/index.html docs/_templates/gh-pages-redirect.html
+git add docs/_templates/gh-pages-redirect.html
+git cm "Add a template for gh-pages-redirect"
+git push origin main
+```
+
+Then add another step to your action to create an `index.html`:
+
+```yaml
+- name: Create index.html
+run: |
+    cp docs/_templates/gh-pages-redirect.html docs/_build/html/index.html
+```
+
+### The updated "Publish Sphinx Documentation" GitHub Action using sphinx-multiversion
 
 Your file `.github/workflows/docs.yaml` should now look like this:
 
@@ -78,6 +105,9 @@ jobs:
       - name: Sphinx build
         run: |
           sphinx-multiversion docs docs/_build/html
+      - name: Create index.html
+        run: |
+          cp docs/_templates/gh-pages-redirect.html docs/_build/html/index.html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
