@@ -32,7 +32,7 @@ Since we need to display the content of other git branches and tags, we need to 
     fetch-depth: 0
 ```
 
-As expected, you need to modify install `sphinx_multiversion` in `Install dependencies` step:
+As expected, you need to install `sphinx_multiversion` in `Install dependencies` step:
 
 ```yaml
 - name: Install dependencies

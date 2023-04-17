@@ -113,7 +113,7 @@ Then, we build our Sphinx documentation using `sphinx-apidoc` and `sphinx-build`
 ```yaml
 - name: Sphinx build
   run: |
-    sphinx-apidoc -o docs src/sphinxy/ --separate --force
+    sphinx-apidoc -o docs src/sphinxy/ --separate
     sphinx-build docs docs/_build/html
 ```
 
@@ -158,7 +158,7 @@ jobs:
           pip install sphinx furo
       - name: Sphinx build
         run: |
-          sphinx-apidoc -o docs src/sphinxy/ --separate --force
+          sphinx-apidoc -o docs src/sphinxy/ --separate
           sphinx-build docs docs/_build/html
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
