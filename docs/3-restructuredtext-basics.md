@@ -67,7 +67,7 @@ Now, from your `docs/` directory, re-run `make html` to see your image rendered 
 
 {: .hint }
 🙌 You have now reached the
-[`3-rst-text-basics`](https://github.com/aelsayed95/sphinxy/tree/3-rst-text-basics) part of the
+[`03-rst-basics`](https://github.com/aelsayed95/sphinxy/tree/03-rst-basics) part of the
 tutorial. If not, check-out that branch and continue from there.
 
 <br />

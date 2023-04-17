@@ -58,7 +58,7 @@ git push origin main
 
 {: .hint }
 🙌 You have now reached the
-[`4-documenting-your-api`](https://github.com/aelsayed95/sphinxy/tree/4-documenting-your-api)
+[`04-document-api`](https://github.com/aelsayed95/sphinxy/tree/04-document-api)
 part of the tutorial. If not, check-out that branch and continue from there.
 
 <br />

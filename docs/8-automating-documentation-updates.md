@@ -178,24 +178,6 @@ git commit -m "Add documentation build action"
 git push origin main
 ```
 
-To test out our new command, make a quick change to `docs/index.rst`:
-
-```
-Welcome to Sphinxy's documentation!
-===================================
-
-Explore Sphinxy's documentation.
-```
-
-Commit your change to `main`:
-
-```sh
-# from the project root
-git add docs/index.rst
-git commit -m "update docs"
-git push origin main
-```
-
 From your repo's Github page, go to the `Actions` tab, you should see that the workflow
 `Publish Sphinx Documentation` is running. Click on it to observe the details of each step. Once
 all steps have completed, you'll see that a new workflow `pages-build-deployment` has kicked off.
@@ -209,8 +191,8 @@ trigger a new deployment of your documentation!
 
 {: .hint }
 🙌 You have now reached the
-[`8-automating-updates`](https://github.com/aelsayed95/sphinxy/tree/8-automating-updates) part
-of the tutorial. If not, check-out that branch and
+[`08-automate-updates`](https://github.com/aelsayed95/sphinxy/tree/08-automate-updates) part of
+the tutorial. If not, check-out that branch and
 [`8-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/8-gh-pages) branch for `gh-pages` and
 continue from there.
 
