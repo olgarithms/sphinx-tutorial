@@ -54,7 +54,7 @@ documentation:
 ```
 
 In the [previous chapter](./9-versioning.md#choosing-a-default-version), we saw how we need to
-choose a default version to redirect to the `main` branch and we need to include it in our action.
+have a landing `index.html` page to redirect visitors of our website to the `main` branch. We need to include this logic in our workflow.
 Copy the logic of `index.html` to a file called `gh-pages-redirect.html` under `docs/_templates/`
 and commit it to your `main` branch. This way we ensure we have a template ready to be copied every
 time we regenerate our docs with the action.
