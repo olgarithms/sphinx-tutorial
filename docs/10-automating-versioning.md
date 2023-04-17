@@ -24,7 +24,9 @@ on:
     types: [published]
 ```
 
-Since we need to display the content of other git branches and tags, we need to have all history available. On the step of checking-out our repo, configure the `Checkout V3` action to fetch all history for all branches and tags:
+Since we need to display the content of other git branches and tags, we need to have all history
+available. On the step of checking-out our repo, configure the `Checkout V3` action to fetch all
+history for all branches and tags:
 
 ```yaml
 - uses: actions/checkout@v3
@@ -121,12 +123,12 @@ From the `Actions` tab on your repo's GitHub URL, you should see that the
 `Publish Sphinx Documentation` workflow has kicked off. Inspect the job details to verify that
 `sphinx-multiversion` has run.
 
-Now, refresh your GitHub Pages URL. You should see your update has taken place on the `main`
-version as well as `v0.0.2` of your docs.
+When the `pages-build-deployment` is done, refresh your GitHub Pages URL. You should see your
+update has taken place on the `main` version as well as `v0.0.2` of your docs.
 
 {: .hint }
 🙌 You have now reached the
-[`10-automating-versioning`](https://github.com/aelsayed95/sphinxy/tree/10-automating-versioning)
+[`10-automate-versioning`](https://github.com/aelsayed95/sphinxy/tree/10-automate-versioning)
 part of the tutorial. If not, check-out that branch and
 [`10-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/10-gh-pages) branch for `gh-pages` and
 continue from there.

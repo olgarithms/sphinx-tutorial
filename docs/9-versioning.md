@@ -119,7 +119,16 @@ git push origin main
 
 ### Generating different versions for your docs
 
-Let's test this out. Make a small change in `index.rst`.
+Let's test this out.
+
+We'll create a tag, `v0.0.1`, for our current version and push it to our remote repository:
+
+```sh
+git tag -a v0.0.1 -m "first tag"
+git push origin v0.0.1
+```
+
+Next, make a small change in `index.rst`.
 
 ```
 Welcome to Sphinxy's documentation!
@@ -128,14 +137,12 @@ Welcome to Sphinxy's documentation!
 Explore Sphinxy's documentation by browsing the different modules.
 ```
 
-Commit it to `main` and tag it:
+Now, push your changes to `main`:
 
 ```sh
-git checkout main
-git add docs/conf.py
+git add docs/index.rst
 git commit -m "Update docs"
-git tag -a v0.0.1 -m "first release"
-git push origin v0.0.1
+git push origin main
 ```
 
 Now re-run `sphinx-multiversion`:
@@ -148,7 +155,7 @@ sphinx-multiversion docs ./docs/_build/html
 You should now see that a new HTML folder was generated: `./docs/_build/html/v0.0.1`. Preview both
 `index.html` locally: `./docs/_build/html/main/index.html` and
 `./docs/_build/html/v0.0.1/index.html`. As you would expect, the modification will appear on tag
-`v0.0.1`'s `index.html`, but not on `main`'s.
+`main`'s `index.html`, but not on `v0.0.1`'s.
 
 You'll also notice the new sidebar section we added titled `Versions`, with links to all available
 versions of your documentation.
@@ -213,8 +220,8 @@ git commit -m "Add index.html to redirect to main branch"
 git push origin gh-pages
 ```
 
-You should now be able to browse the documentation of your `main` branch on
-`https://<username>.github.io/sphinxy/main`!
+You should now be automatically redirected to browse the documentation of your `main` branch on
+`https://<username>.github.io/sphinxy`!
 
 ### Selecting Branches/Tags of Interest
 
@@ -238,7 +245,7 @@ More nuanced settings can be found on
 
 {: .hint }
 🙌 You have now reached the
-[`9-versioning`](https://github.com/aelsayed95/sphinxy/tree/9-versioning) part of the tutorial. If
+[`09-versioning`](https://github.com/aelsayed95/sphinxy/tree/09-versioning) part of the tutorial. If
 not, check-out that branch and
 [`9-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/9-gh-pages) branch for `gh-pages` and
 continue from there.

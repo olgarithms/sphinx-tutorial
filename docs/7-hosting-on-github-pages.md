@@ -66,7 +66,7 @@ So from the `./docs/_build/html` directory let's create a simple one:
 # from the docs/_build/html dir
 echo '<h1>Hello, World!</h1>' > index.html
 git add index.html
-git commit -m 'initial commit of gh-pages branch'
+git commit -m 'Add hello world landing page'
 git push origin gh-pages
 ```
 
@@ -82,8 +82,11 @@ occasionally want to clean your documentation build output. Running `make clean`
 directory will remove everything under `_build`.
 
 This means that, if you want to be able to push more updates to `gh-pages`, you will need to
-recreate the `git worktree` every time you `make clean`: `git worktree add -f html gh-pages`. To
-make this easier, add the following to `docs/Makefile`:
+recreate the `git worktree` every time you `make clean`:
+
+`git worktree add -f html gh-pages`.
+
+To make this easier, add the following to `docs/Makefile`:
 
 ```make
 clean:
@@ -152,12 +155,12 @@ refresh on your Pages URL.
 🎉 **Congratulations!** 🎉
 
 Now your documentation is now live on GitHub Pages! You should be able to navigate around the
-website and share the URL with the world.
+website and share the URL with the world!
 
 {: .hint }
 🙌 You have now reached the
-[`7-hosting-on-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/7-hosting-on-gh-pages) part
-of the tutorial. If not, check-out that branch and
+[`07-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/07-gh-pages) part of
+the tutorial. If not, check-out that branch and
 [`7-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/7-gh-pages) branch for `gh-pages` and
 continue from there.
 
