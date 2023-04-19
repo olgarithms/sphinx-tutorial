@@ -63,7 +63,7 @@ time we regenerate our docs with the action.
 # from the project root
 cp ./docs/_build/html/index.html docs/_templates/gh-pages-redirect.html
 git add docs/_templates/gh-pages-redirect.html
-git commit "Add a template for gh-pages-redirect"
+git commit -m "Add a template for gh-pages-redirect"
 git push origin main
 ```
 
