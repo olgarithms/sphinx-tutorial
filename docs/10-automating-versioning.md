@@ -155,7 +155,7 @@ update has taken place on the `main` version as well as `v0.0.2` of your docs.
 {: .hint }
 🙌 You have now reached the
 [`10-automate-versioning`](https://github.com/aelsayed95/sphinxy/tree/10-automate-versioning)
-part of the tutorial. If not, check-out that branch and
+part of the tutorial. If not, check out that branch and
 [`gh-pages-10`](https://github.com/aelsayed95/sphinxy/tree/gh-pages-10) branch for `gh-pages` and
 continue from there.
 

@@ -68,7 +68,7 @@ Now, from your `docs/` directory, re-run `make html` to see your image rendered 
 {: .hint }
 🙌 You have now reached the
 [`03-rst-basics`](https://github.com/aelsayed95/sphinxy/tree/03-rst-basics) part of the
-tutorial. If not, check-out that branch and continue from there.
+tutorial. If not, check out that branch and continue from there.
 
 <br />
 [Previous: Getting started with Sphinx](./2-getting-started-with-sphinx.md){: .btn .float-left}

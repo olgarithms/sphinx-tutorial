@@ -192,7 +192,7 @@ trigger a new deployment of your documentation!
 {: .hint }
 🙌 You have now reached the
 [`08-automate-updates`](https://github.com/aelsayed95/sphinxy/tree/08-automate-updates) part of
-the tutorial. If not, check-out that branch and
+the tutorial. If not, check out that branch and
 [`gh-pages-8`](https://github.com/aelsayed95/sphinxy/tree/gh-pages-8) branch for `gh-pages` and
 continue from there.
 
