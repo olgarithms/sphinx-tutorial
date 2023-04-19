@@ -63,7 +63,7 @@ time we regenerate our docs with the action.
 # from the project root
 cp ./docs/_build/html/index.html docs/_templates/gh-pages-redirect.html
 git add docs/_templates/gh-pages-redirect.html
-git cm "Add a template for gh-pages-redirect"
+git commit -m "Add a template for gh-pages-redirect"
 git push origin main
 ```
 
@@ -156,7 +156,7 @@ update has taken place on the `main` version as well as `v0.0.2` of your docs.
 🙌 You have now reached the
 [`10-automate-versioning`](https://github.com/aelsayed95/sphinxy/tree/10-automate-versioning)
 part of the tutorial. If not, check-out that branch and
-[`10-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/10-gh-pages) branch for `gh-pages` and
+[`gh-pages-10`](https://github.com/aelsayed95/sphinxy/tree/gh-pages-10) branch for `gh-pages` and
 continue from there.
 
 🎉 **Congratulations!** 🎉
