@@ -125,7 +125,7 @@ Finally, we deploy our Sphinx documentation to `gh-pages` by using the
   uses: peaceiris/actions-gh-pages@v3
   with:
     publish_branch: gh-pages
-    github_token: ${{ secrets.GITHUB_TOKEN }}
+    github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
     publish_dir: docs/_build/html
     force_orphan: true
 ```
@@ -164,7 +164,7 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: {% raw %}${{ secrets.GITHUB_TOKEN }}{% endraw %}
           publish_dir: docs/_build/html
           force_orphan: true
 ```
