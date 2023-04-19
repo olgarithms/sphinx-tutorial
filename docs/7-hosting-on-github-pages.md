@@ -161,7 +161,7 @@ website and share the URL with the world!
 🙌 You have now reached the
 [`07-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/07-gh-pages) part of
 the tutorial. If not, check-out that branch and
-[`7-gh-pages`](https://github.com/aelsayed95/sphinxy/tree/7-gh-pages) branch for `gh-pages` and
+[`gh-pages-7`](https://github.com/aelsayed95/sphinxy/tree/7-gh-pages) branch for `gh-pages-7` and
 continue from there.
 
 <br />
