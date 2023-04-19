@@ -246,7 +246,7 @@ More nuanced settings can be found on
 {: .hint }
 🙌 You have now reached the
 [`09-versioning`](https://github.com/aelsayed95/sphinxy/tree/09-versioning) part of the tutorial. If
-not, check-out that branch and
+not, check out that branch and
 [`gh-pages-9`](https://github.com/aelsayed95/sphinxy/tree/gh-pages-9) branch for `gh-pages` and
 continue from there.
 

@@ -101,7 +101,7 @@ git push origin main
 {: .hint }
 🙌 You have now reached the
 [`06-select-theme`](https://github.com/aelsayed95/sphinxy/tree/06-select-theme)
-part of the tutorial. If not, check-out that branch and continue from there.
+part of the tutorial. If not, check out that branch and continue from there.
 
 <br />
 [Previous: Generating HTML docs from docstrings](./5-generating-docs.md){: .btn .float-left}

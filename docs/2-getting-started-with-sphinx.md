@@ -93,7 +93,7 @@ You may have noticed that the `Module Index` link doesn't work. This is because 
 {: .hint }
 🙌 You have now reached the
 [`02-getting-started`](https://github.com/aelsayed95/sphinxy/tree/02-getting-started)
-part of the tutorial. If not, check-out that branch and continue from there.
+part of the tutorial. If not, check out that branch and continue from there.
 
 <br />
 [Previous: Environment setup](./1-environment-setup.md){: .btn .float-left}

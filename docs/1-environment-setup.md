@@ -24,22 +24,16 @@ tips provided for a local workflow using [Visual Studio Code](https://code.visua
 
 1. Create a new, public repository on your personal GitHub organisation from our
    [template project](https://github.com/aelsayed95/sphinxy), by clicking on the
-   "[**Use this template**](https://github.com/aelsayed95/sphinxy/generate)" button.
+   "[Use this template => Create a new repository](https://github.com/aelsayed95/sphinxy/generate)"
+   button.
 
-2. Name your repo `sphinxy`, and check ✅ the option "**Include all branches**".
+2. Name your repo `sphinxy`.
 
 3. Clone your new repo locally:
 
    ```sh
    git clone git@github.com:<your-org>/sphinxy.git
    cd sphinxy
-   ```
-
-4. Delete the `gh-pages` branch, both remotely and locally, so when you get to create yours there
-   won't be any clashes!
-
-   ```sh
-   git push -d origin gh-pages
    ```
 
 ## Using a virtual environment

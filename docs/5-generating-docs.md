@@ -94,7 +94,7 @@ git push origin main
 {: .hint }
 🙌 You have now reached the
 [`05-generate-docs`](https://github.com/aelsayed95/sphinxy/tree/05-generate-docs)
-part of the tutorial. If not, check-out that branch and continue from there.
+part of the tutorial. If not, check out that branch and continue from there.
 
 <br />
 [Previous: Documenting your API](./4-documenting-your-api.md){: .btn .float-left}

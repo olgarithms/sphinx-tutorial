@@ -59,7 +59,7 @@ git push origin main
 {: .hint }
 🙌 You have now reached the
 [`04-document-api`](https://github.com/aelsayed95/sphinxy/tree/04-document-api)
-part of the tutorial. If not, check-out that branch and continue from there.
+part of the tutorial. If not, check out that branch and continue from there.
 
 <br />
 [Previous: reStructuredText basics](./3-restructuredtext-basics.md){: .btn .float-left}
