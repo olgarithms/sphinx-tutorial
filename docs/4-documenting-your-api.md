@@ -51,7 +51,7 @@ When you're done, commit the changes you made:
 
 ```sh
 # from the project root
-git add sphinx.py riddle.py
+git add src/sphinxy/sphinx.py src/sphinxy/riddle.py
 git commit -m "Added docstrings"
 git push origin main
 ```
