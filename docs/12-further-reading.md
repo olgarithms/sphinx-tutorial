@@ -19,9 +19,9 @@ nav_order: 12
   [[link](https://myst-parser.readthedocs.io/en/latest/index.html)]
 - [GitHub Actions](https://docs.github.com/en/actions/)
 - Workflow syntax for GitHub Actions
-  [link](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)]
+  [[link](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)]
 - GitHub Actions for GitHub Pages
-  [link](https://github.com/peaceiris/actions-gh-pages)]
+  [[link](https://github.com/peaceiris/actions-gh-pages)]
 - Carol Willing - Practical Sphinx - PyCon 2018
   [[video](https://www.youtube.com/watch?v=0ROZRNZkPS8)]
 
