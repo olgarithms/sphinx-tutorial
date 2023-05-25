@@ -97,7 +97,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.11"
+          python-version: "3.10"
       - name: Install dependencies
         run: |
           pip install -e .

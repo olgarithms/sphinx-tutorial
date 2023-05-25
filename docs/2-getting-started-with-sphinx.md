@@ -85,6 +85,9 @@ python -m http.server --directory _build/html
 which opens a web server at port `8000`. Access your docs by visiting
 [`http://localhost:8000`](http://localhost:8000) on your browser.
 
+{: .tip }
+If you're working on codespaces, it'll prompt you to follow a link where you can preview your local documentation website you just built.
+
 As you go on with the workshop, you can leave your server running and refreshing the webpage will
 show you the latest updates.
 
