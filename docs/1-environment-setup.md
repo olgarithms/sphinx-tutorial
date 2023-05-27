@@ -33,7 +33,7 @@ tips provided for a local workflow using [Visual Studio Code](https://code.visua
 3. You'll be prompted to name your new remote repository, select the `public` option and name your
    repo `sphinxy`
 
-### Locally
+### On your computer
 
 1. Create a new, public repository on your personal GitHub organisation from our
    [template project](https://github.com/aelsayed95/sphinxy), by clicking on the
