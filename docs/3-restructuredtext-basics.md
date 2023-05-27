@@ -63,12 +63,17 @@ preferred image in the `docs/_static` directory and type under your header:
 .. image:: _static/sphinx.png
 ```
 
+{: .tip }
+If you are using codespaces, you'd need to save the image locally, then upload it to the
+`docs/_static` folder on codespaces by right-clicking on the `_static` directly, and selecting
+`Upload...`, then select the image you'd downloaded from the file browser to upload it.
+
 Now, from your `docs/` directory, re-run `make html` to see your image rendered on the site.
 
 {: .hint }
 🙌 You have now reached the
-[`03-rst-basics`](https://github.com/aelsayed95/sphinxy/tree/03-rst-basics) part of the
-tutorial. If not, check out that branch and continue from there.
+[`03-rst-basics`](https://github.com/aelsayed95/sphinxy/tree/03-rst-basics) part of the tutorial.
+If not, check-out that branch and continue from there.
 
 <br />
 [Previous: Getting started with Sphinx](./2-getting-started-with-sphinx.md){: .btn .float-left}

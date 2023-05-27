@@ -96,7 +96,7 @@ steps:
   - uses: actions/checkout@v3
   - uses: actions/setup-python@v3
     with:
-      python-version: "3.11"
+      python-version: "3.10"
 ```
 
 Now we can install our package and the sphinx-related dependencies:
@@ -151,7 +151,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
         with:
-          python-version: "3.11"
+          python-version: "3.10"
       - name: Install dependencies
         run: |
           pip install -e .

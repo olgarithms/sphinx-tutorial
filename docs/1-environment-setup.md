@@ -22,6 +22,19 @@ tips provided for a local workflow using [Visual Studio Code](https://code.visua
 
 ## Creating your project
 
+### Using Codespaces (Recommended)
+
+1. To get started, create a new project using the example project Sphinxy as a template
+   [on codespaces](https://codespaces.new/aelsayed95/sphinxy). This will open up a copy of Sphinxy
+   on codespaces for you.
+
+2. From the source control tab on the left panel of codespaces, select "Publish Branch".
+
+3. You'll be prompted to name your new remote repository, select the `public` option and name your
+   repo `sphinxy`
+
+### On your computer
+
 1. Create a new, public repository on your personal GitHub organisation from our
    [template project](https://github.com/aelsayed95/sphinxy), by clicking on the
    "[Use this template => Create a new repository](https://github.com/aelsayed95/sphinxy/generate)"
