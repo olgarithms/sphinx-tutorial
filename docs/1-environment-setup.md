@@ -22,16 +22,16 @@ tips provided for a local workflow using [Visual Studio Code](https://code.visua
 
 ## Creating your project
 
-### Using Codespaces (Recommended)
+### Using [GitHub Codespaces](https://github.com/features/codespaces) (Recommended)
 
-1. To get started, create a new project using the example project Sphinxy as a template
-   [on codespaces](https://codespaces.new/aelsayed95/sphinxy). This will open up a copy of Sphinxy
-   on codespaces for you.
+1. To get started, create a new project using the example project Sphinxy as
+   [a template](https://codespaces.new/aelsayed95/sphinxy) on GitHub Codespaces. This will open up
+   a copy of Sphinxy on codespaces for you.
 
-2. From the source control tab on the left panel of codespaces, select "Publish Branch".
+2. From the source control tab on the left panel of Codespaces, select "Publish Branch".
 
 3. You'll be prompted to name your new remote repository, select the `public` option and name your
-   repo `sphinxy`
+   repo `sphinxy`.
 
 ### On your computer
 
