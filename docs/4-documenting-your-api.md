@@ -40,7 +40,8 @@ def check_riddle_answer(self, answer: str, return_hint: bool = False) -> str:
         """
 ```
 
-{: .tip } In VS Code, you can install the extension `autoDocstring` which will generate python
+{: .tip }
+In VS Code, you can install the extension `autoDocstring` which will generate python
 docstring prompts, so you only need to fill them in. PyCharm supports this as well.
 
 Continue adding documentation for the rest of the methods in `sphinx.py` and for the class itself.

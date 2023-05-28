@@ -12,7 +12,7 @@ nav_order: 0
 
 1. [Environment setup](docs/1-environment-setup.md)
 2. [Getting started with Sphinx](docs/2-getting-started-with-sphinx.md)
-3. [reStructuredText basics](docs/restructuredtext-basics.md)
+3. [reStructuredText basics](docs/3-restructuredtext-basics.md)
 4. [Documenting your API](docs/4-documenting-your-api.md)
 5. [Generating HTML docs from docstrings](docs/5-generating-docs.md)
 6. [Selecting a theme](docs/6-selecting-a-theme.md)
