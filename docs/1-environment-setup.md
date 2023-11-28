@@ -11,7 +11,7 @@ nav_order: 1
 ## Prerequisites
 
 The prerequisites for this workshop are having `git` and `python` installed
-([`python3.11`](https://www.python.org/downloads/) is recommended), as well as having a
+([`python3.12`](https://www.python.org/downloads/) is recommended), as well as having a
 [GitHub](https://github.com/) account.
 
 The tutorial focuses on UNIX-based systems, but we will providing some tips on how to run the
@@ -55,7 +55,7 @@ Next, we will be setting up a [virtual environment](https://docs.python.org/3/tu
 where later we will be installing everything else we need for the workshop.
 
 ```sh
-python3.11 -m venv venv
+python3.12 -m venv venv
 source venv/bin/activate
 ```
 
